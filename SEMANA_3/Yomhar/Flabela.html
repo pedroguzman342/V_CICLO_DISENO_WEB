@@ -1,0 +1,86 @@
+
+<html >
+
+<head>
+    
+    <style>
+        html {
+            background: #8b8b8b;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card-producto {
+            position: relative; /* Necesario para posicionar el botón dentro de la tarjeta */
+            width: 200px;
+            background: white;
+              padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          border-radius: 10px;
+        }
+
+        .card-producto:hover {
+            box-shadow: 0 0 8px 1px white;
+        }
+
+        .img-card {
+            width: 100%;
+        }
+
+        .nombre_producto {
+            font-weight: bold;
+        }
+
+        .precio-oferta {
+            font-weight: bold;
+            color: red;
+            font-size: 20px;
+        }
+
+        .btn-agregar {
+            color: red;
+            border: 2px solid red;
+            width: 90%;
+            border-radius: 20px;
+            background: white;
+            height: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute; /* Para posicionar el botón dentro de la tarjeta */
+            bottom: 10px; /* Alinea el botón al fondo de la tarjeta */
+            left: 10px ; /* Alinea el botón a la izquierda de la tarjeta */
+            opacity: 0; /* Inicialmente oculto */
+            transition: opacity 0.3s ease; /* Agrega una transición suave para la propiedad de opacidad */
+        }
+
+        .card-producto:hover .btn-agregar {
+            opacity: 1; /* Mostrar el botón cuando se pasa el mouse sobre la tarjeta */
+        }
+
+        .btn-agregar:hover {
+            background-color: #da0e0e;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.plazavea.com.pe/laptop-hp-15fc0002la-15-6--amd-ryzen-5-7000-series-16gb-512gb-ssd/p">
+        <div class="card-producto">
+            <img class="img-card" src="https://falabella.scene7.com/is/image/FalabellaPE/19929442_1?wid=1500&hei=1500&qlt=70">
+            <p>HP</p>
+            <p class="nombre_producto">LAPTOP HP Intel Core i5</p>
+            <p>12GB 512GB SSD 12vaGen 14"ddq5005la</p>
+            <p>For Falabella</p>
+            <p class="precio-oferta">s/. 2799</p>
+            <br>
+            <button class="btn-agregar">AGREGAR AL CARRO</button>
+        </div>
+    </a>
+</body>
+
+</html>
+
