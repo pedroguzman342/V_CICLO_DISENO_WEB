@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html {
+            background: #8f8c8c;
+        }
+
+        /* Estilos para quitar el subrayado de los enlaces */
+        a {
+            text-decoration: none;
+        }
+
+        .card-producto {
+            width: 250px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0; /* Bordes en punta en la parte superior */
+            overflow: hidden; /* Oculta el botón por defecto */
+            transition: box-shadow 0.3s ease; /* Añade una transición al efecto de sombra */
+            font-family: Arial, sans-serif; /* Cambia la fuente del texto a Arial */
+        }
+
+        .card-producto:hover{
+            box-shadow: 0 0 8px 1px #ccc;
+        }
+
+        .nombre_producto {
+            font-weight: bold;
+        }
+
+        .img-card {
+            width: 100%;
+            border-bottom: 1px solid #ccc; /* Agrega una línea debajo de la imagen */
+            transition: transform 0.3s ease; /* Añade una transición a la rotación de la imagen */
+        }
+
+        /* Estilos para rotar la imagen al pasar el mouse sobre la tarjeta */
+        .card-producto:hover .img-card {
+            transform: rotate(10deg); /* Rota la imagen 10 grados */
+        }
+
+        .descripcion {
+            margin-top: 10px; /* Añade espacio entre la imagen y la descripción */
+        }
+
+        .btn_agregar {
+            color: white;
+            border: 2px solid #3c3a3a;
+            width: 100%;
+            border-radius: 20px;
+            background: #fff;
+            height: 40px;
+            cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+            transition: all 0.3s ease; /* Agregar transición para un cambio suave */
+            font-size: 18px; /* Tamaño de fuente aumentado */
+            font-weight: bold;
+            margin-top: 10px; /* Añade un poco de espacio entre la descripción y el botón */
+            opacity: 0; /* Hace que el botón esté completamente transparente */
+            transform: translateY(20px); /* Empuja el botón hacia abajo */
+        }
+
+        /* Estilos para mostrar el botón al pasar el mouse sobre la tarjeta */
+        .card-producto:hover .btn_agregar {
+            opacity: 1; /* Hace que el botón sea completamente visible */
+            transform: translateY(0); /* Retorna el botón a su posición original */
+        }
+
+        /* Estilos para cuando se pasa el mouse sobre el botón */
+        .btn_agregar:hover {
+            color: white;
+            background-color: #3c3a3a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="https://www.falabella.com.pe/falabella-pe/product/19929442/Laptop-Hp-Intel-Core-I5-12GB-512GB-SSD-12va-Gen-14-14-dq5005la/19929442">
+        <div class="card-producto">
+            <img class="img-card" src="https://falabella.scene7.com/is/image/FalabellaPE/19929442_2?wid=240&hei=240&qlt=70&fmt=webp">
+            <p class="descripcion">HP Laptop Intel Core I5 12GB 512GB SSD 12va Gen 14" 14-dq5005la</p>
+            <p>Por Falabella</p>
+            <p>s/. 2,799</p>
+            <button class="btn_agregar">AGREGAR</button>
+        </div>
+    </a>
+</body>
+
+</html>
