@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            .imagen-oso{
+            width:100px;
+            height: auto;
+        }
+        .contenedor-padre{
+            display: flex;
+            gap: 10px;
+            flex-direction:row;
+            /* flex-direction: row | row-reverse | column | column-reverse; */
+            flex-wrap:wrap;
+            /* flex-flow: column wrap; */
+            /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe; */
+            justify-content: center ;
+            align-items: center;
+        }
+        .contenedor-hijo-imagen-1{
+            order: 1;
+        }
+
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="contenedor-padre">
+            <div class="contenedor-hijo-imagen-1"> Item 1</div>
+            <div class="contenedor-hijo-imagen-2"> Item 2</div>
+            <div> Item 3</div>
+            <div> Item 4</div>
+            <div> Item 5</div>
+            <div> Item 6</div>
+            <div> Item 7</div>
+            <div> Item 8</div>
+            <div> Item 9</div>
+            <div> Item 10</div>
+            <div> Item 11</div>
+            <div> Item 12</div>
+            <div>
+                <img class="imagen-oso" src="https://th.bing.com/th/id/OIP.4_PuU7jHm8onTqyn9FTMmQHaED?w=304&h=180&c=7&r=0&o=5&pid=1.7">
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
