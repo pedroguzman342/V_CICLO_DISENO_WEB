@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; /* Utilizando flexbox */
+            align-items: center; /* Alinea los elementos verticalmente al centro */
+        }
+
+        .cv-image {
+            margin-right: 20px;
+        }
+
+        .cv-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Hace que la imagen sea circular */
+            border: 3px solid black; /* Añade un borde negro a la imagen */
+        }
+
+        .cv-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1; /* Hace que este contenedor ocupe todo el espacio disponible */
+        }
+
+        .cv-item {
+            margin-bottom: 10px;
+        }
+
+        .cv-item p {
+            margin: 0;
+            font-size: 18px; /* Aumenta el tamaño del texto */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv-container">
+        <div class="cv-image">
+            <!-- La imagen está dentro de un div para aplicarle estilos -->
+            <div class="imagen_gato">
+                <img src="https://yt3.googleusercontent.com/Tf31yPtjEC8a7aBD9xvTT8B79x_C8xB4RDi4vYyNt4YybBKOaseYJpcSDI-KLzqMDmHh7Tr0=s900-c-k-c0x00ffffff-no-rj">
+            </div>
+        </div>
+        <div class="cv-details">
+            <div class="cv-item">
+                <p style="font-weight: bold;">Josue Ramos</p> <!-- Añade negrita al nombre -->
+            </div>
+            <div class="cv-item">
+                <p>Desarrollador Frontend</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
