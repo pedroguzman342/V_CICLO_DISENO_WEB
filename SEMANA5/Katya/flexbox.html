@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            .imagen-perro{
+                width: 100px;
+                height: auto;
+                
+            }
+            .contenedor-padre{
+                display: flex;
+                gap: 10px;
+                /* flex-direction: row | row-reverse | column | column-reverse; */
+                flex-direction: row; 
+                /* flex-wrap: nowrap | wrap | wrap-reverse; */
+                flex-wrap: wrap;
+                /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe; */
+
+                justify-content: space-evenly;
+                /* align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe; */
+
+                align-items: baseline;
+
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="contenedor-padre">
+            <div>Item 1</div> 
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>
+            <div>Item 11</div>
+            <div>Item 12</div>
+            <div>
+                <img class="imagen-perro" src="https://estaticos-cdn.prensaiberica.es/clip/823f515c-8143-4044-8f13-85ea1ef58f3a_16-9-discover-aspect-ratio_default_0.jpg">
+            </div>
+            
+        </div>
+    </body>
+</html>
