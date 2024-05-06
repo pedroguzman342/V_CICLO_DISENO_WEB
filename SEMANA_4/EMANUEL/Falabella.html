@@ -28,8 +28,8 @@
         
         }
         .btn_agregar{
-            color: red;
-            border: 2px solid red;
+            color: rgb(15, 15, 15);
+            border: 2px solid rgb(255, 254, 254);
             width: 100%;
             border-radius: 20px;
             background: #fff;
@@ -40,8 +40,8 @@
 
         }
         .btn_agregar:hover{
-            color: white;
-            background: red;
+            color: rgb(97, 95, 95);
+            background: rgb(12, 12, 12);
             
 
         }
@@ -54,6 +54,23 @@
 
 </head>
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtener la tarjeta del producto y el botón
+            const card = document.querySelector(".card-producto");
+            const btnAgregar = document.querySelector(".btn_agregar");
+
+            // Evento para mostrar el botón cuando el ratón está sobre la tarjeta
+            card.addEventListener("mouseenter", function() {
+                btnAgregar.style.visibility = "visible";
+            });
+
+            // Evento para ocultar el botón cuando el ratón sale de la tarjeta
+            card.addEventListener("mouseleave", function() {
+                btnAgregar.style.visibility = "hidden";
+            });
+        });
+    </script>
     <a href="https://www.falabella.com.pe/falabella-pe/product/20088781/Laptop-HP-Intel-Core-i7-12GB-512GB-SSD-Pavilion-12%C2%B0-Gen-15.6-/20088781" >
     <div class="card-producto">
         <img class="img-F" src="https://falabella.scene7.com/is/image/FalabellaPE/20088781_1?wid=1500&hei=1500&qlt=70"> </img>
