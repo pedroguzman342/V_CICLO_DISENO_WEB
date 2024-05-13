@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        body {
+            background: #8f8c8c;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .card {
+            width: 250px;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            position: relative; /* Agregado para posicionar las imágenes */
+        }
+        .card:hover {
+            box-shadow: 0 0 8px 1px #ccc;
+        }
+        .card-img-top {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .detail {
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .detail p {
+            margin: 0;
+            font-size: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: red;
+        }
+        .btn-agregar {
+            color: rgb(255, 255, 255);
+            border: 2px solid red;
+            width: 100%;
+            border-radius: 10px;
+            background: #db0202dc;
+            height: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-agregar:hover {
+            color: #fff;
+            background: red;
+        }
+        
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 10px; 
+            box-sizing: border-box; 
+        }
+        .img-container img {
+            width: 25px;
+            height: 25px;
+        }
+        .link{
+            font-size: 5px;
+            align-items: center;
+            vertical-align: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://todorenting.es/wp-content/uploads/2023/04/coche-rojo-1.jpg" class="card-img-top" alt="Product Image">
+        <div class="detail">
+            <p>STARTING AT</p>
+            <p class="price">$22,495*</p>
+        </div>
+        <div class="detail">
+            <p>Fuel Efficiency</p>
+            <p>8.5/7.1 L/100KM*</p>
+        </div>
+        <div class="detail">
+            <p>ENGINE</p>
+            <p>HORSEPOWER</p>
+        </div>
+        <div class="img-container">     
+            <img src="https://img.freepik.com/vector-premium/velocimetro-interfaz-blanca-odometro-realista-medidor-velocidad-aislado-flecha-roja-escala-medicion-millas-plantilla-tablero-instrumentos-vehiculo-diseno-dial-contador-automovil-indicador-velocidad-transporte-vectorial_176411-3654.jpg" alt="Small Image">
+            <img src="https://cdn-icons-png.flaticon.com/512/3903/3903010.png" alt="Small Image">       
+        </div>
+        <button class="btn-agregar">BUILD & PRICE</button>
+        <a class="link" href="https://todorenting.es/por-que-deberia-comprarme-un-coche-de-color-rojo/">Legal Disclaimer</a>
+    </div>
+
+    <div class="card">
+        <img src="https://wallpapers.com/images/hd/back-view-white-3d-car-cx7lwmwcnqe6173n.jpg" class="card-img-top" alt="Product Image">
+        <div class="detail">
+            <p>STARTING AT</p>
+            <p class="price">$22,495*</p>
+        </div>
+        <div class="detail">
+            <p>Fuel Efficiency</p>
+            <p>8.5/7.1 L/100KM*</p>
+        </div>
+        <div class="detail">
+            <p>ENGINE</p>
+            <p>HORSEPOWER</p>
+        </div>
+        <div class="img-container">     
+            <img src="https://img.freepik.com/vector-premium/velocimetro-interfaz-blanca-odometro-realista-medidor-velocidad-aislado-flecha-roja-escala-medicion-millas-plantilla-tablero-instrumentos-vehiculo-diseno-dial-contador-automovil-indicador-velocidad-transporte-vectorial_176411-3654.jpg" alt="Small Image">
+            <img src="https://cdn-icons-png.flaticon.com/512/3903/3903010.png" alt="Small Image">       
+        </div>
+        <button class="btn-agregar">BUILD & PRICE</button>
+        <a class="link" href="https://todorenting.es/por-que-deberia-comprarme-un-coche-de-color-rojo/">Legal Disclaimer</a>
+    </div>
+
+    <div class="card">
+        <img src="https://news.motoreto.com/wp-content/uploads/2022/06/IMG_0123.jpg" class="card-img-top" alt="Product Image">
+        <div class="detail">
+            <p>STARTING AT</p>
+            <p class="price">$22,495*</p>
+        </div>
+        <div class="detail">
+            <p>Fuel Efficiency</p>
+            <p>8.5/7.1 L/100KM*</p>
+        </div>
+        <div class="detail">
+            <p>ENGINE</p>
+            <p>HORSEPOWER</p>
+            <div class="img-container">     
+                <img src="https://img.freepik.com/vector-premium/velocimetro-interfaz-blanca-odometro-realista-medidor-velocidad-aislado-flecha-roja-escala-medicion-millas-plantilla-tablero-instrumentos-vehiculo-diseno-dial-contador-automovil-indicador-velocidad-transporte-vectorial_176411-3654.jpg" alt="Small Image">
+                <img src="https://cdn-icons-png.flaticon.com/512/3903/3903010.png" alt="Small Image">       
+            </div>
+        </div>
+        
+        <button class="btn-agregar">BUILD & PRICE</button>
+        <a class="link" href="https://todorenting.es/por-que-deberia-comprarme-un-coche-de-color-rojo/">Legal Disclaimer</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
