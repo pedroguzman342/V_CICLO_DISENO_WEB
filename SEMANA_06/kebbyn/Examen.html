@@ -1,0 +1,140 @@
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #8f8c8c;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card-producto {
+            width: 250px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+            flex: 1;
+        }
+        .card-producto:hover {
+            box-shadow: 0 0 8px 1px #000;
+        }
+        .img-card {
+            width: 100%;
+        }
+        .descripcion {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .descripcion p {
+            margin: 5px 0;
+            border-bottom: 1px solid #ddd; /* Línea divisoria */
+            padding-bottom: 10px; /* Espacio entre la línea y el siguiente elemento */
+        }
+        .nombre_producto {
+            font-weight: bold;
+            font-size: medium;
+        }
+        .prec{
+            font-size: small;
+        }
+        .precio-contado {
+            font-weight: bold;
+            color: red;
+            font-size: 20px;
+        }
+        .btn_agregar {
+            color: red;
+            border: 2px solid red;
+            width: 100%;
+            border-radius: 20px;
+            background: #ffffff;
+            height: 40px;
+            cursor: pointer;
+        }
+        .btn_agregar:hover {
+            color: white;
+            background: red;
+        }
+        .ult{
+            text-align: center;           
+            text-decoration: underline;            
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="container">
+            <a href="https://www.derco.com.pe/modelos/suzuki/new-alto-k10">
+                <div class="card-producto">
+                    <img class="img-card" src="https://derco-pe-prod.s3.amazonaws.com/images/versions/2023-12-14-09-12-40-Dise%C3%B1o%20sin%20t%C3%ADtulo%20%281%29.jpg">
+                    <div class="descripcion">
+                        <sub class="nombre_producto">Fuel Efficiency 8.5/7.1</sub>
+                        <p class="prec">L/100kmº</p>                        
+                        
+                        <sub>Llévatelo desde:</sub>
+                        <p>US$ 160 ó S/ 609 al mes*</p>
+                        <sub>Precio lista:</sub>
+                        <p class="precio-contado">US$ 10,190 ó S/ 38,722*</p>
+                    </div>
+                    <sub>Standard key Features</sub>
+                    <button class="btn_agregar">BUILD Y PRICE</button>
+                    <sub class="ult">*legal disclainner</sub>
+                </div>
+            </a>
+            <!-- Repite el mismo contenido para las siguientes tarjetas -->
+            <a href="https://www.derco.com.pe/modelos/suzuki/nuevo-s-presso">
+                <div class="card-producto">
+                    <img class="img-card" src="https://derco-pe-prod.s3.amazonaws.com/images/versions/2023-02-14-04-02-24-Pendiente%20%281%29.jpg">
+                    <div class="descripcion">
+                        <sub class="nombre_producto">Fuel Efficiency 8.5/7.1</sub>
+                        <p class="prec">L/100kmº</p> 
+                        
+                        <sub>Llévatelo desde:</sub>
+                        <p>US$ 170 ó S/ 645 al mes*</p>
+                        <sub>Precio lista:</sub>
+                        <p class="precio-contado">US$ 10,790 ó S/ 41,002*</p>
+                    </div>
+                    <sub>Standard key Features</sub>
+                    <button class="btn_agregar">BUILD Y PRICE</button>
+                    <sub class="ult">*legal disclainner</sub>
+                </div>
+            </a>
+            <a href="https://www.derco.com.pe/modelos/suzuki/nuevo-s-presso">
+                <div class="card-producto">
+                    <img class="img-card" src="https://derco-pe-prod.s3.amazonaws.com/images/version/2023-07-12-Dise%C3%B1o%20sin%20t%C3%ADtulo.jpg">
+                    <div class="descripcion">
+                        <sub class="nombre_producto">Fuel Efficiency 8.5/7.1</sub>
+                        <p class="prec">L/100kmº</p> 
+                        
+                        <sub>Llévatelo desde:</sub>
+                        <p>US$ 181 ó S/ 686 al mes*</p>
+                        <sub>Precio lista:</sub>
+                        <p class="precio-contado">US$ 11,490 ó S/ 43,662*</p>
+                    </div>
+                    <sub>Standard key Features</sub>
+                    <button class="btn_agregar">BUILD Y PRICE</button>
+                    <sub class="ult">*legal disclainner</sub>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
