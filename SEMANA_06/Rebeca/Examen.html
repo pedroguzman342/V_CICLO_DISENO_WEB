@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Carros</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .column {
+            width: calc(33.33% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            box-sizing: border-box;
+        }
+        .column:last-child {
+            margin-right: 0;
+        }
+        .car {
+            margin-bottom: 20px;
+        }
+        .car-image {
+            width: 100%;
+            height: 200px; /* Altura fija para la imagen */
+            background-color: #f0f0f0; /* Color de fondo temporal */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .car-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .car-details {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .car h2 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .car p {
+            margin: 10px 0; /* Agregando margen arriba y abajo */
+            font-size: 14px;
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px; /* Aumentado el padding para hacerlo más largo */
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="car">
+                <div class="car-image">
+                    <img src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_71d57af21c68486aa0649a3a2b955bcf.webp" alt="Carro 1">
+                </div>
+                <div class="car-details">
+                    <p>STARTING AT      $ 22,495*   Full Efficiency       8.5/7.1</p>
+                    <p>ENGNE      HORSEPOWER   </p>
+                    <a href="#" class="button">BUILD &amp; PRICE</a>
+                </div>
+            </div>
+            <!-- Más carros aquí -->
+        </div>
+        <div class="column">
+            <div class="car">
+                <div class="car-image">
+                    <img src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_8567ca2be49543389d00e78a4c03ed28.jpg" alt="Carro 2">
+                </div>
+                <div class="car-details">
+                    <p>STARTING AT      $ 22,495*   Full Efficiency       8.5/7.1</p>
+                    <p>ENGNE      HORSEPOWER   </p>
+                    <a href="#" class="button">BUILD &amp; PRICE</a>
+                </div>
+            </div>
+            <!-- Más carros aquí -->
+        </div>
+        <div class="column">
+            <div class="car">
+                <div class="car-image">
+                    <img src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a68ca601f2ce4bb0ab937b22cd16c16f.webp" alt="Carro 3">
+                </div>
+                <div class="car-details">
+                    <p>STARTING AT      $ 22,495*   Full Efficiency       8.5/7.1</p>
+                    <p>ENGNE      HORSEPOWER   </p>
+                    <a href="#" class="button">BUILD &amp; PRICE</a>
+                </div>
+            </div>
+            <!-- Más carros aquí -->
+        </div>
+    </div>
+</body>
+</html>
