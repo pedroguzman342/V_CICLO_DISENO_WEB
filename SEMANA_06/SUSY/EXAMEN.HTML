@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Productos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F5F1EE;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card {
+            width: 250px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .card-subtitle {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-bottom: 16px;
+        }
+
+        .card-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-text span {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
+        .card-text h5 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .card-text small {
+            font-size: 0.7rem;
+        }
+
+        .card-button {
+            margin-top: auto;
+        }
+
+        .card-button button {
+            width: 100%;
+            padding: 8px;
+            background-color: #FFCBD2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card-button button:hover {
+            background-color: #e41b22e1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            background-color: #ECEDF1;
+            color: #6c757d;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://s3.amazonaws.com/nexu-ghost-blog/2016/Sep/Autos_economicos-1473291482119.jpg" alt="Product 1" class="card-image">
+        <div class="card-content">
+            <div class="card-text">
+                <div class="card-title">INICIO DESDE</div>
+                <div class="card-subtitle">&dollar;19,600&ast;</div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>Eficiencia de combustible</span>
+                    <small>L/90KM&ast;</small>
+                </div>
+                <div>
+                    <h5>1.0/1.6</h5>
+                    <small class="text-right">(ciudad/Aut)</small>
+                </div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>MOTOR</span>
+                    <div class="d-flex align-items-center">
+                        <img src="https://imgur.com/iPtsG7I.png" alt="Motor Icon" width="35" height="25">
+                        <div class="ml-2">
+                            <small class="ghj">1.4L MultiAir</small>
+                            <small class="ghj">12V I-4 Turbo</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>CABALLOS DE FUERZA</span>
+                    <div class="d-flex align-items-center">
+                        <img src="https://imgur.com/J11mEBq.png" alt="Horsepower Icon">
+                        <h6 class="ml-2">138 hp&ast;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-button">
+                <button type="button">CONSTRUIR & PRECIO</button>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">*Aviso legal</small>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://i0.wp.com/bestsellingcarsblog.com/wp-content/uploads/2014/11/Nissan-March-Mexico-October-2014.jpg" alt="Product 2" class="card-image">
+        <div class="card-content">
+            <div class="card-text">
+                <div class="card-title">INICIO DESDE</div>
+                <div class="card-subtitle">&dollar;25,345&ast;</div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>Eficiencia de combustible</span>
+                    <small>L/120KM&ast;</small>
+                </div>
+                <div>
+                    <h5>8.3/6.2</h5>
+                    <small class="text-right">(ciudad/Aut)</small>
+                </div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>MOTOR</span>
+                    <div class="d-flex align-items-center">
+                        <img src="https://imgur.com/iPtsG7I.png" alt="Motor Icon" width="35" height="25">
+                        <div class="ml-2">
+                            <small class="ghj">1.4L MultiAir</small>
+                            
+                             <small>Nissan XYZ 1.5L</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>CABALLOS DE FUERZA</span>
+                    <div class="d-flex align-items-center">
+                        <img src="" alt="Horsepower Icon">
+                        <h6 class="ml-2">135 hp&ast;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-button">
+                <button type="button">CONSTRUIR & PRECIO</button>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">*Aviso legal</small>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://img.olx.com.br/images/61/617906029000981.jpg" alt="Product 3" class="card-image">
+        <div class="card-content">
+            <div class="card-text">
+                <div class="card-title">INICIO DESDE</div>
+                <div class="card-subtitle">&dollar;20,600&ast;</div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>Eficiencia de combustible</span>
+                    <small>L/150KM&ast;</small>
+                </div>
+                <div>
+                    <h5>9.0/7.2</h5>
+                    <small class="text-right">(ciudad/Aut)</small>
+                </div>
+                <div class="card-separator"></div>
+                <div>
+                    <span>MOTOR</span>
+                    <div class="d-flex align-items-center">
+                        <img src="https://imgur.com/iPtsG7I.png" alt="Motor Icon" width="35" height="25">
+                        <div class="ml-2">
+                            <small class="ghj">1.5L MultiAir</small>
+                            <small class="ghj">15V I-4 Turbo</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>CABALLOS DE FUERZA</span>
+                    <div class="d-flex align-items-center">
+                        <img src="https://imgur.com/J11mEBq.png" alt="Horsepower Icon">
+                        <h6 class="ml-2">135 hp&ast;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-button">
+                <button type="button">CONSTRUIR & PRECIO</button>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">*Aviso legal</small>
+        </div>
+    </div>
+</body>
+</html>
