@@ -2,15 +2,47 @@
 <head>
     <style>
         html{
-            background: rgba(162, 190, 166, 0.533);
+            background: v#8f8c8c;
         }
-     .car-producto{
-        width: 250px;
-     }
-    </style>
-       
+        a{
+            text-decoration: none;
+                color: inherit;
+        }
+        .card-producto{
+                width: 250px;
+                background: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;    
+         }
+     .card-producto:hover
+        .img-card{
+            width: 100%;
+        }
+        .nombre_producto{
+            font-weight: bold;
+        }
+        .precio-oferta{
+            font-weight: bold;
+            color: rgb(255, 0, 34);
+            font-size: 20px;
+        }
+        .btn_agregar{
+            color: red;
+            border: 2px solid red;
+            width: 100%;
+            border-radius: 20px;
+            background: #fff;
+            height: 40px;
+            cursor: pointer;
+            box-shadow: 0 0 8px 1px;
 
-       
+        }
+        .btn_agregar:hover{
+            color: white;
+            background: rgb(221, 77, 77);
+        }
+    </style>  
 </head>
 <div class="card-producto">
     <img class="img-card" src="https://falabella.scene7.com/is/image/FalabellaPE/19929442_1?wid=1500&hei=1500&qlt=70">
@@ -19,7 +51,7 @@
     <P>12GB 512GB SSD 12 va Gen</P>
     <p>s/. 2,259 un</p>
     <p class="precio-oferta">s/. 2,799 un</p>
-    <button>agregar</button>
+    <button class="btn_agregar">agregar</button>
 </div>
 </body>
 </html>
