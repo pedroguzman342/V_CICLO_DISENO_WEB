@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas de Información</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    height: 100vh; /* Altura total de la ventana del navegador */
+  }
+  .contenedor-tarjetas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .tarjeta {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .tarjeta:last-child {
+    margin-right: 0;
+  }
+  .tarjeta img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Añadido para redondear las esquinas de la imagen */
+  }
+  .boton-rojo {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 50px;
+  }
+  .letra {
+    margin-left: 50px;
+    font-size: 10px;
+  }
+  .kilo {
+    font-size: 10px;
+  }
+
+
+
+  .contenedor-imagenes {
+    display: flex; /* Utilizamos flexbox para posicionar las imágenes */
+    justify-content: space-between; /* Las imágenes se distribuyen horizontalmente con el máximo espacio entre ellas */
+    align-items: center; /* Centramos verticalmente las imágenes */
+  }
+
+  .img2,
+  .img3 {
+    width: 50px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Hacer que la imagen sea un bloque */
+  }
+
+  .precio{
+    margin-left: 250px;
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="contenedor-centralizado">
+  <div class="contenedor-tarjetas">
+    
+    <div class="tarjeta">
+      <img src="https://th.bing.com/th/id/R.ba6c096bedff62a196dff10e9c1e5b4c?rik=KyhMEjZUtyc9YQ&riu=http%3a%2f%2fplacervial.com%2f2%2fimages%2fwallpapers%2fg%2fda72c5805f2c961890f43bff77eec0e2.jpg&ehk=qnyEyoWs%2bTj0fPDm%2bOEzEUlsCwmTILPQ8JKxv1XZCLM%3d&risl=&pid=ImgRaw&r=0" alt="Imagen 1">
+      <p class="precio">$22,495</p>
+      <p>Fuel Efficciency 8.5/7.1 3 1.</p>
+      <div class="contenedor-imagenes">
+        <img class="img2" src="https://cdn-icons-png.flaticon.com/512/3347/3347927.png">
+        <img class="img3" src="https://media.istockphoto.com/id/1147747786/nl/vector/snelheidsmeter-icoon-ge%C3%AFsoleerd-op-wit.jpg?s=1024x1024&w=is&k=20&c=vvvPoDitZuR-R630Tr71DbtXtfxtOoNvm6o-RwXp3_c=">
+      </div>
+    
+      <p class="kilo">L/100km"</p>
+      
+      <button class="boton-rojo">BUILD & PRICE</button>
+
+      <p class="letra">Legal Disclaimer</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://th.bing.com/th/id/OIP.vvExxSOU4Xijzm7XzqcYiwHaE8?w=1020&h=680&rs=1&pid=ImgDetMain" alt="Imagen 2">
+      <p class="precio">$22,495</p>
+      <p>Fuel Efficciency 8.5/7.1 3 1.</p>
+      <div class="contenedor-imagenes">
+        <img class="img2" src="https://cdn-icons-png.flaticon.com/512/3347/3347927.png">
+        <img class="img3" src="https://media.istockphoto.com/id/1147747786/nl/vector/snelheidsmeter-icoon-ge%C3%AFsoleerd-op-wit.jpg?s=1024x1024&w=is&k=20&c=vvvPoDitZuR-R630Tr71DbtXtfxtOoNvm6o-RwXp3_c=">
+      </div>
+      <p class="kilo">L/100km"</p>
+      
+      <button class="boton-rojo">BUILD & PRICE</button>
+      <p class="letra">Legal Disclaimer</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://cdn.motor1.com/images/mgl/w0076/s1/audi-e-tron-br.jpg" alt="Imagen 3">
+      <p class="precio">$22,495</p>
+      <p>Fuel Efficciency 8.5/7.1 3 1.</p>
+      <div class="contenedor-imagenes">
+        <img class="img2" src="https://cdn-icons-png.flaticon.com/512/3347/3347927.png">
+        <img class="img3" src="https://media.istockphoto.com/id/1147747786/nl/vector/snelheidsmeter-icoon-ge%C3%AFsoleerd-op-wit.jpg?s=1024x1024&w=is&k=20&c=vvvPoDitZuR-R630Tr71DbtXtfxtOoNvm6o-RwXp3_c=">
+
+      </div>
+      <p class="kilo">L/100km"</p>
+
+      <button class="boton-rojo">BUILD & PRICE</button>
+      <p class="letra">Legal Disclaimer</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
