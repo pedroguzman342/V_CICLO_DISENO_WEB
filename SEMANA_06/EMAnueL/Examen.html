@@ -1,0 +1,143 @@
+<html>
+<head>
+    <style>
+        
+        .container {
+            margin: 20px; 
+        }
+
+        
+        .main-container {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+        }
+
+        
+        .Autos {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+        
+        
+        .imgC {
+            width: 200px;
+            height: 200px;
+        }
+        
+        
+        .Letras {
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            font-size: 14px; 
+            opacity: 0.7; 
+            
+        }
+        .Letras span {
+            font-size: inherit;
+            
+           }
+        
+        
+        .info {
+            background-color: #f2f2f2;
+            font-size: 12px;
+            padding: 10px;
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            display: flex; /* Utilizar flexbox */
+            flex-direction: column;
+        }
+        .btn_agregar {
+        background-color: red; 
+        color: white; 
+        text-transform: uppercase; 
+        padding: 10px 20px; 
+        border: none; 
+        cursor: pointer; 
+        border-radius: 5px; /* Añadir esquinas redondeadas */
+    }
+         .fuel-efficiency {
+         font-size: 16px; /* Tamaño de fuente */
+        }
+
+        .fuel-efficiency span {
+            margin:  6px; /* Márgenes entre los números */
+        } 
+        .info sub {
+        font-size: 80%; 
+        display: block; 
+    }
+    .info .upper-text {
+        font-size: 80%; 
+        
+        margin-left: -50px; /* Ajuste de margen izquierdo */
+    }
+    
+
+    .info sub {
+        font-size: 80%; 
+    }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Primer bloque de código -->
+        <div class="container">
+            <div class="Autos">
+                <img class="imgC" src="https://www.toyotaperu.com.pe/toyota-a-gas/assets/img/modelo/yaris-auto-gnv.jpg">
+                <p class="Letras">STARTING AT <span>$22,495*</span></p>      
+                <p class="nombre-producto">Fuel efficiency <span>8.5/71</span></p>
+                <div class="info">
+                    <span class="upper-text">ENGIE</span>
+                    <p>
+                        <span>1.4L MultiAir</span>
+                        <span>135 hp*</span>
+                    </p>
+                    <sub>16v 14 Turbo</sub>
+                </div>
+                <button class="btn_agregar"> Build & price</button>
+            </div>
+        </div>
+
+        <!-- Segundo bloque de código -->
+        <div class="container">
+            <div class="Autos">
+                <img class="imgC" src="https://www.toyotaperu.com.pe/sites/default/files/360/agya23_blancoW09_05.jpg">
+                <p class="Letras">STARTING AT $22,495*</p>      
+                <p class="nombre-producto">Fuel efficiency <span>8.5/71</span></p>
+                <div class="info">
+                    <span class="upper-text">ENGIE</span>
+                    <p>
+                        <span>1.4L MultiAir</span>
+                        <span>135 hp*</span>
+                    </p>
+                    <sub>16v 14 Turbo</sub>
+                </div>
+                <button class="btn_agregar"> Build & price</button>
+            </div>
+        </div>
+
+        <!-- Tercer bloque de código -->
+        <div class="container">
+            <div class="Autos">
+                <img class="imgC" src="https://www.toyotaperu.com.pe/sites/default/files/360/avanza22_negrometalicoX12_05.jpg">
+                <p class="Letras">STARTING AT $22,495*</p>      
+                <p class="nombre-producto">Fuel efficiency <span>8.5/71</span></p>
+                <div class="info">
+                    <span class="upper-text">ENGIE</span>
+                    <p>
+                        <span>1.4L MultiAir</span>
+                        <span>135 hp*</span>
+                    </p>
+                    <sub>16v 14 Turbo</sub>
+                </div>
+                <button class="btn_agregar"> Build & price</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
