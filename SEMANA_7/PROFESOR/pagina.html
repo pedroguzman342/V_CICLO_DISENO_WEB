@@ -1,1 +1,102 @@
-hola mundo
+<html>
+<head>
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+
+    <style>
+        .caja{
+            background: #ff0000;
+        }
+
+        @media only screen and (max-width:400px){
+            .caja{
+                background: #0004ff;
+            }
+        }
+
+        @media only screen and (min-width:401px) and (max-width:600px){
+            .caja{
+                background: #00ff00;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="caja">
+        ESTO ES UNA CAJA
+    </div>
+
+    <center><h1>Formularios</h1></center>
+
+    <form action="#" method="GET">
+        <div>
+            <span>Ingreso de texto</span>
+            <input type="text">
+        </div>
+
+        <div>
+            <span>Ingreso de contraseña</span>
+            <input type="password">
+        </div>
+
+        <div>
+            <span>Ingreso de numeros</span>
+            <input type="number" min="5" max="30">
+        </div>
+
+        <div>
+            <span>Ingreso de fecha</span>
+            <input type="date">
+        </div>
+
+        <div>
+            <span>Ingreso de hora</span>
+            <input type="time">
+        </div>
+
+        <div>
+            <span>Ingreso de color</span>
+            <input type="color">
+        </div>
+
+        <div>
+            <span>Ingreso de mes</span>
+            <input type="month">
+        </div>
+
+        <button>Este es mi primer boton</button>
+
+        <div>
+            <span>Ingreso de checkbox</span>
+            <input type="checkbox">Opcion 1
+            <input type="checkbox">Opcion 2
+        </div>
+
+        <div>
+            <span>Ingreso de radio buton</span>
+            <input type="radio">Opcion 1
+            <input type="radio">Opcion 2
+        </div>
+
+        <div>
+            <span>Ingreso de email</span>
+            <input type="email">
+        </div>
+
+        <div>
+            <span>Ingreso de textarea</span>
+            <textarea>Escribir nota aqui</textarea>
+        </div>
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>
