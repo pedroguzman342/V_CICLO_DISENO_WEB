@@ -1,0 +1,84 @@
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .caja{
+                background: #ff0000;
+            }
+            @media only screen and (max-width:400px){
+                .caja{
+                    background: #0004ff;
+                }
+            }
+            @media only screen and (min-width: 401px) and (max-width: 600px) {
+                .caja {
+                    background: #00ff00; 
+                }
+            }
+            @media only screen and (min-width: 601px) {
+                .caja {
+                   background: #ff0000; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div  class="caja">
+            ESTO ES UNA CAJA
+
+        </div>
+        <center><h1>Formulario</h1></center>
+        <from action="#" method="GET"></from>
+            <div>
+                <apan>Ingreso de texto</apan>
+                <input type="text">
+            </div>
+            <div>
+                <apan>Ingreso de contarseña</apan>
+                <input type="password">
+            </div>
+            <div>
+                <apan>Ingreso de munero</apan>
+                <input type="number">
+            </div>
+            <div>
+                <apan>Ingreso de fecha</apan>
+                <input type="date">
+            </div>
+            <div>
+                <apan>Ingreso de hora</apan>
+                <input type="time">
+            </div>
+            <div>
+                <apan>Ingreso de color</apan>
+                <input type="color">
+            </div>
+            <div>
+                <apan>Ingreso de mes</apan>
+                <input type="month">
+            </div>
+
+            <buttom>este es mi priomer butom</buttom>
+
+            <div>
+                <apan>Ingreso de checkbox</apan>
+                <input type="checkbox">opcion 1
+                <input type="checkbox">opcion 2
+            </div>
+            <div>
+                <apan>Ingreso de radio buton</apan>
+                <input type="radio">opcion 1
+                <input type="radio">opcion 2
+            </div>
+            <div>
+                <apan>ingreso de email</apan>
+                <input type="email">
+            </div>
+            <div>
+                <apan>ingreso de textarea</apan>
+                <textarea>escribir nota aqui</textarea>
+            </div>
+        </from>
+    </body>
+</html>
