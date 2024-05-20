@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .caja{
+                background:#d05555;
+            }
+
+            @media only screen and (max-width:400px){
+                .caja{
+                    background:#6f5ed0;
+                }
+            }
+            @media only screen and (min-width:401px) and (max-width:600px){
+                .caja{
+                    background:#4ca383;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="caja">
+            esto es una caja
+        </div>
+
+        <center><h1>Formularios</h1></center>
+        <form action="#" method="GET">
+            <div>
+                <span>Usuario</span>
+                <input type="text">
+            </div>
+
+            <div>
+            <span>Contraseña</span>
+                <input type="password">
+            </div>
+
+            <div>
+                <span>Ingresar Numeros</span>
+                <input type="number" min="5" max="30">
+            </div>
+
+            <div>
+                <span>Fecha</span>
+                <input type="date">
+            </div>
+
+            <div>
+                <span>Hora</span>
+                <input type="time">
+            </div>
+
+            <div>
+                <span>Color</span>
+                <input type="color">
+            </div>
+
+            <div>
+                <span>Fecha</span>
+                <input type="month">
+            </div>
+
+            <button>Ingresar</button>
+
+            <div>
+                <span>Ingreso Checkbox</span>
+                <input type="checkbox">Opcion 1
+                <input type="checkbox">Opcion 2
+                <input type="checkbox">Opcion 3                
+            </div><br>
+
+            <div>
+                <span>Ingreso de radio button</span>
+                <input type="button">Opcion 1
+                <input type="button">Opcion 2
+                <input type="button">Opcion 3                
+            </div>
+
+            <div>
+                <span>Correo</span>
+                <input type="email">
+            </div>
+
+            <div>
+                <span>Mensaje</span>
+                <textarea>Escribir nota aqui</textarea> 
+            </div>
+
+
+        </form>
+
+    </body>
+
+</html>    
