@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <img src="path/to/your/photo.jpg" alt="Foto de Perfil" class="profile-img">
+            <h1>Tu Nombre</h1>
+            <p class="lead">Desarrollador Web | Diseñador</p>
+            <div>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="content bg-light" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <p>Descripción breve sobre ti. Habla de tus habilidades, tu experiencia y tus logros.</p>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="content" id="resume">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Experiencia</h3>
+                    <ul>
+                        <li>
+                            <h4>Puesto de Trabajo</h4>
+                            <p>Empresa | Fecha de inicio - Fecha de finalización</p>
+                            <p>Descripción breve de tus responsabilidades y logros.</p>
+                        </li>
+                        <!-- Añadir más experiencia aquí -->
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Educación</h3>
+                    <ul>
+                        <li>
+                            <h4>Grado Académico</h4>
+                            <p>Institución | Fecha de inicio - Fecha de finalización</p>
+                            <p>Descripción breve de tus estudios y logros.</p>
+                        </li>
+                        <!-- Añadir más educación aquí -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="content bg-light" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portafolio</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="path/to/project1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Añadir más proyectos aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
