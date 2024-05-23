@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+        .imagen {
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="caja1"></div>
+    <input type="number" id="numero" placeholder="Ingrese un número">
+    <button id="generar">Generar Pares</button>
+
+    <script>
+        $("#generar").click(function() {
+            var limite = parseInt($("#numero").val());
+            $("#caja1").html("");  // Limpiar el contenido anterior
+
+            for (var num = 2; num <= limite; num += 2) {
+                $("#caja1").append("<p>" + num + "</p>");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
