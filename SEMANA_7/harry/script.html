@@ -1,0 +1,87 @@
+<html>
+    <head> 
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            .imagen{
+                width: 150px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="caja1"></div>
+
+        <script>
+            $("#caja1").html("hola mundo");
+            $("#caja1").append("<br>");
+            $("#caja1").append("INSTITUTO PAUSA");
+            $("#caja1").append("<img class='imagen' src='https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_640.jpg'>");
+
+             /* Enumeración del 1 al 10*/
+             for (let i = 1; i <= 10; i++) {
+             $("#caja1").append("<br>");
+             $("#caja1").append(i);
+             }
+
+             /* Enumeración de números pares del 1 al 10
+             for (let i = 2; i <= 10; i += 2) {
+              $("#caja1").append("<br>");
+              $("#caja1").append(i);
+              }*/
+
+              /*var n = 20; 
+              var fib = [0, 1];
+
+             for (let i = 2; i < n; i++) {
+             fib[i] = fib[i - 1] + fib[i - 2];
+             }
+
+              fib.forEach(num => {
+              $("#caja1").append("<br>" + num);
+             });*/
+
+             /*var n =8;
+             var n =0;
+             var n =1;
+             var siguientes ;
+             for (var i =3; i <= n; i++){
+                siguientes = a +b ;
+                $("#caja1").append(siguiente);
+                $("#caja1").append("<br>>");
+                a=b;
+                b=siguientes;*/
+
+
+                    // Definimos las variables iniciales
+             var n = 10; // El valor hasta el cual queremos enumerar los números pares
+             var a = 0; // Primer término de la secuencia Fibonacci
+             var b = 1; // Segundo término de la secuencia Fibonacci
+               var siguiente;
+
+             // Mostramos los números pares de la secuencia Fibonacci hasta n
+              for (var i = 1; i <= n; i++) {
+              // Si el término actual es par, lo mostramos
+             if (a % 2 === 0) {
+             $("#caja1").append(a);
+             $("#caja1").append("<br>");
+              }
+        
+             // Calculamos el siguiente término de la secuencia Fibonacci
+             siguiente = a + b;
+        
+             // Actualizamos a y b para el siguiente cálculo
+              a = b;
+             b = siguiente;
+
+
+             }
+
+
+        </script>
+       
+
+
+
+
+    </body>
+</html>
