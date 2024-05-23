@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Ejemplo</title>
+   <script src="jquery-3.7.1.min.js"></script>
+   <style>
+    .imagen{
+        width: 150px;
+        border-radius: 50%;
+    }
+   </style>
+</head>
+<body>
+    <div id="caja1"> </div>
+    <script>
+        $("#caja1").html("Hola mundo");
+        $("#caja1").append("<br>");
+        $("#caja1").append("Instituto Pauza");
+        $("#caja1").append("<br>");
+        $("#caja1").append("<img class='imagen' src='https://iestpsarasara.edu.pe/wp-content/uploads/2023/11/Hector.bmp'>");
+        $("#caja1").append("<br>");
+
+        
+        //imprimir 1 al 10
+        for (let i = 1; i <= 10; i++) {
+            $("#caja1").append(i);
+        }
+        //Numeros primos
+        for (let i = 2; i <= 10; i += 2) {
+            $("#caja1").append(i);
+        }
+        //Numeros impares
+        for (let i = 1; i <= 10; i += 2) {
+            $("#caja1").append(i);
+        }
+
+        //Secuencia de Fibonacci
+        //////////////////////////**Mi ejemplo**//////////////////////
+        var n = 5; // Número de términos de la secuencia de Fibonacci
+        // Secuencia de Fibonacci
+        let a = 0, b = 1;
+        for (let i = 0; i < n; i++) {
+            $("#caja1").append(a + "<br>>");
+            [a, b] = [b, a + b]; // Actualizar a y b
+        }
+
+         //Secuencia de Fibonacci
+        //////////////////////////**Ejemplo del Profe**//////////////////////
+        var n = 8;
+        var x = 0;
+        var z = 1;
+        var siguiente;
+        for(var i=3; i<= n; i++){
+            siguiente = x + z;
+            $("#caja1").append(siguiente);
+            $("#caja1").append("<br>>");
+            x = z;
+            z = siguiente;
+        }
+    
+        //////////////////////////**imprimir los numeros pares**//////////////////////
+        var limite = 200; // Límite superior para imprimir números pares
+
+        for (let i = 0; i <= limite; i += 2) {
+        $("#caja1").append(i + "<br>");
+        }
+    </script>
+</body>
+</html>
