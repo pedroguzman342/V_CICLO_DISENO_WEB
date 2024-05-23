@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+
+        <style>
+            .imagen{
+                border-radius: 50%;
+                width: 150px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <div id="caja1"></div>
+        <script>
+            $("#caja1").html("Hola mundo");
+            $("#caja1").append("<br>");
+            $("#caja1").append("Instituto Pausa");
+            $("#caja1").append("<img class='imagen' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7TxEnwaaU5UGbtRasarYKKQWzPbfS5t5pk2M3HKT6Jw&s'>");
+
+            /*for (let i = 1; i <= 10; i++) {
+            $("#caja1").append("<br>" + i);}*/
+            /*for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                $("#caja1").append("<br>" + i);
+            }*/
+            /*for (let num = 2; num <= 10; num += 2) {
+            $("#caja1").append("<br>" + num);
+             }*/
+            /*for (let num = 1; num <= 10; num += 2) {
+                $("#caja1").append("<br>" + num);
+           
+            }*/
+          
+            // var n = 8;
+            //secuenci de Fibonacci
+            //0,1,2,3,4,5,6,7,8,13,21
+
+            //let a = 0, b = 1, nextTerm;
+        /*$("#caja1").append("<br>" + a);
+        $("#caja1").append("<br>" + b);
+        for (let i = 1; i <= 9; i++) {  // Ajusta el límite según sea necesario
+            nextTerm = a + b;
+            a = b;
+            b = nextTerm;
+            $("#caja1").append("<br>" + nextTerm);
+        }*/
+        /*let fib = [0, 1];
+        for (let i = 2; i <= 10; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        fib.forEach(num => {
+            $("#caja1").append("<br>" + num);
+        });*/
+       /* var n = 8; 
+        var fib = [0, 1];
+
+        for (let i = 2; i < n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        fib.forEach(num => {
+            $("#caja1").append("<br>" + num);
+        });*/
+        /*var n = 8   ;
+        var n = 0;
+        var b = 1 ; 
+        var siguiente ; 
+        for (var i = 3 ; i<=n; i++){
+            siguiente = a+b;
+            $("#caja1").append(siguiente);
+            $("#caja1").append("<br>>");
+            a=b;
+            b = siguiente;
+
+
+        }*/
+
+        var n = 200;
+        var a = 0;
+        var b = 1;
+        var siguiente;
+
+        // Mostrar los primeros dos números si son pares
+        if (a % 2 === 0) {
+            $("#caja1").append(a + "<br>");
+        }
+        if (b % 2 === 0) {
+            $("#caja1").append(b + "<br>");
+        }
+
+        for (var i = 3; i <= n; i++) {
+            siguiente = a + b;
+            if (siguiente % 2 === 0) {
+                $("#caja1").append(siguiente + "<br>");
+            }
+            a = b;
+            b = siguiente;
+        }
+
+       
+        
+
+
+        
+            
+        </script>
+
+    </body>
+
+
+
+
+
+</html>
