@@ -40,7 +40,13 @@
             b= siguiente;
         }
 
-        
+        $(document).ready(function() {
+    var max = 100;
+    for (var i = 2; i <= max; i += 2) {
+        $("#caja1").append(i);
+        $("#caja1").append("<br>");
+    }
+});
 
         
 
