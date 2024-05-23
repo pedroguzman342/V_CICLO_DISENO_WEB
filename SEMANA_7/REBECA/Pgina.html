@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      
+      .caja{
+         background: #ff0000;
+       }
+
+      @media only screen and (max-width:400px){
+        .caja{
+            background:#0004ff;
+        }
+      }
+
+      @media only screen and (min-width:401px) and (max-width:600px){
+        .caja{
+            background:#00ff00;
+        }
+      }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="caja">
+        ESTO ES UNA CAJA
+    </div>
+     <center><h1>Formulario</h1></center>
+
+    <from action="#" method="GET">
+      <div>
+        <span>ingreso texto</span>
+        <input type="text">
+      </div>
+      
+      <div>
+        <span>ingreso de contrseña</span>
+        <input type="password">
+      </div>
+
+      <div>
+        <span>ingreso de numero</span>
+        <input type="number" min="5" max="30">
+      </div>
+
+      <div>
+        <span>ingreso de fecha</span>
+        <input type="date">
+      </div>
+
+      <div>
+        <span>ingreso de hora</span>
+        <input type="time">
+      </div>
+
+      <div>
+        <span>ingreso de color</span>
+        <input type="color">
+      </div>
+
+      <div>
+        <span>ingreso de mes</span>
+        <input type="month">
+      </div>
+
+      <button>este es mi primer boton</button>
+
+      <div>
+          <span>ingreso de checkbox</span>
+          <input type="checkbox">opcion 1
+          <input type="checkbox">opcion 2
+      </div>
+
+      <div>
+        <span>Ingreso de email</span>
+        <input type="email">
+      </div>
+
+      <div>
+        <span>Ingreso de Textarea</span>
+        <textarea>Escribir nota aqui</textarea>
+      </div>
+
+    </from>
+
+</body>
+
+</html>
