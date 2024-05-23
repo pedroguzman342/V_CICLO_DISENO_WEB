@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            .imagen{
+                width: 150px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="caja1"></div>
+        <script>
+            $("#caja1").html("Hola mundo");
+            $("#caja1").append("<br>");
+            $("#caja1").append("Instituto Pausa");
+            $("#caja1").append("<img class='imagen' src='https://media.admagazine.com/photos/64f79a2fadb58ff7b4aea46d/master/w_1600%2Cc_limit/flor%25E2%2580%2591de%25E2%2580%2591cerezo%25E2%2580%2591clima.jpg'>");
+
+            //  for (var i = 1; i<= 10; i++) {
+            //      $("#caja1").append(i)
+            //  }
+
+            //  for (var i = 1; i <= 10; i++) {
+            //      if (i % 2 === 0) {
+            //          $("#caja1").append(i);
+            //      }
+            //  }
+
+            //  for (var i = 2; i <= 10; i += 2) {
+            //      $("#caja1").append(i);
+            //  }
+
+            //  for (var i = 1; i <= 10; i += 2) {
+            //      $("#caja1").append(i + " ");
+            //  }
+
+            //  var n = 9, fib = [0, 1];
+            //  for (var i = 2; i < n; fib[i] = fib[i - 1] + fib[i - 2], i++) {}
+            //  $("#caja1").append(fib.join(" "));
+
+            //  var n = 8;
+            //  var a = 0;
+            //  var b = 1;
+            //  var siguiente;
+
+            //  for (var i = 4; i <= n; i++){
+            //      siguiente = a+b;
+            //      $('#caja1').append(siguiente);
+            //      $('#caja1').append("<br>>")
+            //      a=b;
+            //      b= siguiente;
+            //  }
+
+            // var n = 200;
+            // var a = 0;
+            // var b = 1;
+            // var siguiente;
+
+            // for (var i = 0; a <= n; i++) {
+            //     if (a % 2 === 0) {
+            //         $('#caja1').append(a + "<br>");
+            //     }
+            //     siguiente = a + b;
+            //     a = b;
+            //     b = siguiente;
+            // }
+
+            var n = 200;
+
+            for (var i = 1; i <= n; i++) {
+                if (i % 2 === 0) {
+                    $('#caja1').append(i + "<br>");
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>
