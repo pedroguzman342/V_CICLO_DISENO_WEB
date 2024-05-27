@@ -1,0 +1,63 @@
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script> 
+
+    <style>
+        .imagen{
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="caja1"></div>
+
+    <script>
+        $("#caja1").html("Hola mundo");
+        $("#caja1").append("<br>");
+        $("#caja1").append("Instituto Pausa");
+        $("#caja1").append("<img class='imagen' src='https://iestpsarasara.edu.pe/wp-content/uploads/2023/11/slider1-sarasara.jpg'>");
+
+        /*for (let i = 1; i <= 10; i++) {
+        document.write(i + "<br>");
+        }*/
+
+       
+        for (var i=1; i<=10; i++){
+            $("#caja1").append(i);
+        }
+
+        /*for (var i = 2; i <= 10; i + 2){
+            $("#caja1").append(i);
+        }*/
+
+        //secuencia de fibonacci
+        //0,1,1,2,3,5,8,13,21 
+
+        var n = 8;
+        var a = 0;
+        var b = 1;
+
+       // for (var i = 3; i <= n; i++){
+        //    siguiente = a + b;
+        //    $("#caja1").append(siguiente);
+        //    $("#caja1").append("<br>>");
+        //    a = b;
+        //    b = siguiente;;
+        //}
+
+        var n = 100; // Cambia este valor para el límite hasta donde llegar con los números pares
+
+        for (var numero = 0; numero <= n; numero++) {
+            if (numero % 2 === 0) {
+                $("#caja1").append(numero + "<br>");
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>

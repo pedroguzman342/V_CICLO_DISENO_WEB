@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            .imagen{
+                width: 150px;
+                border-radius: 50%; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="caja1"></div>
+        <script>
+            $("#caja1").html("Hola mundo");
+            $("#caja1").append("<br>");
+            $("#caja1").append("instituto pauza");
+            $("#caja1").append("<br>");
+            $("#caja1").append("<img class='imagen' src='https://iestpsarasara.edu.pe/wp-content/uploads/2023/11/slider1-sarasara.jpg'>");
+            $("#caja1").append("<br>");
+            for (let i = 1; i <= 10; i++) {
+                $("#caja1").append(i);
+            }
+            $("#caja1").append("<br>");
+            var n = 10;
+            var fib = [0, 1];
+            for (var i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+                $("#caja1").append(fib[i] + " ");
+            }
+            var n=8;
+            var a=0;
+            var b=1;
+            var siguiente;
+            for (var i=3; i <= n; i++){
+                siguiente =a+b;
+                $("#caja1").append(siguiente);
+                $("#caja1").append("<br>>");
+                a=b
+                b=siguiente;
+            }
+            var n = 10; // o cualquier otro valor deseado
+
+for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) { // Verificar si el número es par
+        $("#caja1").append(i);
+    }
+}
+
+
+
+        </script>
+    </body>
+</html>
