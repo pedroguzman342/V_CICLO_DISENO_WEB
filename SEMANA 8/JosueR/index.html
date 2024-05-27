@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegación</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <style>
+        .barra-navegacion {
+            background-color: #eeeeee;
+            padding: 10px 0;
+        }
+        .barra-navegacion .enlace-navegacion, .barra-navegacion .marca {
+            color: #666666;
+            margin: 0 10px;
+            text-decoration: none; /* Quitar subrayado */
+        }
+        .barra-navegacion .enlace-navegacion.activo {
+            border-bottom: 2px solid #00b7a8;
+        }
+        .iconos-sociales a {
+            color: #666666;
+            margin: 0 5px;
+        }
+        .seccion-heroe {
+            margin-top: 20px;
+            position: relative; /* Permitir posicionar elementos hijos */
+        }
+        .texto-heroe {
+            position: absolute; /* Posicionamiento absoluto */
+            top: 50%; /* Centrar verticalmente */
+            left: 50%; /* Centrar horizontalmente */
+            transform: translate(-50%, -50%); /* Centrar completamente */
+            text-align: center;
+            z-index: 1; /* Asegurarse de que el texto esté sobre la imagen */
+            color: white; /* Color del texto para que se vea bien sobre la imagen */
+        }
+        .texto-heroe h1 {
+            font-size: 4rem; /* Aumentar el tamaño del título */
+            font-weight: bold;
+        }
+        .texto-heroe p {
+            font-size: 1.5rem; /* Aumentar el tamaño del texto */
+        }
+        .texto-heroe .boton {
+            background-color: #00b7a8;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+        .imagen-heroe {
+            text-align: center;
+        }
+        .imagen-heroe img {
+            width: 100%; /* Ocupar todo el ancho disponible */
+            height: auto; /* Mantener la proporción original */
+            max-width: 100vw; /* Limitar el tamaño máximo a la anchura de la ventana */
+            max-height: 80vh; /* Limitar el tamaño máximo a la altura de la ventana */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid barra-navegacion">
+        <div class="row align-items-center">
+            <div class="col-md-1 text-center">
+                <a class="marca" href="#">JOSUE</a>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex justify-content-center">
+                    <a class="enlace-navegacion activo" href="#">INICIO</a>
+                    <a class="enlace-navegacion" href="#">ACERCA DE</a>
+                    <a class="enlace-navegacion" href="#">RESUMEN</a>
+                    <a class="enlace-navegacion" href="#">SERVICIOS</a>
+                    <a class="enlace-navegacion" href="#">PORTAFOLIO</a>
+                    <a class="enlace-navegacion" href="#">CONTACTO</a>
+                </div>
+            </div>
+            <div class="col-md-1 text-center">
+                <div class="iconos-sociales">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container seccion-heroe">
+        <div class="imagen-heroe">
+            <img src="https://us.123rf.com/450wm/arseniipalivoda/arseniipalivoda2212/arseniipalivoda221200021/198480632-programmer-man-looking-at-big-monitor-checking-id-address-and-debugging-system-writing-html-code.jpg?ver=6" alt="Kelly Adams">
+            <div class="texto-heroe">
+                <h1>JOSUE RAMOS</h1>
+                <p>Soy un ilustrador profesional de San Francisco</p>
+                <button class="boton">ACERCA DE MÍ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="JS/bootstrap.min.js"></script>
+</body>
+</html>
