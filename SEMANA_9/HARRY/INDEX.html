@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+                #datos-persona {
+                text-align: center; 
+                position: relative;
+            }
+            #nombre-persona {
+                font-weight: bold; 
+                position: absolute; 
+                top: 0; 
+                left: 50%; 
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.7); 
+                border-radius: 5px; 
+            }
+            #datos-persona img {
+                border-radius: 50%;
+                width: 200px; 
+                height: 200px;
+                object-fit: cover; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="datos-persona"></div>
+        <div id="nombre-persona"></div>
+       <script>
+        $.ajax({
+            url:'https://randomuser.me/api/',
+            type:"GET",
+            success:function(data){
+
+                var datos_personales = data.results[0];
+
+                console.log(data.results[0].gender);
+                console.log(data.results[0].location.city);
+                console.log(data.results[0].location.coordinates.latitude);
+                console.log(data.results[0].location.coordinates.longitude);
+
+                console.log(data.results[0].picture.large);
+                console.log(data.results[0].picture.medium);
+                console.log(data.results[0].picture.thumbnail);
+                
+                /*var imagen = $('<img>').attr('src', data.results[0].picture.large);
+                $('#datos-persona').append(imagen);*/
+
+                var nombre = data.results[0].name.title + ' ' + data.results[0].name.first + ' ' + data.results[0].name.last;
+                var imagen = $('<img>').attr('src', data.results[0].picture.large);
+                $('#nombre-persona').text(nombre);
+                $('#datos-persona').prepend(imagen);
+            }
+        });
+       </script>
+    </body>
+</html>
