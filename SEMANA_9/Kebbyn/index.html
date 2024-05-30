@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            .profile-picture {
+                border-radius: 50%; /* Esto establece un borde circular */
+            }
+            #nombre-apellido {
+                text-align: left; /* Ahora el texto estará alineado a la izquierda */
+                font-size: 18px;
+                margin-top: 10px;
+                padding-left: 10px; /* Espaciado a la izquierda */
+            }
+            #nombre-apellido span {
+                font-size: 16px;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="datos_persona">
+            <div id="nombre-apellido"></div>
+        </div>
+
+        <script>
+            $.ajax({
+                url: 'https://randomuser.me/api/',
+                type: 'GET',
+                success: function(data) {
+                    var title = data.results[0].name.title;
+                    var firstName = data.results[0].name.first;
+                    var lastName = data.results[0].name.last;
+                    var city = data.results[0].location.city;
+                    var latitude = data.results[0].location.coordinates.latitude;
+                    var longitude = data.results[0].location.coordinates.longitude;
+                    var pictureLarge = data.results[0].picture.large;
+
+                    console.log("Title: " + title);
+                    console.log("First Name: " + firstName);
+                    console.log("Last Name: " + lastName);
+                    console.log("City: " + city);
+                    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+                    console.log("Picture (Large): " + pictureLarge);
+
+                    // Display title, first name, and last name above the image
+                    var fullName = title + " " + firstName + " " + lastName;
+                    $('#nombre-apellido').html(fullName);
+
+                    // Create a new img element for the large picture
+                    var imgElement = $('<img>')
+                        .attr('src', pictureLarge)
+                        .attr('alt', 'Profile Picture')
+                        .addClass('profile-picture');
+
+                    // Append the new img element to the container
+                    $('#datos_persona').append(imgElement);
+                }
+            });
+        </script>
+    </body>
+</html>
