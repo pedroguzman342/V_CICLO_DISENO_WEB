@@ -1,0 +1,55 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Imagen y Nombre</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        /* Estilos para el contenedor y sus elementos */
+        #datos_personales {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            width: 150px; /* Ajusta el tamaño según tus necesidades */
+            margin: 0 auto; /* Centra el contenedor en la página */
+        }
+        #datos_personales img {
+            width: 150px; /* Ajusta el tamaño según tus necesidades */
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+        #nombre-persona {
+            font-weight: bold; /* Para resaltar el nombre */
+            position: absolute; /* Para posicionar el texto sobre la imagen */
+            top: 10px; /* Ajusta la posición vertical del texto */
+            left: 50%; /* Coloca el texto en el centro horizontal */
+            transform: translateX(-50%); /* Centra horizontalmente el texto */
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+            padding: 5px 10px; /* Espacio alrededor del texto */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <div id="datos_personales">
+        <div id="nombre-persona"></div>
+    </div>
+    <script>
+        $.ajax({
+            url: 'https://randomuser.me/api/',
+            type: 'GET',
+            success: function(data) {
+                var datos_personales = data.results[0];
+                var nombre = datos_personales.name.title + ' ' + datos_personales.name.first + ' ' + datos_personales.name.last;
+                var imagen = $('<img>').attr('src', datos_personales.picture.large);
+
+                $('#nombre-persona').text(nombre);
+                $('#datos_personales').append(imagen);
+            }
+        });
+    </script>
+</body>
+</html>
