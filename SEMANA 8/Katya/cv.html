@@ -1,65 +1,182 @@
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="JS/bootstrap.min.js"></script>
         <style>
-            .menu_izquierdo{
+            .menu_izquierdo {
                 background: rgba(227, 125, 208, 0.721);
-                position:fixed ;
+                position: fixed;
                 height: 100%;
+                width: 16%;
             }
-            .menu_derecho{
+            .menu_derecho {
                 background: rgba(249, 240, 255, 0.501);
-                
                 margin-left: 16%;
-                
-                
+                padding: 20px;
             }
-            .imagen{
+            .imagen {
                 border-radius: 50%;
                 width: 150px;
                 height: 150px;
-                margin-top: 160%;
-                margin-left: 60px;
+                margin-top: 50%;
+                margin-left: 20px;
                 border: 14px solid #c4b0f455;
-
             }
-            .menu_I{
-                margin-left: 20%;
+            .menu_I {
+                margin-left: 20px;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
                 font-size: 18px;
-               
+            }
+            .menu_I div {
+                cursor: pointer;
+                padding: 10px 0;
+            }
+            .iconos {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            .iconos a {
+                color: #333;
+                font-size: 24px;
+                text-decoration: none;
+            }
+            .project-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 20px;
+            }
+            .project {
+                background: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin: 10px;
+                width: calc(33% - 20px);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                padding: 15px;
+            }
+            .project img {
+                max-width: 100%;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 15px;
+            }
+            .project h3 {
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            .project p {
+                font-size: 14px;
+                margin: 0 0 10px;
+            }
+            .project a {
+                color: #007bff;
+                text-decoration: none;
+            }
+            .project a:hover {
+                text-decoration: underline;
+            }
+            .section {
+                display: none;
+            }
+            .section.active {
+                display: block;
             }
         </style>
-
     </head>
     <body>
         <div class="row">
             <div class="col-md-2 menu_izquierdo">
                 <div class="col-md-6">
-                    <img class="imagen" src="https://t4.ftcdn.net/jpg/06/24/56/47/360_F_624564764_Ydjoh4ZKr4Bvfjp94j7OIgTv75rQaWFc.jpg">
-                </div><br>                
+                    <img class="imagen" src="https://t4.ftcdn.net/jpg/06/24/56/47/360_F_624564764_Ydjoh4ZKr4Bvfjp94j7OIgTv75rQaWFc.jpg" alt="Profile Image">
+                </div><br>
                 <div class="col-md-6 menu_I">
-                    <div>ABOUT</div><br>
-                    <div>PROJECTS</div><br>
-                    <div>EDUCATION</div><br>
-                    <div>SKILLS</div><br>
-                    <div>INTERESTS</div>
-
-                </div><br> 
-                
+                    <div onclick="showSection('about')">ABOUT</div><br>
+                    <div onclick="showSection('projects')">PROJECTS</div><br>
+                    <div onclick="showSection('education')">EDUCATION</div><br>
+                    <div onclick="showSection('skills')">SKILLS</div><br>
+                    <div onclick="showSection('interests')">INTERESTS</div>
+                </div><br>
             </div>
             <div class="col-md-10 menu_derecho">
-                <div class="col-md-5">VENUS LUMANGLAS</div><br>  
-                <div class="col-md-1">Philippines</div><br>               
-                <div class="col-md-2">edrfftg</div><br> 
-                <div class="col-md-4">iconos</div>           
+                <div id="about" class="section active">
+                    <div class="col-md-5">VENUS LUMANGLAS</div><br>
+                    <div class="col-md-1">Philippines</div><br>
+                    <div class="col-md-2">vlumanglas30@gmail.com</div><br>
+                    <div class="iconos">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://gitlab.com" target="_blank"><i class="fab fa-gitlab"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div id="projects" class="section">
+                    <h2>Projects</h2>
+                    <div class="project-container">
+                        <div class="project">
+                            <img src="https://binos30.github.io/src/img/solanaland.png" alt="Proyecto 1">
+                            <h3>SOLANALAND</h3>
+                            <p>Custom Project and Material Management System.</p>
+                            <p>(Rails 6, React(TypeScript), PostgreSQL, Heroku)</p>
+                            <a href="https://website1.com">Website</a>
+                        </div>
+                        <div class="project">
+                            <img src="https://binos30.github.io/src/img/brotherskeeper.png" alt="Proyecto 2">
+                            <h3>BROTHERSKEEPER</h3>
+                            <p>Membership Management and Monitoring System for Christian Organization.</p>
+                            <p>(NodeJS, ReactJS, MongoDB, AWS Lambda)</p>
+                            <a href="https://website2.com">Website</a>
+                        </div>
+                        <div class="project">
+                            <img src="https://binos30.github.io/src/img/brotherskeeper-revamp.png" alt="Proyecto 3">
+                            <h3>BROTHERSKEEPER (REVAMP)</h3>
+                            <p>Membership Management and Monitoring System for Christian Organization.</p>
+                            <p>(Rails 7, StimulusJS, PostgreSQL, Heroku)</p>
+                            <a href="https://website3.com">Website</a>
+                        </div>
+                        <div class="project">
+                            <img src="https://binos30.github.io/src/img/todo.png" alt="Proyecto 4">
+                            <h3>TODO</h3>
+                            <p>Todo list app that stores items in the browser's local storage.</p>
+                            <p>(React(TypeScript), Tailwind CSS)</p>
+                            <a href="https://website4.com">Website</a>
+                        </div>
+                        <div class="project">
+                            <img src="https://binos30.github.io/src/img/instablog.png" alt="Proyecto 5">
+                            <h3>INSTABLOG</h3>
+                            <p>A simple web app for CRUDing a blog post and sending feedback email with authentication.</p>
+                            <p>(Rails 7, PostgreSQL, Solid Queue, Bootstrap, SendGrid)</p>
+                            <a href="https://website5.com">Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="education" class="section">
+                    
+                </div>
+                <div id="skills" class="section">
+                    
+                </div>
+                <div id="interests" class="section">
+                    
+                </div>
             </div>
-
         </div>
-
+        <script>
+            function showSection(sectionId) {
+                
+                var sections = document.querySelectorAll('.section');
+                sections.forEach(function(section) {
+                    section.classList.remove('active');
+                });
+                
+                document.getElementById(sectionId).classList.add('active');
+            }
+        </script>
     </body>
 </html>
+

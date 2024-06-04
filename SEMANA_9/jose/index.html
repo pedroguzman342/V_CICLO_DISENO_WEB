@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renderizar Imagen Circular con Nombre</title>
+    <style>
+        #datos_persona {
+            text-align: center; /* Para centrar el contenido */
+            position: relative; /* Para posicionar el texto sobre la imagen */
+            display: inline-block; /* Para que el texto y la imagen sean tratados como un solo bloque */
+        }
+        #nombre_persona {
+            font-weight: bold; /* Para resaltar el nombre */
+            position: absolute; /* Para posicionar el texto sobre la imagen */
+            top: 10px; /* Coloca el texto en la parte superior */
+            left: 50%; /* Coloca el texto en el centro horizontal */
+            transform: translateX(-50%); /* Centra horizontalmente el texto */
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+            padding: 5px 10px; /* Espacio alrededor del texto */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+        .circular-img {
+            width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor circular */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="datos_personales">
+        <div id="datos_persona">
+            <span id="nombre_persona"></span>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'https://randomuser.me/api',
+                type: 'GET',
+                success: function(data) {
+                    var datos_personales = data.results[0];
+                    console.log(datos_personales.location.city);
+                    console.log(datos_personales.location.coordinates.latitude);
+                    console.log(datos_personales.location.coordinates.longitude);
+                    console.log(datos_personales.picture.large);
+                    console.log(datos_personales.picture.medium);
+                    console.log(datos_personales.picture.thumbnail);
+
+                    var nombre = datos_personales.name.title + ' ' + datos_personales.name.first + ' ' + datos_personales.name.last;
+                    var imagen = $('<img>').attr('src', datos_personales.picture.large).addClass('circular-img');
+
+                    $('#nombre_persona').text(nombre);
+                    $('#datos_persona').append(imagen);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

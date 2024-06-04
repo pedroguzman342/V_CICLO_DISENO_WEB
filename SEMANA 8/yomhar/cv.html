@@ -20,7 +20,7 @@
             color: white;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             flex-direction: column;
             padding: 20px;
         }
@@ -40,6 +40,17 @@
             font-size: 20px;
             text-decoration: none;
         }
+        .menu-links {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .menu-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+        }
         .info-section {
             display: flex;
             align-items: center;
@@ -54,6 +65,28 @@
         }
         .content {
             padding: 20px;
+            background-color: #f8f9fa; /* Color de fondo claro */
+        }
+        .progress {
+            height: 20px;
+            margin-bottom: 10px;
+            width: 80%;
+            margin: 10px auto;
+        }
+        .progress-bar {
+            background-color: #007bff;
+            line-height: 20px;
+        }
+        .skills-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2, h3, p {
+            color: #333;
+        }
+        .section {
+            padding-top: 40px;
         }
     </style>
 </head>
@@ -68,42 +101,63 @@
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
+            <div class="menu-links">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#informacion-personal">Información personal</a>
+                <a href="#facts">Facts</a>
+                <a href="#skills">Skills</a>
+            </div>
         </div>
         <div class="col-md-10">
             <div class="content">
-                <div>Caja 2</div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="conten">
-                            <h2>Sobre mí</h2>
-                            <p>
-                                Soy un estudiante de Computación apasionado por la tecnología y el desarrollo de software. Tengo experiencia en programación con lenguajes como Python, Java y C++, y disfruto trabajando en proyectos de inteligencia artificial y desarrollo web. Mi objetivo es aplicar mis conocimientos para resolver problemas del mundo real y contribuir a la innovación tecnológica. Actualmente, busco oportunidades para crecer profesionalmente y colaborar en equipos dinámicos. Me destaco por mi capacidad de aprendizaje rápido y mi dedicación a la excelencia.
-                            </p>
-                        </div>
-                    </div>
+                <div class="section" id="caja-2">
+                    
                 </div>
 
-                <div class="row info-section">
+                <div class="section" id="sobre-mi">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Soy un estudiante de Computación apasionado por la tecnología y el desarrollo de software. Tengo experiencia en programación con lenguajes como Python, Java y C++, y disfruto trabajando en proyectos de inteligencia artificial y desarrollo web. Mi objetivo es aplicar mis conocimientos para resolver problemas del mundo real y contribuir a la innovación tecnológica. Actualmente, busco oportunidades para crecer profesionalmente y colaborar en equipos dinámicos. Me destaco por mi capacidad de aprendizaje rápido y mi dedicación a la excelencia.
+                    </p>
+                </div>
+
+                <div class="section info-section" id="informacion-personal">
                     <div class="col-md-3">
                         <img src="https://th.bing.com/th/id/OIP.AbGafkazjc_S1pZPh0B9cQHaIm?rs=1&pid=ImgDetMain" alt="Mi Imagen">
                     </div>
                     <div class="col-md-7 info">
-                        <div>
-                            <h2>Información personal</h2>
-                            <p>Aquí puedes agregar más detalles sobre tu información personal.</p>
-                        </div>
+                        <h2>Información personal</h2>
+                        <p>Aquí puedes agregar más detalles sobre tu información personal.</p>
                     </div>
                 </div>
-                <div class="col-md-10">
-                    <h1>Facts</h1>
+
+                <div class="section" id="facts">
+                    <h1><center>Facts</center></h1>
                     <p>
                         Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
                     </p>
                 </div>
-                <div class="col-md-10">
-                    <h1>Skills</h1>
-                    <p></p>
+
+                <div class="section" id="skills">
+                    <h1><center>Skills</center></h1>
+                    <div class="skills-section">
+                        <h3>Python</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                        <h3>Java</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                        <h3>C++</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
