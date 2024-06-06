@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegación</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <style>
+       .barra-navegacion {
+            background-color: #eeeeee;
+            padding: 10px 0;
+        }
+       .barra-navegacion.enlace-navegacion,.barra-navegacion.marca {
+            color: #666666;
+            margin: 0 10px;
+            text-decoration: none; /* Quitar subrayado */
+        }
+       .barra-navegacion.enlace-navegacion.activo {
+            border-bottom: 2px solid #00b7a8;
+        }
+       .iconos-sociales a {
+            color: #666666;
+            margin: 0 5px;
+        }
+       .titulo-centro {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 2.5rem;
+            color: #333;
+        }
+       .informacion-centro {
+            text-align: center;
+            margin: 20px auto;
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 1000px;
+        }
+       .informacion-lateral {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 20px;
+        }
+       .informacion-lateral ul {
+            padding-left: 0;
+            list-style: none;
+        }
+       .informacion-lateral ul li {
+            margin-bottom: 10px;
+        }
+       .informacion-lateral ul li strong {
+            font-weight: bold;
+        }
+       .informacion-lateral h2 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+       .informacion-lateral p {
+            margin-bottom: 10px;
+        }
+       .imagen-centro img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+       .titulo-habilidades {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+            color: #333;
+        }
+       .texto-habilidades {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.25rem;
+            color: #666;
+        }
+       .contadores {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+       .contador {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+       .contador span {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+       .porcentaje {
+            float: right;
+            font-weight: bold;
+            color: #333;
+        }
+       .barra-progreso {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+       .progreso {
+            height: 100%;
+            background-color: #00b7a8;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+        /* Estilos para el nuevo contenido */
+       .titulo-hechos {
+            text-align: center;
+        }
+       .texto-centro {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 1000px;
+            margin: 0 auto; /* Centrar el texto horizontalmente */
+        }
+        /* Estilos para el contador de estadísticas */
+       .contador-estadisticas {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+       .numero {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid barra-navegacion">
+        <div class="row align-items-center">
+            <div class="col-md-1 text-center">
+                <a class="marca" href="#">JOSUE</a>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex justify-content-center">
+                    <a class="enlace-navegacion " href="/">INICIO</a>
+                    <aclass="enlace-navegacion activo" href="index.html">ACERCA DE</a>
+                    <a class="enlace-navegacion" href="/">RESUMEN</a>
+                    <a class="enlace-navegacion" href="#">SERVICIOS</a>
+                    <a class="enlace-navegacion" href="Portafolio.html">PORTAFOLIO</a>
+                    <a class="enlace-navegacion" href="#">CONTACTO</a>
+                </div>
+            </div>
+            <div class="col-md-1 text-center">
+                <div class="iconos-sociales">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="titulo-centro">ACERCA DE</h1>
+        <p class="informacion-centro">
+            Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir de los oficios de conveniencia que aquí tiene.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="imagen-centro">
+                    <img src="https://us.123rf.com/450wm/arseniipalivoda/arseniipalivoda2212/arseniipalivoda221200021/198480632-programmer-man-looking-at-big-monitor-checking-id-address-and-debugging-system-writing-html-code.jpg?ver=6" alt="Imagen de programador">
+                </div>
+            </div>
+            <div class="col-md-6 informacion-lateral">
+                <h2>Ilustrador y Diseñador UI/UX</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Cumpleaños:</strong>23 Oct 2003</li>
+                            <li><strong>Sitio Web:</strong>www.Djoshd.com</li>
+                            <li><strong>Télefono:</strong>+51 947 424 866</li>
+                            <li><strong>Ciudad:</strong>Pausa, Ayacucho</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Edad:</strong>20</li>
+                            <li><strong>Titulacion:</strong>Técnico</li>
+                            <li><strong>Email:</strong>josuern5593@gmail.com</li>
+                            <li><strong>Independiente:</strong>Disponible</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Por lo tanto, elegir los servicios de parto y dolores es la elección de los servicios. Cualquiera puede conseguirlo todo y eso. Hasta el momento no hay quejas de los fiscales sobre sus servicios. y todo su Por ganas, como ya se ha dicho, la mayoría de oficinas efectivamente. Pero aquellos que no deban ser rechazados serán, por tanto, perseguidos. Algo realmente interesante para buscar con ganas. Y de aquel que siente repulsión por toda culpa, de gran alabanza los dolores.</p>
+            </div>
+        </div>
+        <h2 class="titulo-habilidades">HABILIDADES</h2>
+        <p class="texto-habilidades">Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir en esta oficina de conveniencia, que está aquí.</p>
+
+        <div class="contadores">
+            <div class="contador">
+                <span>HTML <span class="porcentaje">100%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 100%;"></div>
+               </div>
+            </div>
+            <div class="contador">
+                <span>CSS <span class="porcentaje">90%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="contador">
+                <span>JavaScript <span class="porcentaje">75%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="contador">
+                <span>PHP <span class="porcentaje">80%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="contador">
+                <span>WordPress/CMS <span class="porcentaje">90%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="contador">
+                <span>Photoshop <span class="porcentaje">55%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 55%;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Después de la sección de habilidades -->
+          <div class="container">
+            <!-- Espacio -->
+            <div style="margin-bottom: 50px;"></div>
+
+        <!-- Título y texto -->
+            <div class="titulo-hechos">
+              <h2 class="titulo-centro">HECHOS</h2>
+                <p class="texto-centro">
+                  Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                </p>
+            </div>
+          </div>
+
+        <!-- Contador de estadísticas -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="contador-estadisticas">
+                <span class="numero">250+</span>
+                <p>Clients</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="contador-estadisticas">
+                <span class="numero">500+</span>
+                <p>Projects</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="contador-estadisticas">
+                <span class="numero">1000+</span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="contador-estadisticas">
+                <span class="numero">50+</span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="JS/bootstrap.min.js"></script>
+</body>
+</html>

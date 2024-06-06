@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="JS/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .about-me {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .profile-photo {
+            flex: 1 1 300px;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .info {
+            flex: 2 1 400px;
+            padding: 20px;
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        p {
+            color: #777;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+        ul li strong {
+            width: 100px;
+            display: inline-block;
+            color: #333;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .stats > div {
+            flex: 1 1 200px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stats h3 {
+            margin: 0;
+            color: #3498db;
+        }
+        
+        .skills {
+            margin-top: 20px;
+        }
+        
+        .skills > div {
+            margin-bottom: 10px;
+        }
+        
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .skill-level {
+            height: 10px;
+            background-color: #3498db;
+        }
+        /* ------------------------------------------------------------------------- */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar el texto */
+        }
+
+        nav ul li {
+            display: inline; /* Mostrar los elementos en línea */
+            margin-right: 20px; /* Añadir un espacio entre los elementos */
+        }
+
+        nav ul li:last-child {
+            margin-right: 0; /* Eliminar el espacio en el último elemento */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Eliminar subrayado de los enlaces */
+            color: #000; /* Color del texto */
+            padding: 5px 10px; /* Espaciado alrededor del texto */
+            border: 1px solid #000; /* Borde alrededor de los enlaces */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        nav ul li a:hover {
+            background-color: #000; /* Cambiar color de fondo al pasar el mouse */
+            color: #fff; /* Cambiar color del texto al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="#">RESUME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-me">
+        <div class="profile-photo">
+            <img src="https://bootstrapmade.com/demo/templates/Laura/assets/img/me.jpg" alt="Laura Thomso taking a photo">
+        </div>
+        <div class="info">
+            <h2>About Me</h2>
+            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias.</p>
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <ul>
+                        <li><strong>Name:</strong> Laura Thomso</li>
+                        <li><strong>Age:</strong> 30</li>
+                        <li><strong>Website:</strong> <a href="#">www.example.com</a></li>
+                        <li><strong>Phone:</strong> +123 456 7890</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>Degree:</strong> Master</li>
+                        <li><strong>Email:</strong> email@example.com</li>
+                        <li><strong>City:</strong> New York, USA</li>
+                        <li><strong>Freelance:</strong> Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stats">
+                <div>
+                    <h3>232</h3>
+                    <p>Happy Clients</p>
+                    <p>consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                </div>
+                <div>
+                    <h3>521</h3>
+                    <p>Projects</p>
+                    <p>adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                </div>
+                <div>
+                    <h3>18</h3>
+                    <p>Years of experience</p>
+                    <p>aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                </div>
+                <div>
+                    <h3>16</h3>
+                    <p>Awards</p>
+                    <p>rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                </div>
+            </div>
+            <div class="skills">
+                <div>
+                    <h4>HTML</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>CSS</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

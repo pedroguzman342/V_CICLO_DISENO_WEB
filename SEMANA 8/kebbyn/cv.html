@@ -3,6 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <script src="JS/bootstrap.min.js"></script>
+        
 
         <style>
             .imagen-perfil{
@@ -28,6 +29,46 @@
             .final{
                 text-align: center;
                 font-size: x-small;
+            }
+
+            .col-md-2{
+                background-color: #f2f2f6;
+            }
+
+            .image-container{
+                background-image:url(https://img.freepik.com/foto-gratis/concepto-diseno-web-dibujos_1134-77.jpg);
+                min-height: 900px;
+                opacity: 0.3;
+                
+            }
+
+            .text{
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                color: darkblue; /* O el color que prefieras */
+                font-weight: bold;
+                /*background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente opcional */
+                padding: 10px; /* Opcional, para añadir algo de espacio alrededor del texto */
+                text-align: center; /* Centrar el texto dentro del div */
+                font-size: 50px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+                -webkit-text-stroke: 1px black; 
+            }
+            .des{
+                position: absolute;
+                top:55%;
+                left: 46.5%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+                color: darkblue;
+                text-align: center;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+                -webkit-text-stroke: 1px black; 
             }
         </style>
 
@@ -65,9 +106,11 @@
 
 
                 <div class="col-md-10">
-
-
-
+                    <div class="image-container">
+                        
+                    </div>
+                    <div class="text">Hola, me llamo kebbyn</div>
+                    <div class="des">Especialista en cursos basicos de Computacion e Informmatica</div>
 
                 </div>            
             </div>
