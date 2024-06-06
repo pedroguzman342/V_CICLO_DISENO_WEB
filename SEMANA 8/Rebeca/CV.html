@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,47 +7,124 @@
     <script src="js/bootstrap.min.js"></script>
 
     <style>
-        body {
-            background-color: #FFFFE0; /* Light yellow background */
+        .Contenido1 {
+            background: linear-gradient(#673ab7, #ffd740);
+            padding: 1%;
         }
+
+        .Contenido2 {
+            background-color: white;
+        }
+
         .foto-perfil {
             width: 200px;
         }
+
         .skills-text {
             margin-top: 10px;
             font-size: 16px;
             font-weight: bold;
         }
+
+        .contenedor-3 {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .color-icon {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .java {
+            background-color: #f89820;
+        }
+
+        .javascript {
+            background-color: #f7df1e;
+        }
+
+        .typescript {
+            background-color: #007acc;
+        }
+
+        .python {
+            background-color: #3776ab;
+        }
+
+        .html {
+            background-color: #e34f26;
+        }
+
+        .css {
+            background-color: #1572b6;
+        }
+
+        .acerca-de-mi {
+            font-size: 30px; /* Ajusta este valor al tamaño de fuente deseado */
+        }
+
+        .acerca-de-mi h3 {
+            font-size: 35px; /* Ajusta este valor al tamaño de fuente deseado para el título */
+        }
     </style>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-12">Rebeca Condori Barzola</div>
-    </div>
+    <div class="Contenido1">
 
-    <div class="row">
-        <div class="col-md-2">
-            <img class="foto-perfil" src="https://www.mujerde10.com/wp-content/uploads/2021/07/habitos-para-convertirte-en-una-mujer-empoderada.jpg">
-            <div class="skills-text">
-                HABILIDADES
+        <div class="Contenido2">
+
+            <div class="row">
+                <div class="col-md-12">Rebeca Condori Barzola</div>
             </div>
-            <ul>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
+
+            <div class="row">
+                <div class="col-md-2">
+
+                    <div class="contenedor-3">
+
+                        <img class="foto-perfil" src="https://www.mujerde10.com/wp-content/uploads/2021/07/habitos-para-convertirte-en-una-mujer-empoderada.jpg">
+                        <div class="skills-text">
+                            HABILIDADES
+                        </div>
+                        <ul>
+                            <li><span class="color-icon java"></span>Java</li>
+                            <li><span class="color-icon javascript"></span>JavaScript</li>
+                            <li><span class="color-icon typescript"></span>TypeScript</li>
+                            <li><span class="color-icon python"></span>Python</li>
+                            <li><span class="color-icon html"></span>HTML</li>
+                            <li><span class="color-icon css"></span>CSS</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-10">
+                    <div class="acerca-de-mi">
+                        <h3>A cerca de mi</h3>
+                        <p>Profesional en Computación e Informática, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-md-10">
-            A cerca de mi, profesional en Computacion e Informatica, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.
-        </div>
     </div>
 
-    
 </body>
 
 </html>
+
