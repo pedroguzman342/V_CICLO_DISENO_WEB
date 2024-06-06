@@ -5,68 +5,94 @@
         <script src="JS/bootstrap.min.js"></script>
         <style>
             
+            body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            }
             .Titulo {
-                font-size: 2.7em; /* Tamaño de letra más grande */
-                font-weight: bold; /* Texto en negrita */
-                color: greenyellow; /* Color de texto */
-                margin-top: 14%;
+                font-size: 2.5em; 
+                font-weight: bold; 
+                color: #4caf50; 
+                margin-top: 10%; 
+                text-align: center; 
             }
-             .Es, .As {
-                margin-bottom: 10px; /* Margen inferior */
-                font-size: 1.4em; /* Tamaño de letra */
-                color: greenyellow;
-                text-align: center; /* Centrar el texto */
+            .Es, .As {
+                margin-bottom: 10px; 
+                font-size: 1.2em; 
+                color: #fff; 
+                text-align: center; 
                 margin-top: 10%;
+                padding: 10px; 
             }
-            .derecha{
-                
-                background-color: #2b28f5;
-               
+            .derecha {
+                background-color: #3f51b5; 
+                padding: 30px; 
+                border-radius: 8px; 
             }
-            .sub{
-                color: aliceblue;
-                margin-top: 10%;
-                font-size: 1.5em; /* Tamaño de letra */
-            }
-            .imagen{
-                width:300;
-                background-color: #01ee15;
-            }
-             .derecha3 {
-            background-color: rgb(192, 192, 192);
-            margin-bottom: 20px;
-            padding: 20px;
-            max-width: 636px; /* Ancho máximo para centrar */
-            margin-top: 14%;
-            
-            }
-            .Titulo2, .Titulo3 {
-                font-size: 60px;
-                font-weight: bold;
-                color: blue;
-            }
-            
             .sub {
-                font-size: 16px;
-                margin-top: 10px;
-                color: #141414;
+                color: #fff;
+                margin-top: 10%;
+                font-size: 1.2em; 
+                text-align: center; 
             }
-            .fondo{
-                background-color: rgb(192, 192, 192);
-                width:1270;
-               
-
+            .imagen {
+                
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                 
             }
-            .derecha2{
-                margin-top: 2%;
-
+            .imagen img {
+                max-width: 100%; 
+                height: auto; 
             }
-            .sub1,.sub2 {
-                font-size: 16px;
-                margin-top: 10px;
-                color: #7c09e7;
+            .derecha3 {
+                
+                margin-bottom: 20px;
+                padding: 20px;
+                border-radius: 8px; 
             }
-           
+            .col-md-12 {
+                display: flex;
+                justify-content: center; /* Centra el contenido horizontalmente */
+                text-align: right; /* Alinea el texto a la derecha */
+            }
+            .Titulo2 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #044d91e1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                margin-right: 50px;
+                
+            }
+            .sub1{
+                margin-top: 20px;
+                margin-left: 50px;
+            }
+            .Titulo3 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #044d91e1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                margin-right: 50px;
+                
+            }
+            .fondo,.fondo2{
+                margin: 40px;
+            }
+            .Contenedor{
+                background-color: #4caf50;
+            }
+                        
             
 
             
@@ -93,8 +119,8 @@
                     </div>
                    
                 </div>
-                <div class="col-md-6 Contenedor imagen">
-                    <img class="img-thumbnail float-md-right " src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen">
+                <div class="col-md-6 Contenedor ">
+                    <img class="img-thumbnail float-md-right imagen " src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen">
                 </div>
             </div>
         </div>
@@ -108,6 +134,13 @@
                 </div>
                 
         </div>
+
+
+    </div> 
+
+
+    <div class="row fondo1 ">
+        <div class="col-md-6" ></div>  
         <div class="col-md-6 derecha3" >
             <div class="Titulo3">
                Ingeniería
