@@ -3,16 +3,24 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
     <script src="JS/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: "Bootstrap Icons";
+            src: url("./fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2"),
+                 url("./fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6") format("woff");
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body, html {
             height: 100%;
             margin: 0;
-        }
-        .row {
-            height: 100%;
-            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f4f8; /* Fondo claro con un toque de azul */
         }
         .caja_menu {
             background-color: #040b14;
@@ -23,6 +31,10 @@
             justify-content: flex-start;
             flex-direction: column;
             padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 16.6667%; /* Aproximadamente 2/12 de ancho de la pantalla para col-md-2 */
         }
         .profile-pic {
             width: 100px;
@@ -45,11 +57,16 @@
             width: 100%;
         }
         .menu-links a {
-            color: white;
+            color: #f2f3f5; /* Azul claro */
             text-decoration: none;
             display: block;
             padding: 10px 0;
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .menu-links a:hover {
+            background-color: #050c13;
+            color: #b1a0f0; /* Blanco */
         }
         .info-section {
             display: flex;
@@ -64,8 +81,36 @@
             margin-left: 20px;
         }
         .content {
-            padding: 20px;
+            padding: 40px;
             background-color: #f8f9fa; /* Color de fondo claro */
+            margin-left: 16.6667%; /* Mismo ancho que el menú */
+            width: 83.3333%; /* Resto del ancho de la pantalla */
+        }
+        h1, h2, h3 {
+            color: #1a1a1a;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #007bff; /* Azul principal */
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0056b3; /* Azul más oscuro */
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #003366; /* Azul aún más oscuro */
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         .progress {
             height: 20px;
@@ -82,82 +127,160 @@
             flex-direction: column;
             align-items: center;
         }
-        h1, h2, h3, p {
-            color: #333;
-        }
         .section {
             padding-top: 40px;
+        }
+        /* Nuevos estilos para la sección de estadísticas */
+        .stats-icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .stat-item {
+            text-align: center;
+            color: #007bff; /* Color principal azul */
+        }
+        .stat-item i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .stat-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #0056b3; /* Azul más oscuro */
+        }
+        .stat-item p {
+            font-size: 1rem;
+            color: #333;
+        }
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .caja_menu {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .menu-links a {
+                padding: 10px;
+            }
+            .info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .info-section .info {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            /* Estilos responsivos para las estadísticas */
+            .stats-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-item {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-2 caja_menu">
-            <img src="https://th.bing.com/th/id/OIP.AbGafkazjc_S1pZPh0B9cQHaIm?rs=1&pid=ImgDetMain" alt="Foto de perfil" class="profile-pic">
-            <div>Yomhar Peralta Valencia</div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <div class="caja_menu">
+        <img src="https://th.bing.com/th/id/OIP.AbGafkazjc_S1pZPh0B9cQHaIm?rs=1&pid=ImgDetMain" alt="Foto de perfil" class="profile-pic">
+        <div>Yomhar Peralta Valencia</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="menu-links">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#informacion-personal">Información personal</a>
+            <a href="#facts">Facts</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section" id="caja-2">
+            <h1><center>Yomhar Peralta Valencia</center></h1>
+        </div>
+
+        <div class="section" id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy un estudiante de Computación apasionado por la tecnología y el desarrollo de software. Tengo experiencia en programación con lenguajes como Python, Java y C++, y disfruto trabajando en proyectos de inteligencia artificial y desarrollo web. Mi objetivo es aplicar mis conocimientos para resolver problemas del mundo real y contribuir a la innovación tecnológica. Actualmente, busco oportunidades para crecer profesionalmente y colaborar en equipos dinámicos. Me destaco por mi capacidad de aprendizaje rápido y mi dedicación a la excelencia.
+            </p>
+        </div>
+
+        <div class="section info-section" id="informacion-personal">
+            <div class="col-md-3">
+                <img src="https://th.bing.com/th/id/OIP.AbGafkazjc_S1pZPh0B9cQHaIm?rs=1&pid=ImgDetMain" alt="Mi Imagen">
             </div>
-            <div class="menu-links">
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#informacion-personal">Información personal</a>
-                <a href="#facts">Facts</a>
-                <a href="#skills">Skills</a>
+            <div class="col-md-7 info">
+                <h2>Información personal</h2>
+                <p>Aquí puedes agregar más detalles sobre tu información personal.</p>
             </div>
         </div>
-        <div class="col-md-10">
-            <div class="content">
-                <div class="section" id="caja-2">
-                    
-                </div>
 
-                <div class="section" id="sobre-mi">
-                    <h2>Sobre mí</h2>
-                    <p>
-                        Soy un estudiante de Computación apasionado por la tecnología y el desarrollo de software. Tengo experiencia en programación con lenguajes como Python, Java y C++, y disfruto trabajando en proyectos de inteligencia artificial y desarrollo web. Mi objetivo es aplicar mis conocimientos para resolver problemas del mundo real y contribuir a la innovación tecnológica. Actualmente, busco oportunidades para crecer profesionalmente y colaborar en equipos dinámicos. Me destaco por mi capacidad de aprendizaje rápido y mi dedicación a la excelencia.
-                    </p>
-                </div>
+        <div class="section" id="facts">
+            <h2><center>Facts</center></h2>
+            <p>
+                Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
 
-                <div class="section info-section" id="informacion-personal">
-                    <div class="col-md-3">
-                        <img src="https://th.bing.com/th/id/OIP.AbGafkazjc_S1pZPh0B9cQHaIm?rs=1&pid=ImgDetMain" alt="Mi Imagen">
-                    </div>
-                    <div class="col-md-7 info">
-                        <h2>Información personal</h2>
-                        <p>Aquí puedes agregar más detalles sobre tu información personal.</p>
-                    </div>
+        <div class="section" id="statistics">
+            <h2><center>Estadísticas</center></h2>
+            <div class="stats-icons">
+                <div class="stat-item">
+                    <i class="bi bi-emoji-smile"></i>
+                    <h3>Clientes Satisfechos</h3>
+                    <p>Más de 100</p>
                 </div>
-
-                <div class="section" id="facts">
-                    <h1><center>Facts</center></h1>
-                    <p>
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
-                    </p>
+                <div class="stat-item">
+                    <i class="bi bi-briefcase"></i>
+                    <h3>Trabajos Realizados</h3>
+                    <p>Más de 200</p>
                 </div>
+                <div class="stat-item">
+                    <i class="bi bi-clock-history"></i>
+                    <h3>Horas Trabajadas</h3>
+                    <p>Más de 3000</p>
+                </div>
+                <div class="stat-item">
+                    <i class="bi bi-people"></i>
+                    <h3>Hard Workers</h3>
+                    <p>Equipo de 50+</p>
+                </div>
+            </div>
+        </div>
 
-                <div class="section" id="skills">
-                    <h1><center>Skills</center></h1>
-                    <div class="skills-section">
-                        <h3>Python</h3>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                        <h3>Java</h3>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                        </div>
-                        <h3>C++</h3>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-                        </div>
-                        <h3>JavaScript</h3>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                        </div>
-                    </div>
+        <div class="section" id="skills">
+            <h2><center>Skills</center></h2>
+            <div class="skills-section">
+                <h3>Python</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+                <h3>Java</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+                <h3>C++</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+                <h3>JavaScript</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
                 </div>
             </div>
         </div>
