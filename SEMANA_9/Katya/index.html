@@ -9,29 +9,20 @@
         </style>
     </head>
     <body>
-        <div id="datos_persona"></div>
-        <div id="nombre"></div>
+        <img src="">
+        ADOPTAME.PE
+        
+        <div id="listado_gatos"></div>
+        
 
         <script>
             $.ajax({
-                url:'https://randomuser.me/api/',
-                type:'GET',
+                url:"https://api.thecatapi.com/v1/images/search?limit=10",
+                type:"GET",
                 success:function(data){
-                    var datos_personales= data.results[0];
-                    console.log(datos_personales.gender);
-                    console.log(datos_personales.location.city);
-                    console.log(datos_personales.location.coordinates.latitude);
-                    console.log(datos_personales.location.coordinates.longitude);                
-                    console.log(datos_personales.picture.large);
-                    console.log(datos_personales.picture.medium);
-                    console.log(datos_personales.picture.thumbnail);
-                    $("#datos_persona").html("<img class='imagen' src='"+ datos_personales.picture.large + "'>");
-
-                    console.log(datos_personales.name.title); 
-                    console.log(datos_personales.name.first); 
-                    console.log(datos_personales.name.last); 
-                    var nombre_completo = datos_personales.name.title + " " + datos_personales.name.first + " " + datos_personales.name.last;
-                    $("#nombre").html(nombre_completo);
+                    
+                    console.log(data);
+                    
                     
                     
                 }
