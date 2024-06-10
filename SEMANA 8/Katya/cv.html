@@ -1,4 +1,4 @@
-<html lang="en">
+<html >
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
@@ -20,20 +20,34 @@
                 border-radius: 50%;
                 width: 150px;
                 height: 150px;
-                margin-top: 50%;
-                margin-left: 20px;
-                border: 14px solid #c4b0f455;
+                margin-top: 280px;
+                margin-left: 60px;
+                border: 8px solid #fafafa57;
             }
             .menu_I {
-                margin-left: 20px;
+                margin-left: 30%;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                font-size: 18px;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+                color: #f7f7f7;
+
+
             }
             .menu_I div {
                 cursor: pointer;
                 padding: 10px 0;
+            }
+            .menu_I div:hover {
+                color: #f7f7f7;
+                border-radius: 5px;
+                
+            }
+            .titulo{
+                color: cadetblue;
+                font-size: 50px;
+                position: relative;
             }
             .iconos {
                 display: flex;
@@ -92,22 +106,22 @@
     <body>
         <div class="row">
             <div class="col-md-2 menu_izquierdo">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <img class="imagen" src="https://t4.ftcdn.net/jpg/06/24/56/47/360_F_624564764_Ydjoh4ZKr4Bvfjp94j7OIgTv75rQaWFc.jpg" alt="Profile Image">
                 </div><br>
-                <div class="col-md-6 menu_I">
-                    <div onclick="showSection('about')">ABOUT</div><br>
-                    <div onclick="showSection('projects')">PROJECTS</div><br>
-                    <div onclick="showSection('education')">EDUCATION</div><br>
-                    <div onclick="showSection('skills')">SKILLS</div><br>
+                <div class="col-md-4 menu_I">
+                    <div onclick="showSection('about')">ABOUT</div>
+                    <div onclick="showSection('projects')">PROJECTS</div>
+                    <div onclick="showSection('education')">EDUCATION</div>
+                    <div onclick="showSection('skills')">SKILLS</div>
                     <div onclick="showSection('interests')">INTERESTS</div>
-                </div><br>
+                </div>
             </div>
             <div class="col-md-10 menu_derecho">
                 <div id="about" class="section active">
-                    <div class="col-md-5">VENUS LUMANGLAS</div><br>
-                    <div class="col-md-1">Philippines</div><br>
-                    <div class="col-md-2">vlumanglas30@gmail.com</div><br>
+                    <div class="col-md-5 titulo">VENUS LUMANGLAS</div>
+                    <div class="col-md-1">Philippines· VLUMANGLAS30@GMAIL.COM</div>
+                    <div class="col-md-2">Software Engineer who is interested in devising a better problem-solving method for challenging tasks, and learning new technologies and tools.</div>
                     <div class="iconos">
                         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
@@ -155,16 +169,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="education" class="section">
-                    
-                </div>
-                <div id="skills" class="section">
-                    
-                </div>
-                <div id="interests" class="section">
-                    
-                </div>
+                
             </div>
+            
         </div>
         <script>
             function showSection(sectionId) {

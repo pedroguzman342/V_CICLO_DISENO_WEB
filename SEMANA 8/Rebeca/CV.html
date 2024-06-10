@@ -1,52 +1,203 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
 
     <style>
-        body {
-            background-color: #FFFFE0; /* Light yellow background */
+        .Contenido1 {
+            background: linear-gradient(#673ab7, #ffd740);
+            padding: 1%;
         }
+
+        .Contenido2 {
+            background-color: white;
+            padding: 2%;
+            border-radius: 5px;
+        }
+
         .foto-perfil {
-            width: 200px;
+            width: 100%;
+            border-radius: 50%;
         }
+
         .skills-text {
             margin-top: 10px;
             font-size: 16px;
             font-weight: bold;
         }
+
+        .contenedor-3 {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .skill-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: conic-gradient(var(--color) var(--percentage), #ccc 0);
+        }
+
+        .java {
+            --color: #f89820;
+            --percentage: 80%;
+        }
+
+        .javascript {
+            --color: #f7df1e;
+            --percentage: 60%;
+        }
+
+        .typescript {
+            --color: #007acc;
+            --percentage: 70%;
+        }
+
+        .python {
+            --color: #3776ab;
+            --percentage: 90%;
+        }
+
+        .html {
+            --color: #e34f26;
+            --percentage: 95%;
+        }
+
+        .css {
+            --color: #1572b6;
+            --percentage: 85%;
+        }
+
+        .acerca-de-mi {
+            font-size: 30px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        .acerca-de-mi h3 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .bloque-info {
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-12">Rebeca Condori Barzola</div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <img class="foto-perfil" src="https://www.mujerde10.com/wp-content/uploads/2021/07/habitos-para-convertirte-en-una-mujer-empoderada.jpg">
-            <div class="skills-text">
-                HABILIDADES
+    <div class="Contenido1">
+        <div class="Contenido2">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Rebeca Condori Barzola</h1>
+                </div>
             </div>
-            <ul>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-        </div>
 
-        <div class="col-md-10">
-            A cerca de mi, profesional en Computacion e Informatica, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="contenedor-3 text-center">
+                        <img class="foto-perfil" src="https://www.mujerde10.com/wp-content/uploads/2021/07/habitos-para-convertirte-en-una-mujer-empoderada.jpg" alt="Foto de perfil de Rebeca Condori Barzola">
+                        <div class="skills-text">HABILIDADES</div>
+                        <ul>
+                            <li><span class="skill-icon java"></span>Java</li>
+                            <li><span class="skill-icon javascript"></span>JavaScript</li>
+                            <li><span class="skill-icon typescript"></span>TypeScript</li>
+                            <li><span class="skill-icon python"></span>Python</li>
+                            <li><span class="skill-icon html"></span>HTML</li>
+                            <li><span class="skill-icon css"></span>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <div class="acerca-de-mi" id="acerca-de-mi" onclick="toggleText()">
+                        <h3>Acerca de mí</h3>
+                        <p>Profesional en Computación e Informática, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.</p>
+                    </div>
+                    <div class="bloque-info" id="bloque-info1" style="display: none;">
+                        <h3>Título: Maestría en Ciencias</h3>
+                        <p><strong>Especialidad:</strong> Ciencias de la Computación</p>
+                        <p><strong>Cursos:</strong> Algoritmos, Introducción a Big Data, Fundamentos de Sistemas Inteligentes, Fundamentos de Computación Paralela, Big Data, Seguridad de Datos, Limpieza de Datos, Codificación Segura</p>
+                    </div>
+                    <div class="bloque-info" id="bloque-info2" style="display: none;">
+                        <h3>Titulación: Licenciatura en Ingeniería</h3>
+                        <p><strong>Especialidad:</strong> Ciencias de la Computación</p>
+                        <p><strong>Cursos:</strong> Sistemas Operativos, Sistemas de Gestión de Bases de Datos, Ingeniería de Software, Arquitectura de Computadores, Programación Orientada a Objetos.</p>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Botones de Navegación">
+                        <button class="btn btn-primary" onclick="anterior()">Retroceder</button>
+                        <button class="btn btn-primary" onclick="siguiente()">Avanzar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+    <script>
+        var textos = [
+            "acerca-de-mi",
+            "bloque-info1",
+            "bloque-info2"
+        ];
+
+        var indice = 0;
+
+        function anterior() {
+            if (indice > 0) {
+                indice--;
+                actualizarTexto();
+            }
+        }
+
+        function siguiente() {
+            if (indice < textos.length - 1) {
+                indice++;
+                actualizarTexto();
+            }
+        }
+
+        function actualizarTexto() {
+            for (var i = 0; i < textos.length; i++) {
+                var element = document.getElementById(textos[i]);
+                if (i == indice) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
+

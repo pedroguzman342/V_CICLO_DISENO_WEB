@@ -29,76 +29,114 @@
             color: #333;
         }
         .informacion-centro {
-        text-align: center;
-        margin: 20px auto; /* Modificado para centrar verticalmente */
-        font-size: 1.25rem;
-        color: #666;
-        max-width: 10000px; /* Modificado para estirar el contenido */
+            text-align: center;
+            margin: 20px auto;
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 1000px;
         }
         .informacion-lateral {
             font-size: 1rem;
             color: #333;
             margin-top: 20px;
         }
+        .informacion-lateral ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        .informacion-lateral ul li {
+            margin-bottom: 10px;
+        }
+        .informacion-lateral ul li strong {
+            font-weight: bold;
+        }
+        .informacion-lateral h2 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .informacion-lateral p {
+            margin-bottom: 10px;
+        }
         .imagen-centro img {
-            width: 100%; /* Ocupar todo el ancho disponible */
-            height: auto; /* Mantener la proporción original */
-            max-width: 800px; /* Limitar el tamaño máximo */
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 5px;
         }
         .titulo-habilidades {
-            text-align: center; /* Alinear el título */
-            margin-top: 50px; /* Espacio superior */
-            font-size: 2rem; /* Tamaño del título */
-            color: #333; /* Color del texto */
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+            color: #333;
         }
         .texto-habilidades {
-            text-align: center; /* Alinear el texto */
-            margin-top: 20px; /* Espacio superior */
-            font-size: 1.25rem; /* Tamaño del texto */
-            color: #666; /* Color del texto */
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.25rem;
+            color: #666;
         }
         .contadores {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
-
         .contador {
-          margin: 20px;
-          text-align: center;
+            width: 48%;
+            margin-bottom: 20px;
         }
-
-        .contador i {
-          font-size: 24px;
-          margin-bottom: 10px;
-        }
-
         .contador span {
-          display: block;
-          margin-bottom: 10px;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
         }
-
         .porcentaje {
-          font-size: 18px;
-          font-weight: bold;
-          color: #666;
+            float: right;
+            font-weight: bold;
+            color: #333;
         }
-
         .barra-progreso {
-          width: 100%;
-          height: 10px;
-          background-color: #ddd;
-          border-radius: 10px;
-          overflow: hidden;
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
         }
-
         .progreso {
-          width: 0%;
-          height: 100%;
-          background-color: #00b7a8;
-          border-radius: 10px;
-          transition: width 0.5s ease-in-out;
+            height: 100%;
+            background-color: #00b7a8;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+        /* Estilos para el nuevo contenido */
+        .titulo-hechos {
+            text-align: center;
+        }
+        .texto-centro {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 1000px;
+            margin: 0 auto; /* Centrar el texto horizontalmente */
+        }
+        /* Estilos para el contador de estadísticas */
+        .contador-estadisticas {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .numero {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .profesion {
+        margin-bottom: 5px;
+        }
+        .descripcion {
+        text-align: center;
         }
     </style>
 </head>
@@ -110,11 +148,11 @@
             </div>
             <div class="col-md-10">
                 <div class="d-flex justify-content-center">
-                    <a class="enlace-navegacion activo" href="#">INICIO</a>
-                    <a class="enlace-navegacion" href="#">ACERCA DE</a>
-                    <a class="enlace-navegacion" href="#">RESUMEN</a>
+                    <a class="enlace-navegacion" href="/">INICIO</a>
+                    <a class="enlace-navegacion activo" href="index.html">ACERCA DE</a>
+                    <a class="enlace-navegacion" href="/">RESUMEN</a>
                     <a class="enlace-navegacion" href="#">SERVICIOS</a>
-                    <a class="enlace-navegacion" href="#">PORTAFOLIO</a>
+                    <a class="enlace-navegacion" href="Portafolio.html">PORTAFOLIO</a>
                     <a class="enlace-navegacion" href="#">CONTACTO</a>
                 </div>
             </div>
@@ -141,77 +179,189 @@
                 </div>
             </div>
             <div class="col-md-6 informacion-lateral">
-                <h2>Illustrator & UI/UX Designer</h2>
+                <h2>Ilustrador y Diseñador UI/UX</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <ul>
-                    <li><strong>Birthday:</strong> 1 May 1995</li>
-                    <li><strong>Website:</strong> www.example.com</li>
-                    <li><strong>Phone:</strong> +123 456 7890</li>
-                    <li><strong>City:</strong> New York, USA</li>
-                    <li><strong>Age:</strong> 30</li>
-                    <li><strong>Degree:</strong> Master</li>
-                    <li><strong>Email:</strong> email@example.com</li>
-                    <li><strong>Freelance:</strong> Available</li>
-                </ul>
-                <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor inciduntofficia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Cumpleaños:</strong>23 Oct 2003</li>
+                            <li><strong>Sitio Web:</strong>www.Djoshd.com</li>
+                            <li><strong>Télefono:</strong>+51 947 424 866</li>
+                            <li><strong>Ciudad:</strong>Pausa, Ayacucho</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Edad:</strong>20</li>
+                            <li><strong>Titulacion:</strong>Técnico</li>
+                            <li><strong>Email:</strong>josuern5593@gmail.com</li>
+                            <li><strong>Independiente:</strong>Disponible</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Por lo tanto, elegir los servicios de parto y dolores es la elección de los servicios. Cualquiera puede conseguirlo todo y eso. Hasta el momento no hay quejas de los fiscales sobre sus servicios. y todo su Por ganas, como ya se ha dicho, la mayoría de oficinas efectivamente. Pero aquellos que no deban ser rechazados serán, por tanto, perseguidos. Algo realmente interesante para buscar con ganas. Y de aquel que siente repulsión por toda culpa, de gran alabanza los dolores.</p>
             </div>
         </div>
         <h2 class="titulo-habilidades">HABILIDADES</h2>
-        <p class="texto-habilidades">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p>
+        <p class="texto-habilidades">Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir en esta oficina de conveniencia, que está aquí.</p>
 
         <div class="contadores">
-          <div class="contador">
-            <i class="fab fa-html5"></i>
-            <span>HTML</span>
-            <span class="porcentaje">80%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 80%;"></div>
+            <div class="contador">
+                <span>HTML <span class="porcentaje">100%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 100%;"></div>
+                </div>
             </div>
-          </div>
-          <div class="contador">
-            <i class="fab fa-css3-alt"></i>
-            <span>CSS</span>
-            <span class="porcentaje">90%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 90%;"></div>
+            <div class="contador">
+                <span>CSS <span class="porcentaje">90%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 90%;"></div>
+                </div>
             </div>
-          </div>
-          <div class="contador">
-            <i class="fab fa-js"></i>
-            <span>JAVASCRIPT</span>
-            <span class="porcentaje">70%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 70%;"></div>
+            <div class="contador">
+                <span>JavaScript <span class="porcentaje">75%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 75%;"></div>
+                </div>
             </div>
-          </div>
-          <div class="contador">
-            <i class="fab fa-php"></i>
-            <span>PHP</span>
-            <span class="porcentaje">85%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 85%;"></div>
+            <div class="contador">
+                <span>PHP <span class="porcentaje">80%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 80%;"></div>
+                </div>
             </div>
-          </div>
-          <div class="contador">
-            <i class="fab fa-wordpress"></i>
-            <span>WORDPRESS/CMS</span>
-            <span class="porcentaje">95%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 95%;"></div>
+            <div class="contador">
+                <span>WordPress/CMS <span class="porcentaje">90%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 90%;"></div>
+                </div>
             </div>
-          </div>
-          <div class="contador">
-            <i class="fab fa-photoshop"></i>
-            <span>PHOTOSHOP</span>
-            <span class="porcentaje">80%</span>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 80%;"></div>
+            <div class="contador">
+                <span>Photoshop <span class="porcentaje">55%</span></span>
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 55%;"></div>
+                </div>
             </div>
-          </div>
+        </div>
+        
+        <!-- Después de la sección de habilidades -->
+        <div class="container">
+            <!-- Espacio -->
+            <div style="margin-bottom: 50px;"></div>
+            <!-- Título y texto -->
+            <div class="titulo-hechos">
+                <h2 class="titulo-centro">HECHOS</h2>
+                <p class="texto-centro">
+                    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                </p>
+            </div>
         </div>
 
+        <!-- Contador de estadísticas -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contador-estadisticas">
+                        <span class="numero">250</span>
+                        <p>Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contador-estadisticas">
+                        <span class="numero">500</span>
+                        <p>Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contador-estadisticas">
+                        <span class="numero">1000</span>
+                        <p>Hours Of Support</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contador-estadisticas">
+                        <span class="numero">50</span>
+                        <p>Hard Workers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Nueva sección de testimonios -->
+<div class="container">
+    <div class="titulo-testimonios">
+        <h2 class="titulo-centro">TESTIMONIOS</h2>
+        <p class="texto-centro">
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+        </p>
     </div>
 
+    <!-- Espacio -->
+    <div style="margin-top: 30px;"></div>
+
+    <!-- Carrusel de testimonios -->
+    <div id="carouselTestimonios" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Testimonio 1 -->
+            <div class="carousel-item active">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww" class="rounded-circle" alt="Testimonio 1" style="width: 150px; height: 150px;">
+                    <h3>Ana Ramirez</h3>
+                    <p class="profesion">Programadora MultiStack</p>
+                    <p class="descripcion">¡Ana es una programadora altamente talentosa con habilidades en múltiples tecnologías! Siempre entrega trabajos de alta calidad y es un placer trabajar con ella.</p>
+                </div>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="file:///C:/Users/Josue/OneDrive/Documentos/EjemploCV_Proyecto/Kelly/assets/img/testimonials/testimonials-2.jpg" class="rounded-circle" alt="Testimonio 2" style="width: 150px; height: 150px;">
+                    <h3>Nombre del Testimonio 2</h3>
+                    <p class="profesion">Profesión del Testimonio 2</p>
+                    <p class="descripcion">Descripción aleatoria del testimonio 2.</p>
+                </div>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="file:///C:/Users/Josue/OneDrive/Documentos/EjemploCV_Proyecto/Kelly/assets/img/testimonials/testimonials-3.jpg" class="rounded-circle" alt="Testimonio 3" style="width: 150px; height: 150px;">
+                    <h3>Nombre del Testimonio 3</h3>
+                    <p class="profesion">Profesión del Testimonio 3</p>
+                    <p class="descripcion">Descripción aleatoria del testimonio 3.</p>
+                </div>
+            </div>
+            <!-- Testimonio 4 -->
+            <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="file:///C:/Users/Josue/OneDrive/Documentos/EjemploCV_Proyecto/Kelly/assets/img/testimonials/testimonials-4.jpg" class="rounded-circle" alt="Testimonio 4" style="width: 150px; height: 150px;">
+                    <h3>Nombre del Testimonio 4</h3>
+                    <p class="profesion">Profesión del Testimonio 4</p>
+                    <p class="descripcion">Descripción aleatoria del testimonio 4.</p>
+                </div>
+            </div>
+            <!-- Testimonio 5 -->
+            <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="file:///C:/Users/Josue/OneDrive/Documentos/EjemploCV_Proyecto/Kelly/assets/img/testimonials/testimonials-5.jpg" class="rounded-circle" alt="Testimonio 5" style="width: 150px; height: 150px;">
+                    <h3>Nombre del Testimonio 5</h3>
+                    <p class="profesion">Profesión del Testimonio 5</p>
+                    <p class="descripcion">Descripción aleatoria del testimonio 5.</p>
+                </div>
+            </div>
+            <!-- Agrega más testimonios según sea necesario -->
+        </div>
+        <!-- Controles del carrusel -->
+        <a class="carousel-control-prev" href="#carouselTestimonios" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselTestimonios" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
+
+</div>
+    </div>
     <!-- FontAwesome Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- jQuery -->
