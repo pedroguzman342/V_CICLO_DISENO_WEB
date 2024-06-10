@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADOPTAME.PE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container, .image-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .image-row {
+            gap: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .first-image {
+            width: 50%;
+        }
+
+        .row-image {
+            width: calc(33.33% - 10px);
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="image-container" id="first_image_container"></div>
+    <div id="titulo"></div>
+    <div class="image-row" id="listado_gatos"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_MbYZeXvP9QTUI80eRrVa8RWhWnuKwzojv9GmhwZ3e4OijuaGqMovr8Ni1KqeRzdq",
+                type: "GET",
+                success: function(data) {
+                    if (data.length > 0) {
+                        // Agrega la primera imagen
+                        $('#first_image_container').append(`<img src='${data[0].url}' alt='Gato adorable' class='first-image'>`);
+                        
+                        // Agrega el título debajo de la primera imagen
+                        $('#titulo').append('<h2>ADOPTAME.PE</h2>');
+                        
+                        // Agrega las siguientes tres imágenes en una fila
+                        for (let i = 1; i < data.length; i++) {
+                            $('#listado_gatos').append(
+                                `<img src='${data[i].url}' alt='Gato adorable' class='row-image'>`
+                            );
+                        }
+                    }
+                },
+                error: function(error) {
+                    console.error('Error al obtener las imágenes de los gatos', error);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
