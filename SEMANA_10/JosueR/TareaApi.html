@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>ADOPTAME.PE</title>
+    <title>ADOPTAME_Perritos.PE</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -15,7 +15,7 @@
         }
 
         h1 {
-            background-color: #ffcc00;
+            background-color: green;
             padding: 20px;
             margin: 0;
         }
@@ -37,21 +37,21 @@
     </style>
 </head>
 <body>
-    <div id="top-cat-image" class="cat-container"></div>
-    <h1>ADOPTAME.PE</h1>
-    <div id="listado_gatos" class="cat-container"></div>
+    <div id="top-dog-image" class="cat-container"></div>
+    <h1>ADOPTAME_Perritos.PE</h1>
+    <div id="listado_perros" class="cat-container"></div>
     <script>
         $.ajax({
-            url: "https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_Z9zwqQuHp2PFuWve4uhYOtjyMymrbe7g6nrgbFnaWwhyJg7uo0SAhMpoqdw178kn",
+            url: "https://api.thedogapi.com/v1/images/search?limit=10&api_key=live_k4nwTC2rHnJRd9WhAu6Y9uWOKQMz6qnz24KmbDr1GUlM5ia2lipSQ7D2O86BULvP",
             type: "GET",
             success: function(data) {
                 // Mostrar la primera imagen arriba del título
                 var topImage = data[0];
-                $("#top-cat-image").append("<img src='" + topImage.url + "' alt='Cat Image'>");
+                $("#top-dog-image").append("<img src='" + topImage.url + "' alt='dog Image'>");
 
                 // Mostrar las imágenes restantes abajo del título
                 data.slice(1).forEach(element => {
-                    $("#listado_gatos").append("<img src='" + element.url + "' alt='Cat Image'>");
+                    $("#listado_perros").append("<img src='" + element.url + "' alt='dog Image'>");
                 });
             },
             error: function(error) {
