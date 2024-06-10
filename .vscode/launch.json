@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open CV.html",
+            "file": "c:\\Users\\kevim\\Documents\\GitHub\\V_CICLO_DISENO_WEB\\SEMANA 8\\Rebeca\\CV.html"
+        }
+    ]
+}
