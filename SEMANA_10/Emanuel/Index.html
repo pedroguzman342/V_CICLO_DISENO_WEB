@@ -1,0 +1,90 @@
+<!-- <html>
+    <head>  
+        <script src="jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <img src = "">
+        ADOPTAME.PE
+        <div id="lista_gatos"></div>
+        <script>
+            $.ajax({
+                url: "https://api.thecatapi.com/v1/images/search?limit=10",
+                type:"GET",
+                success:function(data){
+                    data.forEach(element => {
+                        console.log(element.url);
+                    $("#lista_gatos").append("<img src='"+element.url+"'>")
+                    });
+                    
+                }
+            });
+        </script>
+    </body>
+</html> -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoptame.pe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .main-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        #lista_gatos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        #lista_gatos img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .title-container {
+            position: relative;
+            width: 100%;
+            margin-top: -80px;
+            z-index: 1;
+        }
+        .title-container h1 {
+            background: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="main_image_container"></div>
+    <div class="title-container">
+        <h1>ADOPTAME.PE</h1>
+    </div>
+    <div id="lista_gatos"></div>
+    <script>
+        $.ajax({
+            url: "https://api.thecatapi.com/v1/images/search?limit=10 &api_key=live_aKDX3iF1VQbM9ciumVfmimhAQlbHIuCPGchHCBWjWt8iDOMrnZoKBjHb7OEyF8bI",
+            type: "GET",
+            success: function(data) {
+                // Establecer la imagen principal
+                if (data.length > 0) {
+                    let mainImageUrl = data[0].url;
+                    $("#main_image_container").append("<img src='" + mainImageUrl + "' class='main-image'>");
+                    data.shift(); // Eliminar la primera imagen de la lista
+                }
+                // Añadir las demás imágenes a la galería
+                data.forEach(element => {
+                    $("#lista_gatos").append("<img src='" + element.url + "'>");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
