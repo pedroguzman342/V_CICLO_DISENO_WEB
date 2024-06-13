@@ -9,11 +9,12 @@
     <title>Emily Jones - About</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    body {
     background-color: #000;
     color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -33,10 +34,13 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    
 }
 
 nav ul li {
     margin-left: 20px;
+    display: inline;
+    margin-right: 10px;
 }
 
 nav ul li a {
@@ -104,7 +108,7 @@ main {
 .stat h3 {
     margin: 0;
     font-size: 2em;
-    color: #00ff00;
+    color: hsl(120, 100%, 50%);
 }
 
 .stat p {
@@ -114,6 +118,55 @@ main {
     max-width: 100%;
     height: auto;
 }
+/* ---------------------------------------------------------------------------------- */
+
+main {
+            text-align: center;
+            width: 80%;
+        }
+
+        .skills, .interests, .testimonials {
+            margin-bottom: 20px;
+        }
+
+        .skills-container, .testimonials-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 10px;
+        }
+
+        .skill .bar {
+            flex-grow: 1;
+            height: 10px;
+            background: #e0e0e0;
+            margin: 0 10px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .progress.html { width: 100%; background:hsl(120, 100%, 50%);; }
+        .progress.css { width: 90%; background:hsl(120, 100%, 50%);; }
+        .progress.js { width: 75%; background:hsl(120, 100%, 50%);; }
+        .progress.php { width: 80%; background: hsl(120, 100%, 50%);; }
+        .progress.cms { width: 90%; background: hsl(120, 100%, 50%);; }
+        .progress.photoshop { width: 55%; background: hsl(120, 100%, 50%);; }
+/* ---------------------------------------------------------- */
+
 
 </style>
 </head>
@@ -194,6 +247,56 @@ main {
                 </div>
             </div>
         </section>
+    </main>
+    <main>
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="bar">
+                        <div class="progress html"></div>
+                    </div>
+                    <span>100%</span>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar">
+                        <div class="progress css"></div>
+                    </div>
+                    <span>90%</span>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar">
+                        <div class="progress js"></div>
+                    </div>
+                    <span>75%</span>
+                </div>
+                <div class="skill">
+                    <span>PHP</span>
+                    <div class="bar">
+                        <div class="progress php"></div>
+                    </div>
+                    <span>80%</span>
+                </div>
+                <div class="skill">
+                    <span>WordPress/CMS</span>
+                    <div class="bar">
+                        <div class="progress cms"></div>
+                    </div>
+                    <span>90%</span>
+                </div>
+                <div class="skill">
+                    <span>Photoshop</span>
+                    <div class="bar">
+                        <div class="progress photoshop"></div>
+                    </div>
+                    <span>55%</span>
+                </div>
+            </div>
+        </section>
+        
     </main>
 </body>
 </html>
