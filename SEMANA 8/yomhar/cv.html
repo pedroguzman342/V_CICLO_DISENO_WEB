@@ -7,6 +7,18 @@
     <script src="JS/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
     <style>
         @font-face {
             font-family: "Bootstrap Icons";
@@ -141,8 +153,9 @@
             text-align: center;
             color: #007bff; /* Color principal azul */
         }
-        .stat-item i {
-            font-size: 3rem;
+        .stat-item img {
+            width: 60px;
+            height: 60px;
             margin-bottom: 10px;
         }
         .stat-item h3 {
@@ -155,6 +168,28 @@
             font-size: 1rem;
             color: #333;
         }
+        .swiper {
+  width: 80%; /* Ancho del carrusel */
+  height: 300px; /* Alto del carrusel */
+  margin: 40px auto; /* Margen superior e inferior */
+}
+
+.swiper-slide {
+  /* Ajustar el tamaño de cada slide */
+  width: 100%; /* Ajustar el ancho según sea necesario */
+  height: 100%; /* Ajustar la altura según sea necesario */
+  text-align: center; /* Centrar la imagen horizontalmente */
+}
+
+.swiper-slide img {
+  /* Establecer el tamaño máximo de la imagen para que no exceda el contenedor */
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* Asegurar que la imagen se comporte como bloque */
+  margin: 0 auto; /* Centrar la imagen horizontalmente dentro del slide */
+}
+
+
         /* Estilos responsivos */
         @media (max-width: 768px) {
             .caja_menu {
@@ -208,6 +243,15 @@
             <a href="#skills">Skills</a>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
     <div class="content">
         <div class="section" id="caja-2">
             <h1><center>Yomhar Peralta Valencia</center></h1>
@@ -226,9 +270,79 @@
             </div>
             <div class="col-md-7 info">
                 <h2>Información personal</h2>
-                <p>Aquí puedes agregar más detalles sobre tu información personal.</p>
+                <p><strong>Nombre:</strong> Yomhar Arturo Peralta Valencia</p>
+                <p><strong>Correo:</strong> [aquí tu correo]</p>
+                <p><strong>DNI:</strong> [aquí tu DNI]</p>
+                <p><strong>Número de celular:</strong> [aquí tu número de celular]</p>
+                <p><strong>Ubicación:</strong> [aquí tu ubicación]</p>
+                <p><strong>Carrera:</strong> Computación e Informática</p>
             </div>
         </div>
+
+
+
+
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="https://th.bing.com/th/id/R.734bc6a9ac7275c07b640a44b23cc4f9?rik=TPEGSo3bO97whg&riu=http%3a%2f%2fwww.totofoto.hu%2fwp-content%2fuploads%2f2017%2f04%2fheader_fotozas.jpg&ehk=mRqJMaltght8Z3VIr54oOGm8SqCA6g5Y2X%2bk8QYNIww%3d&risl=&pid=ImgRaw&r=0" alt="Imagen 1">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://th.bing.com/th/id/OIP.kqYOk8cyqBobB2Lgd7IApAAAAA?rs=1&pid=ImgDetMain" alt="Imagen 2">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://4.bp.blogspot.com/_t7B_Um42taM/THrY6dCydwI/AAAAAAAAAsY/CZ5zjRrKBWI/s1600/DSC_6086+-+C%C3%B3pia.JPG" alt="Imagen 3">
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+    
+    
+    <script>
+   const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  
+  // Ajustar el tamaño del carrusel
+  width: 800, // Ancho del carrusel
+  height: 300, // Alto del carrusel
+});
+    </script>
+    
+
+
+
 
         <div class="section" id="facts">
             <h2><center>Facts</center></h2>
@@ -241,22 +355,22 @@
             <h2><center>Estadísticas</center></h2>
             <div class="stats-icons">
                 <div class="stat-item">
-                    <i class="bi bi-emoji-smile"></i>
+                    <img src="https://lirp.cdn-website.com/e49ce267/dms3rep/multi/opt/Be-Willing-1920w.png" alt="Clientes Satisfechos">
                     <h3>Clientes Satisfechos</h3>
                     <p>Más de 100</p>
                 </div>
                 <div class="stat-item">
-                    <i class="bi bi-briefcase"></i>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/362/564/original/online-work-vector-icon.jpg" alt="Trabajos Realizados">
                     <h3>Trabajos Realizados</h3>
                     <p>Más de 200</p>
                 </div>
                 <div class="stat-item">
-                    <i class="bi bi-clock-history"></i>
+                    <img src="https://png.pngtree.com/png-vector/20190118/ourlarge/pngtree-workplace-line-filled-icon-png-image_324882.jpg" alt="Horas Trabajadas">
                     <h3>Horas Trabajadas</h3>
                     <p>Más de 3000</p>
                 </div>
                 <div class="stat-item">
-                    <i class="bi bi-people"></i>
+                    <img src="https://th.bing.com/th/id/OIP.kp6BfDw9MY7bCXUHefJKhwHaHa?rs=1&pid=ImgDetMain" alt="Hard Workers">
                     <h3>Hard Workers</h3>
                     <p>Equipo de 50+</p>
                 </div>
@@ -266,7 +380,7 @@
         <div class="section" id="skills">
             <h2><center>Skills</center></h2>
             <div class="skills-section">
-                <h3>Python</h3>
+                <h3>C# </h3>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                 </div>
@@ -274,11 +388,11 @@
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                 </div>
-                <h3>C++</h3>
+                <h3>JavaScript</h3>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                 </div>
-                <h3>JavaScript</h3>
+                <h3>HTML</h3>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
                 </div>
