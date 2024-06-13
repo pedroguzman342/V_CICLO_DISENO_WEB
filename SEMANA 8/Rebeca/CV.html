@@ -106,11 +106,6 @@
             background-color: #f9f9f9;
             margin-bottom: 20px;
         }
-
-        .btn-group {
-            margin-top: 20px;
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -140,64 +135,24 @@
                 </div>
 
                 <div class="col-md-10">
-                    <div class="acerca-de-mi" id="acerca-de-mi" onclick="toggleText()">
+                    <div class="acerca-de-mi" id="acerca-de-mi">
                         <h3>Acerca de mí</h3>
                         <p>Profesional en Computación e Informática, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.</p>
                     </div>
-                    <div class="bloque-info" id="bloque-info1" style="display: none;">
-                        <h3>Título: Maestría en Ciencias</h3>
-                        <p><strong>Especialidad:</strong> Ciencias de la Computación</p>
+                    <div class="bloque-info" id="bloque-info1">
+                        <h3>Título: Computacion e Informatica</h3>
+                        <p><strong>Especialidad:</strong> Ofimatica</p>
                         <p><strong>Cursos:</strong> Algoritmos, Introducción a Big Data, Fundamentos de Sistemas Inteligentes, Fundamentos de Computación Paralela, Big Data, Seguridad de Datos, Limpieza de Datos, Codificación Segura</p>
                     </div>
-                    <div class="bloque-info" id="bloque-info2" style="display: none;">
+                    <div class="bloque-info" id="bloque-info2">
                         <h3>Titulación: Licenciatura en Ingeniería</h3>
-                        <p><strong>Especialidad:</strong> Ciencias de la Computación</p>
-                        <p><strong>Cursos:</strong> Sistemas Operativos, Sistemas de Gestión de Bases de Datos, Ingeniería de Software, Arquitectura de Computadores, Programación Orientada a Objetos.</p>
-                    </div>
-                    <div class="btn-group" role="group" aria-label="Botones de Navegación">
-                        <button class="btn btn-primary" onclick="anterior()">Retroceder</button>
-                        <button class="btn btn-primary" onclick="siguiente()">Avanzar</button>
+                        <p><strong>Especialidad:</strong> Ofimatica</p>
+                        <p><strong>Cursos:</strong> Procesador de Textos, Hoja de Clculos, Programa de presentaciones, otros.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        var textos = [
-            "acerca-de-mi",
-            "bloque-info1",
-            "bloque-info2"
-        ];
-
-        var indice = 0;
-
-        function anterior() {
-            if (indice > 0) {
-                indice--;
-                actualizarTexto();
-            }
-        }
-
-        function siguiente() {
-            if (indice < textos.length - 1) {
-                indice++;
-                actualizarTexto();
-            }
-        }
-
-        function actualizarTexto() {
-            for (var i = 0; i < textos.length; i++) {
-                var element = document.getElementById(textos[i]);
-                if (i == indice) {
-                    element.style.display = 'block';
-                } else {
-                    element.style.display = 'none';
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
-
