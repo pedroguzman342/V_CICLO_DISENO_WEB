@@ -1,0 +1,79 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoptame.pe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .main-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        #lista_gatos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .title-container {
+            position: relative;
+            width: 100%;
+            margin-top: -80px;
+            z-index: 1;
+        }
+        .title-container h1 {
+            background: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="main_image_container"></div>
+    <div class="title-container">
+        <h1>ADOPTAME.PE</h1>
+    </div>
+    <div id="lista_gatos"></div>
+    <script>
+        $.ajax({
+            url: "https://api.thecatapi.com/v1/images/search?limit=10&api_key=live_VqNHQMDAFJykmCpMNXjK8dahTXRNvl7fI2hXdrKOLSeN0HRkjNrJssEa2skYV4G6",
+            type: "GET",
+            success: function(data) {
+                // Establecer la imagen principal
+                if (data.length > 0) {
+                    let mainImageUrl = data[0].url;
+                    $("#main_image_container").append("<img src='" + mainImageUrl + "' class='main-image'>");
+                    data.shift(); // Eliminar la primera imagen de la lista
+                }
+                // Añadir las demás imágenes a la galería
+                data.forEach(element => {
+                    let cardHtml = `
+                        <div class="card">
+                            <img src="${element.url}">
+                        </div>
+                    `;
+                    $("#lista_gatos").append(cardHtml);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

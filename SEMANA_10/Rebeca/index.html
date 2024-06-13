@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Fuente por defecto */
+        }
+
+        center {
+            font-size: 3em; /* Tamaño de fuente grande */
+            font-weight: bold; /* Texto en negrita */
+            margin: 20px 0; /* Espaciado alrededor del título */
+        }
+
+        #listado_gatos {
+            display: flex;
+            flex-direction: column; /* Disposición en columna */
+            align-items: center;
+            margin-top: 20px; /* Margen superior para separar del título */
+        }
+
+        #listado_gatos img {
+            margin: 10px;
+            width: 200px; /* Ancho fijo */
+            height: 200px; /* Alto fijo */
+            object-fit: cover; /* Ajustar la imagen dentro del contenedor sin distorsión */
+        }
+    </style>
+</head>
+<body>
+    <img src="">
+    <center>ADOPTAME.PE</center>
+    <div id="listado_gatos"></div>
+
+    <script>
+        $.ajax({
+            url: "https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_U2LlSMGKgP2wtWWuzkvCofI6mjMUAwoCMCMclG7VWsNb12smB6lR5YUqwEGuCPV5",
+            type: "GET",
+            success: function(data) {
+                data.forEach(element => {
+                    console.log(element.url);
+                    $("#listado_gatos").append("<img src='" + element.url + "'>");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
