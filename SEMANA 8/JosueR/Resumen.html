@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen - Alice Barkley</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .resume-section {
+      padding: 20px;
+    }
+    /* Estilo para la línea de tiempo */
+    .timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 2px;
+      height: 100%;
+      background: #17a2b8;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #17a2b8;
+    }
+    .navbar-nav .nav-item .nav-link {
+      color: #666;
+    }
+    .navbar-nav .nav-item .nav-link.active {
+      color: #000;
+      position: relative;
+    }
+    .navbar-nav .nav-item .nav-link.active::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #17a2b8;
+      margin: 0 auto;
+      margin-top: 4px;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .social-icons a {
+      color: #666;
+      margin-right: 10px;
+    }
+    .page-header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .page-header h1 {
+      margin-bottom: 0;
+    }
+    .page-header p {
+      margin-top: 10px;
+      color: #666;
+    }
+    .page-header .underline {
+      width: 50px;
+      height: 3px;
+      background: #17a2b8;
+      margin: 10px auto;
+    }
+    .timeline-badge {
+      background-color: #dfe6e9;
+      border-radius: 4px;
+      padding: 2px 8px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">KELLY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Resumen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+        <div class="social-icons ml-3">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>RESUMEN</h1>
+      <div class="underline"></div>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+
+    <section class="resume-section">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Alice Barkley -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Alice Barkley</h2>
+              <p>Innovadora y orientada a cumplir plazos, diseñadora gráfica con más de 3 años de experiencia en el diseño y desarrollo de materiales de marketing digital/impreso centrados en el usuario, desde el concepto inicial hasta el resultado final y pulido.</p>
+              <ul>
+                <li>Portland par 127, Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Educación -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Educación</h2>
+              <div>
+                <h3 class="h5">Maestría en Bellas Artes y Diseño Gráfico</h3>
+                <span class="timeline-badge">2015 - 2016</span>
+                <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
+                <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatem qui ut dignissimos deleniti nerada porti sand markend.</p>
+              </div>
+              <div>
+                <h3 class="h5">Licenciatura en Bellas Artes y Diseño Gráfico</h3>
+                <span class="timeline-badge">2010 - 2014</span>
+                <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
+                <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem. Earum molestias consequatur neque elit sed.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Especialista senior en diseño gráfico -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Especialista senior en diseño gráfico</h2>
+              <p><strong>Experion, Nueva York, NY</strong> <span class="text-muted">(2019 - Presente)</span></p>
+              <ul>
+                <li>Liderar el diseño, desarrollo e implementación de los materiales de comunicación gráfica, de diseño y producción.</li>
+                <li>Delegar tareas a los 7 miembros del equipo de diseño y brindar asesoramiento sobre todos los aspectos del proyecto.</li>
+                <li>Supervisar la evaluación de todos los materiales gráficos para garantizar la calidad y precisión del diseño.</li>
+                <li>Supervisar el uso eficiente de los presupuestos de proyectos de producción que oscilan entre $2,000 y $25,000.</li>
+              </ul>
+            </li>
+            <!-- Estilo de línea de tiempo agregado a Especialista en diseño gráfico -->
+            <li class="timeline-item">
+              <h2 class="h5">Especialista en diseño gráfico</h2>
+              <p><strong>Stepping Stone Advertising, Nueva York, NY</strong> <span class="text-muted">(2017 - 2018)</span></p>
+              <ul>
+                <li>Desarrolló numerosos programas de marketing (logos, folletos, infografías, presentaciones y anuncios).</li>
+                <li>Gestionó hasta 5 proyectos o tareas al mismo tiempo bajo presión.</li>
+                <li>Recomendó y consultó con clientes sobre el diseño gráfico más adecuado.</li>
+                <li>Creó más de 4 presentaciones y propuestas de diseño al mes para clientes y gerentes de cuentas.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

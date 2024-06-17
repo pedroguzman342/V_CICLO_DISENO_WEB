@@ -1,120 +1,169 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
-        <script src="JS/bootstrap.min.js"></script>
-        
+<html lang="es">
 
-        <style>
-            .imagen-perfil{
-                width: 150px;
-                border-radius: 50%;
-               
-               
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="JS/bootstrap.min.js"></script>
+    <title>Portafolio de Kebbyn</title>
+    <style>
+        .imagen-perfil {
+            width: 150px;
+            border-radius: 50%;
+        }
 
-            .nombre{
-                font-weight: bold;
-                text-align: center;
-            }
-            
-            .info{
-                font-size: small;
-            }
+        .nombre {
+            font-weight: bold;
+            text-align: center;
+        }
 
-            .menu{
-                text-align: center;
-            }
+        .info {
+            font-size: small;
+        }
 
-            .final{
-                text-align: center;
-                font-size: x-small;
-            }
+        .menu {
+            text-align: center;
+        }
 
-            .col-md-2{
-                background-color: #f2f2f6;
-            }
+        .final {
+            text-align: center;
+            font-size: x-small;
+        }
 
-            .image-container{
-                background-image:url(https://img.freepik.com/foto-gratis/concepto-diseno-web-dibujos_1134-77.jpg);
-                min-height: 900px;
-                opacity: 0.3;
-                
-            }
+        .col-md-2 {
+            background-color: #f2f2f6;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            overflow-y: auto;
+            width: 200px;
+            padding-top: 20px;
+        }
 
-            .text{
-                position: absolute;
-                top: 50%;
-                left: 45%;
-                transform: translate(-50%, -50%);
-                color: darkblue; /* O el color que prefieras */
-                font-weight: bold;
-                /*background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente opcional */
-                padding: 10px; /* Opcional, para añadir algo de espacio alrededor del texto */
-                text-align: center; /* Centrar el texto dentro del div */
-                font-size: 50px;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-                -webkit-text-stroke: 1px black; 
-            }
-            .des{
-                position: absolute;
-                top:55%;
-                left: 46.5%;
-                transform: translate(-50%, -50%);
-                font-weight: bold;
-                color: darkblue;
-                text-align: center;
-                font-size: 20px;
-                font-family: Arial, Helvetica, sans-serif;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-                -webkit-text-stroke: 1px black; 
-            }
-        </style>
+        .col-md-10 {
+            margin-left: 220px;
+            padding: 20px;
+        }
 
-    </head>
+        .image-container {
+            background-image: url(https://img.freepik.com/foto-gratis/concepto-diseno-web-dibujos_1134-77.jpg);
+            min-height: 900px;
+            opacity: 0.3;
+        }
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            color: darkblue;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            -webkit-text-stroke: 1px black;
+        }
 
+        .des {
+            position: absolute;
+            top: 55%;
+            left: 46.5%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            color: darkblue;
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            -webkit-text-stroke: 1px black;
+        }
 
-                    <img class="imagen-perfil" src="https://www.semana.com/resizer/AhOjY7VO50nkdLUyhuzX2HcLZuc=/fit-in/768x0/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/KVRYJNDM6FGKPGL6WXPO26HFUA.png">
-                    <p class="nombre">KEBBYYN RAMIREZ </p>
-                    <p class="info">UI/UX/DESIGNER IN PHILIPPINES</p>
-                    <div class="menu">
-                        <p>HOME</p>                    
-                        <p>ABOUT</p>
-                        <p>SERVICES</p>
-                        <p>SKILLS</p>
-                        <p>EDUCATION</p>
-                        <p>EXPERIENCE</p>
-                        <p>WORK</p>
-                        <p>BLOG</p>
-                        <p>CONTACT</p>
-                    </div>
-                    <div class="final">
-                        <p>© Copyright 2024 All rights reserved.</p>
-                        <p>Made with ★ by Colorlib</p>
-                        <p>Distributed by ThemeWagon</p>
-                        <p>Distributed by ThemeWagon</p>
-                        <p>Demo Images: Unsplash.com</p>
-                    </div>
+        .content-section {
+            margin-top: 20px;
+            background-color: #d3d3d3; /* Fondo plomo */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
 
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img class="imagen-perfil" src="https://www.semana.com/resizer/AhOjY7VO50nkdLUyhuzX2HcLZuc=/fit-in/768x0/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/KVRYJNDM6FGKPGL6WXPO26HFUA.png">
+                <p class="nombre">KEBBYYN RAMIREZ </p>
+                <p class="info">UI/UX/DESIGNER IN PHILIPPINES</p>
+                <div class="menu">
+                    <p>HOME</p>
+                    <p>ABOUT</p>
+                    <p>SERVICES</p>
+                    <p>SKILLS</p>
+                    <p>EDUCATION</p>
+                    <p>EXPERIENCE</p>
+                    <p>WORK</p>
+                    <p>BLOG</p>
+                    <p>CONTACT</p>
+                </div>
+                <div class="final">
+                    <p>© Copyright 2024 All rights reserved.</p>
+                    <p>Made with ★ by Colorlib</p>
+                    <p>Distributed by ThemeWagon</p>
+                    <p>Demo Images: Unsplash.com</p>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="image-container"></div>
+                <div class="text">Hola, me llamo kebbyn</div>
+                <div class="des">Especialista en cursos basicos de Computacion e Informmatica</div>
+
+                <!-- Nuevo contenido aquí -->
+                <div class="content-section">
+                    <h2>Sobre mí</h2>
+                    <p>Soy un diseñador UI/UX con experiencia en la creación de interfaces intuitivas y atractivas. Mi objetivo es mejorar la experiencia del usuario a través de diseños innovadores.</p>
                 </div>
 
+                <div class="content-section">
+                    <h2>Servicios</h2>
+                    <p>Ofrezco una amplia gama de servicios, incluyendo diseño de interfaces, consultoría en experiencia de usuario, y formación en diseño digital.</p>
+                </div>
 
-                <div class="col-md-10">
-                    <div class="image-container">
-                        
-                    </div>
-                    <div class="text">Hola, me llamo kebbyn</div>
-                    <div class="des">Especialista en cursos basicos de Computacion e Informmatica</div>
+                <div class="content-section">
+                    <h2>Habilidades</h2>
+                    <ul>
+                        <li>Diseño de interfaces</li>
+                        <li>Experiencia de usuario</li>
+                        <li>Prototipado</li>
+                        <li>Investigación de usuario</li>
+                    </ul>
+                </div>
 
-                </div>            
+                <div class="content-section">
+                    <h2>Educación</h2>
+                    <p>Título en Diseño Gráfico de la Universidad de Filipinas. Cursos adicionales en diseño de interacción y psicología del usuario.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Experiencia</h2>
+                    <p>Más de 5 años de experiencia trabajando con startups y empresas establecidas, creando soluciones digitales efectivas.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Proyectos</h2>
+                    <p>He trabajado en numerosos proyectos, incluyendo aplicaciones móviles, sitios web y sistemas de software.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Contacto</h2>
+                    <p>Si estás interesado en trabajar conmigo, no dudes en <a href="mailto:kebbyn@example.com">contactarme</a>.</p>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 
 </html>

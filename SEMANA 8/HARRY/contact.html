@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-conexion-degradado_23-2150521683.jpg?w=1380&t=st=1718311727~exp=1718312327~hmac=c3e0be55b05c786ec038f61a7cf3743143123d3ddce1f522ae6126a7197be7f9'); 
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -101,23 +102,51 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+.h1 {
+    text-align: right;
+}
+        /* ------------------------------------------------------------------------------------------- */
+        .menu {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%; /* Asegura que el menú ocupe todo el ancho */
+        }
 
-    </style>
+        .menu a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .menu a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <h1>HARRY GUTIERREZ</h1>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="Portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="menu">
+    
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="service.html">Services</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a class="active"  href="contact.html">Contact</a>
+    </div>
+    <div class="titulo">
+        <h1>HARRY GUTIERREZ</h1>
+        
+    </div>
     <main>
         <div class="container">
             <section id="contact">
@@ -126,48 +155,49 @@ button:hover {
                     <div class="contact-item">
                         <div class="icon">📍</div>
                         <div>
-                            <h3>My Address</h3>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                            <h3>Mi Direccion</h3>
+                            <p>Pauza-B.Huanuco-Av.Miguel Grau</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📧</div>
                         <div>
-                            <h3>Email Me</h3>
-                            <p>contact@example.com</p>
+                            <h3>Email</h3>
+                            <p>erosquispe319@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📞</div>
                         <div>
-                            <h3>Call Me</h3>
-                            <p>+1 5589 55488 55</p>
+                            <h3>Telefono</h3>
+                            <p>+51 928 378 201</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">🔗</div>
                         <div>
-                            <h3>Social Profiles</h3>
+                            <h3>Redes Sociales</h3>
                             <p>
                                 <a href="#">Twitter</a> |
                                 <a href="#">Facebook</a> |
-                                <a href="#">Instagram</a> |
-                                <a href="#">Skype</a> |
-                                <a href="#">LinkedIn</a>
+                                <a href="#">Instagram</a> 
                             </p>
                         </div>
                     </div>
                 </div>
                 <form>
-                    <input type="text" name="name" placeholder="Your Name">
-                    <input type="email" name="email" placeholder="Your Email">
-                    <input type="text" name="subject" placeholder="Subject">
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button type="submit">Send Message</button>
+                    <input type="text" name="Nombre" placeholder="Your Name">
+                    <input type="email" name="Email" placeholder="Your Email">
+                    <input type="text" name="Subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Mensage"></textarea>
+                    <button type="submit">Enviar Mensage</button>
                 </form>
             </section>
         </div>
     </main>
+    <footer class="footer">
+        <p>&copy; 2024 Harry Gutierrez. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 

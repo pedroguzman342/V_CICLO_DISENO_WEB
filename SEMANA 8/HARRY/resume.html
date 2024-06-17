@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-conexion-degradado_23-2150521683.jpg?w=1380&t=st=1718311727~exp=1718312327~hmac=c3e0be55b05c786ec038f61a7cf3743143123d3ddce1f522ae6126a7197be7f9'); 
             background-color: #111;
             color: #fff;
             font-family: 'Arial', sans-serif;
@@ -87,40 +88,57 @@
             margin-bottom: 10px;
         }
 
-       .footer {
-            background-color: #222;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #777;
-        }
+
+        
         /* ------------------------------------------------------------------------------------------- */
+        .menu {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%; /* Asegura que el menú ocupe todo el ancho */
+        }
+
+        .menu a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .menu a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
 
     </style>
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Emily Jones</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+    <div class="menu">
+    
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="service.html">Services</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="titulo">
+        <h1>HARRY GUTIERREZ</h1>
+        
         </div>
-    </nav>
+    
 
     <div class="container">
-        <h1>Resume</h1>
+        <h1> My Resume</h1>
         <div class="resume-section">
             <h2 class="resume-section-title">Summary</h2>
             <p>Emily Jones, Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
