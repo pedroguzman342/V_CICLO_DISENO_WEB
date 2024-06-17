@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            #listado_gatos {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                padding: 20px;
+                border: 5px;
+            }
+            .gatos{
+                width: 100%;
+                height: auto;
+                border-radius: 20px;             
+                
+            }
+            .titulo{
+                
+                
+                font-size: 50px;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                text-align: center;
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <img src="">
+        <center><div class="titulo">ADOPTAME.PE</div></center>
+        
+        <div id="listado_gatos"></div>
+        
+
+        <script>
+            $.ajax({
+                url:"https://api.thecatapi.com/v1/images/search?limit=25&api_key=live_xzxqemNky5nJyF1uUdGTAmZMLAJ40pA0X2oG6LRWZJmSHmJnGAfyoX3qzrZJI1y2",
+                type:"GET",
+                success:function(data){
+                    data.forEach(element => {
+                        console.log(element.url);
+                        $("#listado_gatos").append("<img class='gatos' src= '"+element.url+"'>");
+                    });
+
+                }
+            });
+        </script>
+
+    </body>
+</html>

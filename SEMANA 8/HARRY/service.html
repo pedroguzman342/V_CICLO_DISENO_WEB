@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-conexion-degradado_23-2150521683.jpg?w=1380&t=st=1718311727~exp=1718312327~hmac=c3e0be55b05c786ec038f61a7cf3743143123d3ddce1f522ae6126a7197be7f9'); 
             background-color: #121212;
             color: #fff;
             font-family: 'Arial', sans-serif;
@@ -70,27 +71,49 @@
             color: #fff;
             font-size: 0.8rem;
         }
+                /* ------------------------------------------------------------------------------------------- */
+                .menu {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%; /* Asegura que el menú ocupe todo el ancho */
+        }
+
+        .menu a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .menu a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Emily Jones</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="menu">
+    
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="active" href="service.html">Services</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="titulo">
+        <h1>HARRY GUTIERREZ</h1>
+        
+    </div>
+    
 
     <header class="services-header">
         <h1>Our Services</h1>
@@ -103,8 +126,9 @@
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <div class="service-title">Web Development</div>
-                    <div class="service-description">We create responsive and modern web applications to help your business grow.</div>
+                    <div class="service-title">Tecnología y Desarrollo</div>
+                    <div class="service-description">Inteligencia Artificial y Machine Learning:
+                        Implementación de soluciones de IA.</div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -112,8 +136,10 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="service-title">Mobile Development</div>
-                    <div class="service-description">Build powerful mobile applications for both Android and iOS platforms.</div>
+                    <div class="service-title">Marketing y Comunicación</div>
+                    <div class="service-description">Diseño Gráfico:
+                        Creación de material publicitario. Diseño de identidad corporativa
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -121,8 +147,10 @@
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <div class="service-title">UI/UX Design</div>
-                    <div class="service-description">Design stunning and user-friendly interfaces for your web and mobile apps.</div>
+                    <div class="service-title">Educación y Capacitación</div>
+                    <div class="service-description">Educación Online:
+                        Desarrollo de contenido educativo. Tutorización y apoyo académico
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,8 +162,10 @@
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <div class="service-title">Web Development</div>
-                    <div class="service-description">We create responsive and modern web applications to help your business grow.</div>
+                    <div class="service-title">Innovación y Sostenibilidad</div>
+                    <div class="service-description">Innovación Tecnológica:
+                        Investigación y desarrollo. Gestión de la innovación
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -143,8 +173,10 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="service-title">Mobile Development</div>
-                    <div class="service-description">Build powerful mobile applications for both Android and iOS platforms.</div>
+                    <div class="service-title">Servicios Creativos</div>
+                    <div class="service-description">Diseño y Desarrollo Web:
+                        Diseño de páginas web. Mantenimiento y actualizaciones
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -152,8 +184,8 @@
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <div class="service-title">UI/UX Design</div>
-                    <div class="service-description">Design stunning and user-friendly interfaces for your web and mobile apps.</div>
+                    <div class="service-title">Servicios Administrativos</div>
+                    <div class="service-description">Soporte Administrativo: Gestión de documentos. Asistencia personal</div>
                 </div>
             </div>
         </div>
