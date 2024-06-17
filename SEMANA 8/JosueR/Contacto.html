@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .navbar-custom {
+            background-color: rgb(233, 232, 230);
+        }
+        .navbar-custom .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-custom .nav-link {
+            color: #333;
+        }
+        .navbar-custom .nav-link.active {
+            color: #17a2b8; /* Customize active link color */
+        }
+        .navbar-custom .nav-link:hover {
+            color: #17a2b8; /* Customize hover link color */
+        }
+        .content {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            color: #777;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info .info {
+            margin-bottom: 20px;
+        }
+        .contact-info .info .icon {
+            font-size: 1.5rem;
+            color: #17a2b8;
+            display: inline-block;
+            width: 30px;
+        }
+        .contact-info .info p {
+            display: inline-block;
+            margin: 0;
+            padding-left: 10px;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">KELLY</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
+                    <li class="nav-item"><a href="Servicios.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="Contacto.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="content">
+        <div class="container">
+            <h1>CONTACTO</h1>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+    </section>
+
+    <!-- Mapa de Google -->
+    <section class="map">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9553304493664!2d-74.01337958465422!3d40.71277527933027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19d9b44b6b%3A0x33f1b736bd29f3f6!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2s!4v1620299111507!5m2!1sen!2s"></iframe>
+        </div>
+    </section>
+
+    <!-- Información de contacto y formulario -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 contact-info">
+                    <div class="info">
+                        <div class="icon">📍</div>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+                    <div class="info">
+                        <div class="icon">📧</div>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="info">
+                        <div class="icon">📞</div>
+                        <p>+1 5589 55488 55s</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 contact-form">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

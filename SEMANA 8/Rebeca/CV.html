@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Perfil profesional de Rebeca Condori Barzola, con habilidades en Java, JavaScript, TypeScript, Python, HTML y CSS.">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
 
@@ -85,7 +86,7 @@
             --percentage: 85%;
         }
 
-        .acerca-de-mi {
+        .acerca-de-mi, .bloque-info {
             font-size: 30px;
             padding: 20px;
             border: 2px solid #ddd;
@@ -94,17 +95,43 @@
             margin-bottom: 20px;
         }
 
-        .acerca-de-mi h3 {
+        .acerca-de-mi h3, .bloque-info h3 {
             font-size: 35px;
             margin-bottom: 20px;
         }
 
-        .bloque-info {
+        footer {
+            background-color: #673ab7;
+            color: white;
+            text-align: center;
             padding: 20px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            margin-bottom: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons li {
+            display: inline;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -112,16 +139,14 @@
 <body>
     <div class="Contenido1">
         <div class="Contenido2">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Rebeca Condori Barzola</h1>
-                </div>
-            </div>
+            <header class="text-center">
+                <h1>Rebeca Condori Barzola</h1>
+            </header>
 
             <div class="row">
-                <div class="col-md-2">
+                <aside class="col-md-2">
                     <div class="contenedor-3 text-center">
-                        <img class="foto-perfil" src="https://www.mujerde10.com/wp-content/uploads/2021/07/habitos-para-convertirte-en-una-mujer-empoderada.jpg" alt="Foto de perfil de Rebeca Condori Barzola">
+                        <img class="foto-perfil" src="https://z-p3-scontent.flim3-2.fna.fbcdn.net/v/t31.18172-8/26240821_1254587601352113_8134726642469173018_o.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHbglAbibt4u6jCACo7VYGNlZRSDbULyI6VlFINtQvIjllFDAqd4NzRUL7We0MrF_0IGgJZTqTVKGzsxVnzKH28&_nc_ohc=vspGx0v1hgMQ7kNvgHWtFMY&_nc_ht=z-p3-scontent.flim3-2.fna&oh=00_AYCsnUzs6H5CNtn-102gT--W-RDqVEKDb5dyDltfviZSIg&oe=669593D4" alt="Foto de perfil de Rebeca Condori Barzola">
                         <div class="skills-text">HABILIDADES</div>
                         <ul>
                             <li><span class="skill-icon java"></span>Java</li>
@@ -132,27 +157,43 @@
                             <li><span class="skill-icon css"></span>CSS</li>
                         </ul>
                     </div>
-                </div>
+                </aside>
 
-                <div class="col-md-10">
-                    <div class="acerca-de-mi" id="acerca-de-mi">
+                <main class="col-md-10">
+                    <section class="acerca-de-mi" id="acerca-de-mi">
                         <h3>Acerca de mí</h3>
                         <p>Profesional en Computación e Informática, las habilidades técnicas y flexibles y la capacidad innovadora de resolución de problemas me hacen adecuado para trabajar en entornos de desarrollo de ritmo rápido y ofrecer software listo para la producción de alta calidad. Involucrarme de manera proactiva y asumir tareas desafiantes me mantiene motivado en la creación de software de alta calidad para el cliente final.</p>
-                    </div>
-                    <div class="bloque-info" id="bloque-info1">
-                        <h3>Título: Computacion e Informatica</h3>
-                        <p><strong>Especialidad:</strong> Ofimatica</p>
+                    </section>
+                    <section class="bloque-info" id="bloque-info1">
+                        <h3>Título: Computación e Informática</h3>
+                        <p><strong>Especialidad:</strong> Ofimática</p>
                         <p><strong>Cursos:</strong> Algoritmos, Introducción a Big Data, Fundamentos de Sistemas Inteligentes, Fundamentos de Computación Paralela, Big Data, Seguridad de Datos, Limpieza de Datos, Codificación Segura</p>
-                    </div>
-                    <div class="bloque-info" id="bloque-info2">
+                        <img src="https://iestpsarasara.iestpsdg.edu.pe/wp-content/uploads/2023/10/image-17-300x90.png" alt="Instituto" style="margin-bottom: 20px;">
+                    </section>
+                    <section class="bloque-info" id="bloque-info2">
                         <h3>Titulación: Licenciatura en Ingeniería</h3>
-                        <p><strong>Especialidad:</strong> Ofimatica</p>
-                        <p><strong>Cursos:</strong> Procesador de Textos, Hoja de Clculos, Programa de presentaciones, otros.</p>
-                    </div>
-                </div>
+                        <p><strong>Especialidad:</strong> Ofimática</p>
+                        <p><strong>Cursos:</strong> Procesador de Textos, Hoja de Cálculos, Programa de Presentaciones, otros.</p>
+                    </section>
+                </main>
             </div>
         </div>
+
+        <footer>
+            <p>Sígueme en mis redes sociales:</p>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/rebeca.condori" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/220px-Logo_de_Facebook.png" alt="Facebook"> Facebook</a></li>
+                <li><a href="https://www.twitter.com/rebeca_condori" target="_blank">
+                    <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter"> Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/rebeca-condori" target="_blank">
+                    <img src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kMy0xMC5wbmc.png" alt="LinkedIn"> LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/rebeca_condori" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"> Instagram</a></li>
+            </ul>
+        </footer>
     </div>
 </body>
 
 </html>
+

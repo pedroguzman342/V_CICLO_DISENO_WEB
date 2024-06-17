@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .portfolio {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .portfolio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .portfolio p {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 40px;
+        }
+        .navbar-custom {
+            background-color: rgb(233, 232, 230);
+        }
+        .navbar-custom .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-custom .nav-link {
+            color: #333;
+        }
+        .navbar-custom .nav-link.active {
+            color: #17a2b8; /* Customize active link color */
+        }
+        .navbar-custom .nav-link:hover {
+            color: #17a2b8; /* Customize hover link color */
+        }
+        .portfolio-item {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .filter-buttons {
+            margin-bottom: 2cm; /* Ajusta la distancia entre los botones y las imágenes */
+        }
+        .filter-buttons .btn {
+            border-radius: 30px; /* Bordes redondeados para un efecto ovalado */
+            margin: 5px;
+        }
+        .portfolio-item {
+            display: none; /* Oculta todas las imágenes inicialmente */
+        }
+        .portfolio-item.all,
+        .portfolio-item.app,
+        .portfolio-item.card,
+        .portfolio-item.web {
+            display: block; /* Muestra todas las imágenes de las categorías específicas por defecto */
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado con navegación -->
+    <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">KELLY</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Portafolio -->
+    <section class="portfolio">
+        <div class="container">
+            <h2>PORTFOLIO</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <div class="filter-buttons">
+                <button class="btn btn-primary" onclick="filterSelection('all')">ALL</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('app')">APP</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('card')">CARD</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('web')">WEB</button>
+            </div>
+            <div id="image-container" class="row">
+                <!-- Imágenes se cargarán aquí -->
+                <div class="col-lg-4 col-md-6 portfolio-item app all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="Portfolio 1">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item web all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="Portfolio 2">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item app all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="Portfolio 3">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item app all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="Portfolio 6">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item web all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="Portfolio 5">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item card all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="Portfolio 4">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item card all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="Portfolio 7">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item card all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="Portfolio 8">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item web all">
+                    <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="Portfolio 9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function filterSelection(category) {
+            var items = document.getElementsByClassName('portfolio-item');
+            if (category == 'all') category = 'all';
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = 'none';
+                if (items[i].className.indexOf(category) > -1) {
+                    items[i].style.display = 'block';
+                }
+            }
+        }
+
+        // Show all items by default
+        filterSelection('all');
+    </script>
+</body>
+</html>
