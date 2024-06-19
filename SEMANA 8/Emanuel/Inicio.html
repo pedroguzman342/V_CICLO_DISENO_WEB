@@ -162,6 +162,8 @@
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
         .Titulo {
             font-size: 2.5em; 
@@ -182,6 +184,7 @@
             background-color: #3f51b5; 
             padding: 30px; 
             border-radius: 8px; 
+            min-height: 100vh; /* Altura mínima de la ventana del navegador */
         }
         .sub {
             color: #fff;
@@ -233,12 +236,15 @@
             margin-right: 50px;
         }
         .fondo, .fondo2 {
-            margin: 40px;
+            padding: 40px;
         }
         .Contenedor {
             background-color: #4caf50;
+            min-height: 100vh; /* Altura mínima de la ventana del navegador */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    
         .TextoPrincipal {
             background: #fff;
             padding: 20px;
@@ -268,11 +274,6 @@
             border: 0;
             border-top: 1px solid #ddd;
         }
-       
-
-      
-
-       
     </style>
 </head>
 <body>
@@ -284,20 +285,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                
                 <li class="nav-item">
                     <a class="nav-link" href="personal.html">Personal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Experiencia lavoral</a>
+                    <a class="nav-link" href="#">Experiencia laboral</a>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <!-- Contenido de la página -->
-    <div class="">
-        <div class="row">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
             <div class="col-md-6 derecha">
                 <div class="Titulo">
                     Desarrollador frontend
@@ -318,27 +318,32 @@
         </div>
     </div>
 
-    <div class="row fondo">
-        <div class="col-md-6 derecha2">
-            <div class="Titulo2">
-                Diseño
-            </div>
-            <div class="sub1">Probablemente no sea el típico diseñador que se coloca detrás de una mesa de trabajo de Illustrator ajustando píxeles, pero diseño. Inmerso en hojas de estilo, ajustando tamaños de fuente y contemplando diseños es donde me encontrarás (~_^). Estoy comprometido a crear experiencias de usuario fluidas sin dejar de estar a la moda.
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-md-6 derecha2 fondo">
+                <div class="Titulo2">
+                    Diseño
+                </div>
+                <div class="sub1">Probablemente no sea el típico diseñador que se coloca detrás de una mesa de trabajo de Illustrator ajustando píxeles, pero diseño. Inmerso en hojas de estilo, ajustando tamaños de fuente y contemplando diseños es donde me encontrarás (~_^). Estoy comprometido a crear experiencias de usuario fluidas sin dejar de estar a la moda.
+                </div>
             </div>
         </div>
-    </div> 
+    </div>
 
-    <div class="row fondo1">
-        <div class="col-md-6"></div>  
-        <div class="col-md-6 derecha3">
-            <div class="Titulo3">
-                Ingeniería
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 derecha3 ">
+                <div class="Titulo3">
+                    Ingeniería
+                </div>
+                <div class="sub2">Al crear aplicaciones JavaScript, estoy equipado con las herramientas adecuadas y puedo funcionar absolutamente independientemente de ellas para ofrecer soluciones rápidas y resistentes optimizadas para la escala: el rendimiento y la escalabilidad son prioridades en mi radar.</div>
             </div>
-            <div class="sub2">Al crear aplicaciones JavaScript, estoy equipado con las herramientas adecuadas y puedo funcionar absolutamente independientemente de ellas para ofrecer soluciones rápidas y resistentes optimizadas para la escala: el rendimiento y la escalabilidad son prioridades en mi radar.</div>
         </div>
-    </div>    
-    <div class="container mt-5">
-        <div class="row">
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="TextoPrincipal">
                     <h1 class="TituloP">Con los años</h1>
@@ -347,23 +352,24 @@
                     <p>Antes de ahora, era Ingeniero Principal de Frontend en hellotax, donde trabajé en un conjunto de herramientas y servicios adaptados al cumplimiento automatizado del IVA para vendedores multicanal en Europa.</p>
                     <p>Antes de hellotax, fui consultor senior de ingeniería de frontend con Pixel2HTML, construyendo aplicaciones e interfaces de JavaScript para organizaciones e individuos.</p>
                     <p>Una vez también lideré el equipo de frontend en Conectar, una startup de aprendizaje electrónico a través de la construcción de múltiples aplicaciones React en una única plataforma de aprendizaje.</p>
+                    <div class="col-md-4 IMG ">
+                        <img class="img-thumbnail float-md-right imagen" src="https://imgs.search.brave.com/q35jqYeV1LtNLP1WHO7VFIXwGSR1PaEq_fJzdZq9OyA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/dmVjdG9yLWdyYXRp/cy9kaXNlbmFkb3It/Z3JhZmljby1lc2Nl/bmEtZXNjcml0b3Jp/b182MDM4NDMtNzcy/LmpwZz9zaXplPTYy/NiZleHQ9anBn" alt="Imagen">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 IMG">
-                <img class="img-thumbnail float-md-right imagen" src="https://imgs.search.brave.com/q35jqYeV1LtNLP1WHO7VFIXwGSR1PaEq_fJzdZq9OyA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/dmVjdG9yLWdyYXRp/cy9kaXNlbmFkb3It/Z3JhZmljby1lc2Nl/bmEtZXNjcml0b3Jp/b182MDM4NDMtNzcy/LmpwZz9zaXplPTYy/NiZleHQ9anBn" alt="Imagen">
-            </div>
+            
         </div>
     </div>
-    
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
+
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-md-6 ">
                 <h2 class="title">Construyo cosas con diseño</h2>
                 <p class="description">Código abierto</p>
                 <p class="description">Proyectos y aplicaciones web</p>
                 <p class="description">Experimentales, ese es mi primer renglón.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 ">
                 <h2 class="title">Escribo a veces</h2>
                 <p class="description">Sobre diseño,</p>
                 <p class="description">Frontend dev,</p>
@@ -371,18 +377,14 @@
                 <p class="description">Ese es mi segundo bloque.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
+        <div class="row no-gutters">
+            <div class="col-md-12 text-center fondo">
                 <hr class="separator">
             </div>
         </div>
-    </div> 
-    
+    </div>
 
     <!-- Scripts al final del body -->
     <script src="JS/bootstrap.bundle.min.js"></script>
-    
-     
-    
 </body>
 </html>
