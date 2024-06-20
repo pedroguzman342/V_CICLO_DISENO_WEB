@@ -6,6 +6,7 @@
     <title>INICIO</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: 'Raleway', sans-serif;
@@ -36,10 +37,18 @@
             width: 100%;
         }
         .navbar-custom .nav-link.active {
-            color: #17a2b8; /* Customize active link color */
+            color: #17a2b8;
         }
         .navbar-custom .nav-link:hover {
-            color: #17a2b8; /* Customize hover link color */
+            color: #17a2b8;
+        }
+        .header-social-links a {
+            color: #555;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+        .header-social-links a:hover {
+            color: #00b7a8;
         }
         .content {
             text-align: center;
@@ -89,29 +98,29 @@
             margin-bottom: 30px;
         }
         .seccion-heroe {
-            margin-top: 0; /* Eliminar el margen superior */
-            position: relative; /* Permitir posicionar elementos hijos */
-            height: 100vh; /* Ocupar toda la altura de la ventana */
-            background-image: url('https://d29jy8ovkd5kcx.cloudfront.net/wp-content/uploads/2023/07/12164851/Programadores-en-Argentina.jpg'); /* Ajustar ruta de la imagen */
-            background-size: cover; /* Cubrir todo el contenedor */
-            background-position: center; /* Centrar la imagen */
-            background-repeat: no-repeat; /* No repetir la imagen */
+            margin-top: 0;
+            position: relative;
+            height: 100vh;
+            background-image: url('https://d29jy8ovkd5kcx.cloudfront.net/wp-content/uploads/2023/07/12164851/Programadores-en-Argentina.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .texto-heroe {
-            position: absolute; /* Posicionamiento absoluto */
-            top: 50%; /* Centrar verticalmente */
-            left: 50%; /* Centrar horizontalmente */
-            transform: translate(-50%, -50%); /* Centrar completamente */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            z-index: 1; /* Asegurarse de que el texto esté sobre la imagen */
-            color: white; /* Color del texto para que se vea bien sobre la imagen */
+            z-index: 1;
+            color: white;
         }
         .texto-heroe h1 {
-            font-size: 4rem; /* Aumentar el tamaño del título */
+            font-size: 4rem;
             font-weight: bold;
         }
         .texto-heroe p {
-            font-size: 1.5rem; /* Aumentar el tamaño del texto */
+            font-size: 1.5rem;
         }
         .texto-heroe .boton {
             background-color: #00b7a8;
@@ -119,37 +128,75 @@
             padding: 15px 30px;
             border: none;
             border-radius: 30px;
-            margin-top: 2cm; /* Set margin-top to 2 centimeters */
+            margin-top: 2cm;
             text-decoration: none;
+        }
+        footer {
+            background-color: rgb(233, 232, 230);
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00b7a8;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #17a2b8;
         }
     </style>
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">KELLY</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JOSUE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a href="#" class="nav-link active">INICIO</a></li>
-                    <li class="nav-item"><a href="Acerca_de.html" class="nav-link">ACERCA DE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">RESUMEN</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">SERVICIOS</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PORTAFOLIO</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTACTO</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Acerca de</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resumen</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
                 </ul>
+                <div class="header-social-links">
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
     </header>
 
     <div class="seccion-heroe">
         <div class="texto-heroe">
-            <h1>KELLY ADAMS</h1>
-            <p>I'm a professional illustrator from San Francisco</p>
-            <a class="boton" href="Acerca_de.html">ABOUT ME</a>
+            <h1>JOSUE RAMOS</h1>
+            <p>Soy un ilustrador profesional de San Francisco</p>
+            <a class="boton" href="Acerca_de.html">ACERCA DE</a>
         </div>
+    </div>
+
+    <footer>
+        <div>&copy; Copyright <strong>Josue</strong>. All Rights Reserved</div>
+        <div>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+    </footer>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
     </div>
 
     <!-- FontAwesome Icons -->
@@ -159,6 +206,6 @@
     <!-- Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="JS/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
