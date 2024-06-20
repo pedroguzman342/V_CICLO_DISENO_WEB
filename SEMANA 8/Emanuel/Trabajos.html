@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Título de tu página</title>
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <style>
+           .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 400px;
+            margin: 50px 0;
+            border-left: 2px solid #333;
+            border-bottom: 2px solid #333;
+            padding: 10px;
+        }
+        .bar {
+            width: 30%;
+            margin: 0 10px;
+            background-color: lightblue;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+        .bar span {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+        .bar-value {
+            position: absolute; 
+            top: -30px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+        .rf{
+            margin: -7px;
+
+        }
+        .card {
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+        </style>
+
+
+
+    </head>
+    <body>
+         <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="Inicio.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Personal.html">Personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trabajos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center my-4"><Em>Experiencia</Em></h1>
+            <div class="bar-chart mx-auto">
+                <div class="bar" style="height: 85%;">
+                    <div class="bar-value">85</div>
+                    <span class="rf">Desempeño</span>
+                </div>
+                <div class="bar" style="height: 50%;">
+                    <div class="bar-value">40</div>
+                    <span class="rf">Trabajos Completados</span>
+                </div>
+                <div class="bar" style="height: 20%;">
+                    <div class="bar-value">20</div>
+                    <span class="rf">Experiencia Laboral</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Empresas de Programación</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.google.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/google.png" class="img-fluid logo" alt="Google">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.microsoft.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/microsoft.png" class="img-fluid logo" alt="Microsoft">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.amazon.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/amazon.png" class="img-fluid logo" alt="Amazon">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.facebook.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/facebook.png" class="img-fluid logo" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.ibm.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/ibm.png" class="img-fluid logo" alt="IBM">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <a href="https://www.apple.com" target="_blank" class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/apple.png" class="img-fluid logo" alt="Apple">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+   
+
+
+
+    </body>
+</html>
