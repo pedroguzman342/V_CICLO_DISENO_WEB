@@ -1,76 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body { font-family: 'Raleway', sans-serif; }
-        .navbar-custom { background-color: rgb(233, 232, 230); }
-        .navbar-custom .navbar-nav { margin: 0 auto; }
-        .navbar-custom .nav-link { color: #333; position: relative; }
-        .navbar-custom .nav-link::after { content: ''; display: block; width: 0; height: 2px; background: #00b7a8; transition: width .3s; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-        .navbar-custom .nav-link:hover::after { width: 100%; }
-        .navbar-custom .nav-link.active { color: #17a2b8; }
-        .navbar-custom .nav-link:hover { color: #17a2b8; }
-        .header-social-links a { color: #555; margin-right: 10px; transition: color 0.3s; }
-        .header-social-links a:hover { color: #00b7a8; }
-        footer { background-color: rgb(233, 232, 230); text-align: center; padding: 20px 0; position: relative; bottom: 0; width: 100%; }
-        .back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #00b7a8; color: white; padding: 10px; border-radius: 50%; text-align: center; cursor: pointer; transition: background-color 0.3s; }
-        .back-to-top:hover { background-color: #17a2b8; }
-        .content { text-align: center; padding: 50px 0; }
-        .content h1 { font-size: 3rem; margin-bottom: 20px; }
-        .content p { font-size: 1.2rem; color: #777; margin: 0 auto; max-width: 600px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen - Alice Barkley</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+    .navbar-custom {
+        background-color: rgb(233, 232, 230);
+    }
+    .navbar-custom .navbar-nav {
+        margin: 0 auto;
+    }
+    .navbar-custom .nav-link {
+        color: #333;
+        position: relative;
+    }
+    .navbar-custom .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #00b7a8;
+        transition: width .3s;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-custom .nav-link:hover::after {
+        width: 100%;
+    }
+    .navbar-custom .nav-link.active {
+        color: #17a2b8;
+    }
+    .navbar-custom .nav-link:hover {
+        color: #17a2b8;
+    }
+    .header-social-links a {
+        color: #555;
+        margin-right: 10px;
+        transition: color 0.3s;
+    }
+    .header-social-links a:hover {
+        color: #00b7a8;
+    }
+    .resume-section {
+      padding: 20px;
+    }
+    .timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 2px;
+      height: 100%;
+      background: #17a2b8;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #17a2b8;
+    }
+    .navbar-nav .nav-item .nav-link {
+      color: #666;
+    }
+    .navbar-nav .nav-item .nav-link.active {
+      color: #000;
+      position: relative;
+    }
+    .navbar-nav .nav-item .nav-link.active::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #17a2b8;
+      margin: 0 auto;
+      margin-top: 4px;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .social-icons a {
+      color: #666;
+      margin-right: 10px;
+    }
+    .page-header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .page-header h1 {
+      margin-bottom: 0;
+    }
+    .page-header p {
+      margin-top: 10px;
+      color: #666;
+    }
+    .page-header .underline {
+      width: 50px;
+      height: 3px;
+      background: #17a2b8;
+      margin: 10px auto;
+    }
+    .timeline-badge {
+      background-color: #dfe6e9;
+      border-radius: 4px;
+      padding: 2px 8px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    footer {
+        background-color: rgb(233, 232, 230);
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #00b7a8;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .back-to-top:hover {
+        background-color: #17a2b8;
+    }
+  </style>
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">JOSUE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="acerca_de.html" class="nav-link">Acerca de</a></li>
-                    <li class="nav-item"><a href="resumen.html" class="nav-link active">Resumen</a></li>
-                    <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="portafolio.html" class="nav-link">Portafolio</a></li>
-                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
-                </ul>
-                <div class="header-social-links">
-                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+  <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JOSUE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="Acerca_de.html" class="nav-link">Acerca de</a></li>
+          <li class="nav-item"><a href="Resumen.html" class="nav-link active">Resumen</a></li>
+          <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+          <li class="nav-item"><a href="Portafolio.html" class="nav-link">Portafolio</a></li>
+          <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="header-social-links">
+          <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <div class="content">
-        <div class="container">
-            <h1>Resumen</h1>
-            <p>Innovadora y orientada a cumplir plazos, diseñadora gráfica con más de 3 años de experiencia en el diseño y desarrollo de materiales de marketing digital/impreso centrados en el usuario, desde el concepto inicial hasta el resultado final y pulido.</p>
-        </div>
+  <div class="container">
+    <div class="page-header">
+      <h1>RESUMEN</h1>
+      <div class="underline"></div>
+      <p>Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir en esta oficina de conveniencia, que está aquí.</p>
     </div>
 
-    <footer>
-        <div>&copy; Copyright <strong>Josue</strong>. All Rights Reserved</div>
-        <div>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
-    </footer>
+    <section class="resume-section">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Alice Barkley -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Josue Ramos</h2>
+              <p>Innovador y orientado a cumplir plazos, diseñador gráfico con más de 3 años de experiencia en el diseño y desarrollo de materiales de marketing digital/impreso centrados en el usuario, desde el concepto inicial hasta el resultado final y pulido.</p>
+              <ul>
+                <li>Ayacucho n# 127, Pausa, Peru</li>
+                <li>+51 947 424 866</li>
+                <li>josuern5593@gmail.com</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Educación -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Educación</h2>
+              <div>
+                <h3 class="h5">Maestría en Bellas Artes y Diseño Gráfico</h3>
+                <span class="timeline-badge">2015 - 2016</span>
+                <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
+                <p>Los que se vayan serán perdonados. Y si alguno trabaja en ese momento, que sea justo. Ella, sin embargo, marca el placer de quienes, como los más dignos de las tiernas arenas del puerto.</p>
+              </div>
+              <div>
+                <h3 class="h5">Licenciatura en Bellas Artes y Diseño Gráfico</h3>
+                <span class="timeline-badge">2010 - 2014</span>
+                <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
+                <p>Porque estamos cegados o cegados para seguir. Rechazar y rechazar precisamente qué y quién es o a causa de ello, de donde los placeres de las cosas de la vida son placeres más groseros. Pero no sufrirán sus problemas.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="timeline">
+            <!-- Estilo de línea de tiempo agregado a Especialista senior en diseño gráfico -->
+            <li class="timeline-item">
+              <h2 class="h4 mb-4">Especialista senior en diseño gráfico</h2>
+              <p><strong>Experion, Nueva York, NY</strong> <span class="text-muted">(2019 - Presente)</span></p>
+              <ul>
+                <li>Liderar el diseño, desarrollo e implementación de los materiales de comunicación gráfica, de diseño y producción.</li>
+                <li>Delegar tareas a los 7 miembros del equipo de diseño y brindar asesoramiento sobre todos los aspectos del proyecto.</li>
+                <li>Supervisar la evaluación de todos los materiales gráficos para garantizar la calidad y precisión del diseño.</li>
+                <li>Supervisar el uso eficiente de los presupuestos de proyectos de producción que oscilan entre $2,000 y $25,000.</li>
+              </ul>
+            </li>
+            <!-- Estilo de línea de tiempo agregado a Especialista en diseño gráfico -->
+            <li class="timeline-item">
+              <h2 class="h5">Especialista en diseño gráfico</h2>
+              <p><strong>Publicidad Stepping Stone, Nueva York, NY</strong> <span class="text-muted">(2017 - 2018)</span></p>
+              <ul>
+                <li>Desarrolló numerosos programas de marketing (logos, folletos, infografías, presentaciones y anuncios).</li>
+                <li>Gestionó hasta 5 proyectos o tareas al mismo tiempo bajo presión.</li>
+                <li>Recomendó y consultó con clientes sobre el diseño gráfico más adecuado.</li>
+                <li>Creó más de 4 presentaciones y propuestas de diseño al mes para clientes y gerentes de cuentas.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+  <footer>
+    <div>&copy; Copyright <strong>Josue</strong>. Reservados todos los derechos</div>
+        <div>Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+  </footer>
+    
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -8,49 +8,130 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body { font-family: 'Raleway', sans-serif; }
-        .navbar-custom { background-color: rgb(233, 232, 230); }
-        .navbar-custom .navbar-nav { margin: 0 auto; }
-        .navbar-custom .nav-link { color: #333; position: relative; }
-        .navbar-custom .nav-link::after { content: ''; display: block; width: 0; height: 2px; background: #00b7a8; transition: width .3s; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-        .navbar-custom .nav-link:hover::after { width: 100%; }
-        .navbar-custom .nav-link.active { color: #17a2b8; }
-        .navbar-custom .nav-link:hover { color: #17a2b8; }
-        .header-social-links a { color: #555; margin-right: 10px; transition: color 0.3s; }
-        .header-social-links a:hover { color: #00b7a8; }
-        footer { background-color: rgb(233, 232, 230); text-align: center; padding: 20px 0; position: relative; bottom: 0; width: 100%; }
-        .back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #00b7a8; color: white; padding: 10px; border-radius: 50%; text-align: center; cursor: pointer; transition: background-color 0.3s; }
-        .back-to-top:hover { background-color: #17a2b8; }
-        .portfolio { padding: 50px 0; text-align: center; }
-        .portfolio h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .portfolio p { font-size: 1.2rem; color: #777; margin-bottom: 40px; }
-        .portfolio-item { overflow: hidden; margin-bottom: 30px; }
-        .portfolio-item img { width: 100%; height: auto; transition: transform 0.3s ease; }
-        .portfolio-item:hover img { transform: scale(1.1); }
-        .filter-buttons { margin-bottom: 2cm; }
-        .filter-buttons .btn { border-radius: 30px; margin: 5px; }
-        .portfolio-item { display: none; }
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        .navbar-custom {
+            background-color: rgb(233, 232, 230);
+        }
+        .navbar-custom .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-custom .nav-link {
+            color: #333;
+            position: relative;
+        }
+        .navbar-custom .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00b7a8;
+            transition: width .3s;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .navbar-custom .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-custom .nav-link.active {
+            color: #17a2b8;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #17a2b8;
+        }
+        .header-social-links a {
+            color: #555;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+        .header-social-links a:hover {
+            color: #00b7a8;
+        }
+        footer {
+            background-color: rgb(233, 232, 230);
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00b7a8;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #17a2b8;
+        }
+        .portfolio {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .portfolio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .portfolio p {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 40px;
+        }
+        .portfolio-item {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .filter-buttons {
+            margin-bottom: 2cm;
+        }
+        .filter-buttons .btn {
+            border-radius: 30px;
+            margin: 5px;
+        }
+        .portfolio-item {
+            display: none;
+        }
         .portfolio-item.all,
         .portfolio-item.app,
         .portfolio-item.card,
-        .portfolio-item.web { display: block; }
+        .portfolio-item.web {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <!-- Encabezado con navegación -->
     <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">JOSUE</a>
+            <a class="navbar-brand" href="#">JOSUE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="acerca_de.html" class="nav-link">Acerca de</a></li>
-                    <li class="nav-item"><a href="resumen.html" class="nav-link">Resumen</a></li>
-                    <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
-                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="Acerca_de.html" class="nav-link">Acerca de</a></li>
+                    <li class="nav-item"><a href="Resumen.html" class="nav-link">Resumen</a></li>
+                    <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="Portafolio.html" class="nav-link active">Portafolio</a></li>
+                    <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
                 </ul>
                 <div class="header-social-links">
                     <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -62,17 +143,19 @@
         </div>
     </header>
 
+    <!-- Sección de Portafolio -->
     <section class="portfolio">
         <div class="container">
-            <h2>Portafolio</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>PORTFOLIO</h2>
+            <p>Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir en esta oficina de conveniencia, que está aquí.</p>
             <div class="filter-buttons">
-                <button class="btn btn-primary" onclick="filterSelection('all')">ALL</button>
-                <button class="btn btn-outline-primary" onclick="filterSelection('app')">APP</button>
-                <button class="btn btn-outline-primary" onclick="filterSelection('card')">CARD</button>
+                <button class="btn btn-primary" onclick="filterSelection('all')">TODO</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('app')">APLICACIÓN</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('card')">TARJETA</button>
                 <button class="btn btn-outline-primary" onclick="filterSelection('web')">WEB</button>
             </div>
             <div id="image-container" class="row">
+                <!-- Imágenes se cargarán aquí -->
                 <div class="col-lg-4 col-md-6 portfolio-item app all">
                     <img src="https://bootstrapmade.com/demo/templates/Kelly/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="Portfolio 1">
                 </div>
@@ -104,11 +187,12 @@
         </div>
     </section>
 
+    <!-- Pie de página -->
     <footer>
-        <div>&copy; Copyright <strong>Josue</strong>. All Rights Reserved</div>
-        <div>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        <div>&copy; Copyright <strong>Josue</strong>. Reservados todos los derechos</div>
+        <div>Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
     </footer>
-
+    
     <div class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
@@ -117,6 +201,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script>
         function filterSelection(category) {
             var items = document.getElementsByClassName('portfolio-item');
