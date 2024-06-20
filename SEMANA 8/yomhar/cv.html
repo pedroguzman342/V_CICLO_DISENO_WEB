@@ -188,7 +188,100 @@
   display: block; /* Asegurar que la imagen se comporte como bloque */
   margin: 0 auto; /* Centrar la imagen horizontalmente dentro del slide */
 }
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #007bff;
+            border-radius: 50%;
+            margin-right: 10px;
+            position: relative;
+            top: 8px;
+        }
+        .timeline-content {
+            flex: 1;
+        }
+        .job-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .job-date {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .contact-info, .education, .experience {
+            margin-bottom: 20px;
+        }
+        .contact-info p, .education p, .experience p {
+            margin: 5px 0;
+        }
+        .portfolio {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    display: none;
+}
+
+.portfolio-item:hover.portfolio-overlay {
+    display: block;
+}
 
         /* Estilos responsivos */
         @media (max-width: 768px) {
@@ -241,6 +334,9 @@
             <a href="#informacion-personal">Información personal</a>
             <a href="#facts">Facts</a>
             <a href="#skills">Skills</a>
+            <a href="#summary">summary</a>
+            <a href="#education">educacion</a>
+            <a href="#experience">Profesional Experiencia </a>
         </div>
     </div>
 
@@ -401,37 +497,37 @@
     </div>
 
     <div class="container">
-        <div class="summary">
-            <div class="section-title">Summary</div>
+        <div class="summary" id="summary">
+            <div class="section-title">RESUMEN</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="job-title">BRANDON JOHNSON</div>
-                        <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
-                        <p>• Portland par 127, Orlando, FL</p>
-                        <p>• (123) 456-7891</p>
-                        <p>• alice.barkley@example.com</p>
+                        <div class="job-title">YOMHAR ARTURO PERALTA VALENCIA</div>
+                        <p>"Soy estudiante de informática, apasionado por aprender sobre computación y tecnología de la información."</p>
+                        <p>• Paucar del Sara Sara - Pauza </p>
+                        <p>• 950539350</p>
+                        <p>• yomharperaltavalencia@gmail.com</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="education">
-            <div class="section-title">Education</div>
+        <div class="education" id="education">
+            <div class="section-title">EDUCACION</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="job-title">MASTER OF FINE ARTS & GRAPHIC DESIGN</div>
-                        <div class="job-date">2015 - 2016</div>
-                        <p><strong>Rochester Institute of Technology, Rochester, NY</strong></p>
+                        <div class="job-title">COLEGIO</div>
+                        <div class="job-date">2015 - 2020</div>
+                        <p><strong>MARIANO MELGAR </strong></p>
                         <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" id="timeline">
                     <div class="timeline-content">
-                        <div class="job-title">BACHELOR OF FINE ARTS & GRAPHIC DESIGN</div>
-                        <div class="job-date">2010 - 2014</div>
-                        <p><strong>Rochester Institute of Technology, Rochester, NY</strong></p>
+                        <div class="job-title">BACHILER COPUTACION E INFORMATICO</div>
+                        <div class="job-date">2021 - 2024</div>
+                        <p><strong>INSTITUTO TECNOLOGICO PUBLICO PAUCAR DEL SARA SARA</strong></p>
                         <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque elton sader mart dila</p>
                     </div>
                 </div>
@@ -439,13 +535,13 @@
         </div>
 
         <div class="experience">
-            <div class="section-title">Professional Experience</div>
+            <div class="section-title" id="experience">EXPERIENCIA PROFESIONAL</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="job-title">SENIOR GRAPHIC DESIGN SPECIALIST</div>
-                        <div class="job-date">2019 - Present</div>
-                        <p><strong>Experion, New York, NY</strong></p>
+                        <div class="job-title">PROGRAMADOR</div>
+                        <div class="job-date">2024 - Presente</div>
+                        <p><strong>Paucar del Sara Sara </strong></p>
                         <ul>
                             <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
                             <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project</li>
@@ -456,8 +552,8 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="job-title">GRAPHIC DESIGN SPECIALIST</div>
-                        <div class="job-date">2017 - 2018</div>
+                        <div class="job-title">DISEÑADOR GRAFICO</div>
+                        <div class="job-date">2021 - 2022</div>
                         <p><strong>Stepping Stone Advertising, New York, NY</strong></p>
                         <ul>
                             <li>Developed numerous marketing programs (logos, brochures, infographics, presentations, and advertisements)</li>
@@ -471,6 +567,60 @@
         </div>
     </div>
 
+    <div class="container">
+        <!--... otros elementos... -->
+    
+        <div class="portfolio">
+            <h2><center>Portafolio</center></h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="imagen1.jpg" alt="Imagen 1">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 1</h3>
+                        <p>Descripción de la imagen 1</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagen2.jpg" alt="Imagen 2">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 2</h3>
+                        <p>Descripción de la imagen 2</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagen3.jpg" alt="Imagen 3">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 3</h3>
+                        <p>Descripción de la imagen 3</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagen4.jpg" alt="Imagen 4">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 3</h3>
+                        <p>Descripción de la imagen 3</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagen5.jpg" alt="Imagen 5">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 3</h3>
+                        <p>Descripción de la imagen 3</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagen6.jpg" alt="Imagen 6">
+                    <div class="portfolio-overlay">
+                        <h3>Imagen 3</h3>
+                        <p>Descripción de la imagen 3</p>
+                    </div>
+                </div>
+                <!--... agregar más elementos portfolio-item... -->
+            </div>
+        </div>
+    
+        <!--... otros elementos... -->
+    </div>
 
 
 
