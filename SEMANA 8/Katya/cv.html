@@ -15,8 +15,12 @@
                 background: rgba(249, 240, 255, 0.501);
                 margin-left: 16%;
                 padding: 20px;
-                height: 100%;
-                margin-bottom: 50%;
+                height: 100vh; /* Ocupa toda la altura de la ventana */
+                overflow: hidden; /* Oculta el desbordamiento */
+                display: flex; /* Nuevo: para centrar el contenido */
+                justify-content: left; /* Nuevo: para centrar el contenido */
+                align-items: center; /* Nuevo: para centrar el contenido */
+                scroll-behavior: smooth; /* Transición suave */
             }
             .imagen {
                 border-radius: 50%;
@@ -226,7 +230,7 @@
                 <div id="interests" class="section">
                     <h2>INTERESTS</h2>
 
-                    <p>I watch Christian, action, comedy, sci-fi and fantasy genre movies and television shows. I listen to Christian music and I also love reading books.</p>
+                    <p>I watch Christian, action, comedy, sci-fi and fantasy genre movies and television shows. I listen to Christian music and reading books.</p>
 
                     <img src="https://data-card-for-spotify.herokuapp.com/api/card?user_id=groundzero30">
 
