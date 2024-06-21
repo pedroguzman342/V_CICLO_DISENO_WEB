@@ -1,13 +1,10 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Título de tu página</title>
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <script src="JS/bootstrap.min.js"></script>
     <style>
-
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
@@ -19,27 +16,34 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-bottom: 20px;
         }
         .perfil-img {
             max-width: 200px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        .reseña {
+        .reseña, .estadisticas, .texto-debajo {
             margin-bottom: 20px;
         }
-        .estadisticas {
-            margin-top: 20px;
-        }
-        .Texto{
+        .Texto {
             font-size: 10px;
+        }
+        .titulo-seccion {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .subtitulo {
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="Inicio.html">Inicio</a>
+        <a class="navbar-brand" href="Inicio.html">Inicio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +53,7 @@
                     <a class="nav-link" href="#">Personal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="Trabajos.html">Trabajos</a>
                 </li>
             </ul>
         </div>
@@ -59,73 +63,71 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="mt-5">Bienvenido a mi página</h1>
-                <p>Este es un ejemplo de cómo agregar contenido a tu página HTML.</p>
+                <h1 class="mt-5">Mi Presentación</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información Emanuel -->
+    <div class="container contenedor">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen de perfil" class="perfil-img">
+                <div class="texto-debajo">
+                    <p class="Texto">"Un excelente programador frontend es experto en transformar diseños complejos en interfaces intuitivas y atractivas. Posee un profundo dominio de HTML, CSS y JavaScript para crear experiencias de usuario fluidas y responsivas. Además, domina frameworks modernos como React, Angular o Vue.js, mejorando el rendimiento y escalabilidad de las aplicaciones. Su enfoque en la accesibilidad, usabilidad y compatibilidad entre navegadores asegura que las aplicaciones funcionen sin problemas en diversos dispositivos. Es conocido por su creatividad, colaboración y está siempre actualizado con las últimas tendencias y prácticas de desarrollo web."</p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titulo-seccion">Información Personal</div>
+                        <div class="subtitulo">Nombre</div>
+                        <p>Juan Pérez</p>
+                        <div class="subtitulo">Dirección</div>
+                        <p>Calle Falsa 123, Ciudad, País</p>
+                        <div class="subtitulo">Teléfono</div>
+                        <p>+123 456 7890</p>
+                        <div class="subtitulo">Correo Electrónico</div>
+                        <p>juanperez@example.com</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titulo-seccion reseña">Reseña Personal</div>
+                        <p>Aquí puedes agregar una breve reseña personal sobre ti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titulo-seccion estadisticas">Estadísticas de Desempeño</div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="subtitulo">Proyectos Completados</div>
+                        <p>25</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="subtitulo">Clientes Satisfechos</div>
+                        <p>95%</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="subtitulo">Reconocimientos</div>
+                        <p>Mejor Desarrollador del Año - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>© 2024 Juan Pérez. Todos los derechos reservados.</p>
             </div>
         </div>
     </div>
 
     <!-- Scripts al final del body -->
     <script src="JS/bootstrap.bundle.min.js"></script>
-         <!-- Informacion Emanuel -->
-         <div class="container contenedor">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen de perfil" class="perfil-img">
-                    <div class="texto-debajo">
-                        <p class="Texto">"Un excelente programador frontend es experto en transformar diseños complejos en interfaces intuitivas y atractivas. Posee un profundo dominio de HTML, CSS y JavaScript para crear experiencias de usuario fluidas y responsivas. Además, domina frameworks modernos como React, Angular o Vue.js, mejorando el rendimiento y escalabilidad de las aplicaciones. Su enfoque en la accesibilidad, usabilidad y compatibilidad entre navegadores asegura que las aplicaciones funcionen sin problemas en diversos dispositivos. Es conocido por su creatividad, colaboración y está siempre actualizado con las últimas tendencias y prácticas de desarrollo web."</p>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="titulo-seccion">Información Personal</div>
-                            <div class="subtitulo">Nombre</div>
-                            <p>Juan Pérez</p>
-                            <div class="subtitulo">Dirección</div>
-                            <p>Calle Falsa 123, Ciudad, País</p>
-                            <div class="subtitulo">Teléfono</div>
-                            <p>+123 456 7890</p>
-                            <div class="subtitulo">Correo Electrónico</div>
-                            <p>juanperez@example.com</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="titulo-seccion reseña">Reseña Personal</div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titulo-seccion estadisticas">Estadísticas de Desempeño</div>
-                    
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="subtitulo">Proyectos Completados</div>
-                            <p>25</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="subtitulo">Clientes Satisfechos</div>
-                            <p>95%</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="subtitulo">Reconocimientos</div>
-                            <p>Mejor Desarrollador del Año - 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>© 2024 Juan Pérez. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </div>
-
 </body>
 </html>

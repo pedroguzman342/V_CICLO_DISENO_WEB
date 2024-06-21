@@ -5,14 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resumen - Alice Barkley</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Raleway', sans-serif;
+    }
+    .navbar-custom {
+        background-color: rgb(233, 232, 230);
+    }
+    .navbar-custom .navbar-nav {
+        margin: 0 auto;
+    }
+    .navbar-custom .nav-link {
+        color: #333;
+        position: relative;
+    }
+    .navbar-custom .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #00b7a8;
+        transition: width .3s;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-custom .nav-link:hover::after {
+        width: 100%;
+    }
+    .navbar-custom .nav-link.active {
+        color: #17a2b8;
+    }
+    .navbar-custom .nav-link:hover {
+        color: #17a2b8;
+    }
+    .header-social-links a {
+        color: #555;
+        margin-right: 10px;
+        transition: color 0.3s;
+    }
+    .header-social-links a:hover {
+        color: #00b7a8;
     }
     .resume-section {
       padding: 20px;
     }
-    /* Estilo para la línea de tiempo */
     .timeline {
       list-style: none;
       padding: 0;
@@ -90,51 +130,62 @@
       display: inline-block;
       margin-top: 10px;
     }
+    footer {
+        background-color: rgb(233, 232, 230);
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #00b7a8;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .back-to-top:hover {
+        background-color: #17a2b8;
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">KELLY</a>
+  <header class="navbar navbar-expand-lg navbar-light navbar-custom py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JOSUE</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Resumen</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portafolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="Acerca_de.html" class="nav-link">Acerca de</a></li>
+          <li class="nav-item"><a href="Resumen.html" class="nav-link active">Resumen</a></li>
+          <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+          <li class="nav-item"><a href="Portafolio.html" class="nav-link">Portafolio</a></li>
+          <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
         </ul>
-        <div class="social-icons ml-3">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="header-social-links">
+          <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
-  </nav>
+  </header>
 
   <div class="container">
     <div class="page-header">
       <h1>RESUMEN</h1>
       <div class="underline"></div>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <p>Se necesitan grandes esfuerzos para beneficiarse. Sus necesidades resultan de algo que en realidad lo aleja. Que sean lo que quieran. Cualquiera que alguien desee. Y nadie que estorba recibe a los demás. Porque debería huir en esta oficina de conveniencia, que está aquí.</p>
     </div>
 
     <section class="resume-section">
@@ -143,12 +194,12 @@
           <ul class="timeline">
             <!-- Estilo de línea de tiempo agregado a Alice Barkley -->
             <li class="timeline-item">
-              <h2 class="h4 mb-4">Alice Barkley</h2>
-              <p>Innovadora y orientada a cumplir plazos, diseñadora gráfica con más de 3 años de experiencia en el diseño y desarrollo de materiales de marketing digital/impreso centrados en el usuario, desde el concepto inicial hasta el resultado final y pulido.</p>
+              <h2 class="h4 mb-4">Josue Ramos</h2>
+              <p>Innovador y orientado a cumplir plazos, diseñador gráfico con más de 3 años de experiencia en el diseño y desarrollo de materiales de marketing digital/impreso centrados en el usuario, desde el concepto inicial hasta el resultado final y pulido.</p>
               <ul>
-                <li>Portland par 127, Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Ayacucho n# 127, Pausa, Peru</li>
+                <li>+51 947 424 866</li>
+                <li>josuern5593@gmail.com</li>
               </ul>
             </li>
           </ul>
@@ -160,13 +211,13 @@
                 <h3 class="h5">Maestría en Bellas Artes y Diseño Gráfico</h3>
                 <span class="timeline-badge">2015 - 2016</span>
                 <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
-                <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatem qui ut dignissimos deleniti nerada porti sand markend.</p>
+                <p>Los que se vayan serán perdonados. Y si alguno trabaja en ese momento, que sea justo. Ella, sin embargo, marca el placer de quienes, como los más dignos de las tiernas arenas del puerto.</p>
               </div>
               <div>
                 <h3 class="h5">Licenciatura en Bellas Artes y Diseño Gráfico</h3>
                 <span class="timeline-badge">2010 - 2014</span>
                 <p><strong>Instituto de Tecnología de Rochester, Rochester, NY</strong></p>
-                <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem. Earum molestias consequatur neque elit sed.</p>
+                <p>Porque estamos cegados o cegados para seguir. Rechazar y rechazar precisamente qué y quién es o a causa de ello, de donde los placeres de las cosas de la vida son placeres más groseros. Pero no sufrirán sus problemas.</p>
               </div>
             </li>
           </ul>
@@ -187,7 +238,7 @@
             <!-- Estilo de línea de tiempo agregado a Especialista en diseño gráfico -->
             <li class="timeline-item">
               <h2 class="h5">Especialista en diseño gráfico</h2>
-              <p><strong>Stepping Stone Advertising, Nueva York, NY</strong> <span class="text-muted">(2017 - 2018)</span></p>
+              <p><strong>Publicidad Stepping Stone, Nueva York, NY</strong> <span class="text-muted">(2017 - 2018)</span></p>
               <ul>
                 <li>Desarrolló numerosos programas de marketing (logos, folletos, infografías, presentaciones y anuncios).</li>
                 <li>Gestionó hasta 5 proyectos o tareas al mismo tiempo bajo presión.</li>
@@ -199,6 +250,15 @@
         </div>
       </div>
     </section>
+  </div>
+
+  <footer>
+    <div>&copy; Copyright <strong>Josue</strong>. Reservados todos los derechos</div>
+        <div>Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+  </footer>
+    
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
   </div>
 
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>

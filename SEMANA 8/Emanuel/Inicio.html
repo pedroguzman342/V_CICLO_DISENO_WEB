@@ -162,6 +162,8 @@
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
         .Titulo {
             font-size: 2.5em; 
@@ -182,6 +184,7 @@
             background-color: #3f51b5; 
             padding: 30px; 
             border-radius: 8px; 
+            min-height: 100vh; /* Altura mínima de la ventana del navegador */
         }
         .sub {
             color: #fff;
@@ -233,38 +236,44 @@
             margin-right: 50px;
         }
         .fondo, .fondo2 {
-            margin: 40px;
+            padding: 40px;
         }
         .Contenedor {
             background-color: #4caf50;
+            min-height: 100vh; /* Altura mínima de la ventana del navegador */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .de {
-            background-color: #b3e5fc; /* Color celeste */
-            color: white; /* Color de las letras */
+        .TextoPrincipal {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .TituloP {
-            color: #32CD32; /* Color verde limón */
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #007bff;
         }
         .description {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 4;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .IMG img {
+            max-width: 100%;
+            border-radius: 8px;
         }
         .title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #1e10dff1;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #007bff;
         }
-        .SE{
-            margin-left: 800px;
-            margin-top: -90px;
+        .separator {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
         }
-
-      
-
-       
     </style>
 </head>
 <body>
@@ -276,17 +285,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                
                 <li class="nav-item">
                     <a class="nav-link" href="personal.html">Personal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Experiencia lavoral</a>
+                    <a class="nav-link" href="Trabajos.html">Trabajos</a>
                 </li>
             </ul>
         </div>
     </nav>
-    
     <!-- Contenido de la página -->
     <div class="">
         <div class="row">
@@ -305,85 +312,78 @@
                 </div>
             </div>
             <div class="col-md-6 Contenedor">
-                <img class="img-thumbnail float-md-right imagen" src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen">
+                <img class=" imagen" src="https://www.creartuavatar.com/images/m7.svg" alt="Imagen">
             </div>
         </div>
     </div>
 
-    <div class="row fondo">
-        <div class="col-md-6 derecha2">
-            <div class="Titulo2">
-                Diseño
-            </div>
-            <div class="sub1">Probablemente no sea el típico diseñador que se coloca detrás de una mesa de trabajo de Illustrator ajustando píxeles, pero diseño. Inmerso en hojas de estilo, ajustando tamaños de fuente y contemplando diseños es donde me encontrarás (~_^). Estoy comprometido a crear experiencias de usuario fluidas sin dejar de estar a la moda.
-            </div>
-        </div>
-    </div> 
-
-    <div class="row fondo1">
-        <div class="col-md-6"></div>  
-        <div class="col-md-6 derecha3">
-            <div class="Titulo3">
-                Ingeniería
-            </div>
-            <div class="sub2">Al crear aplicaciones JavaScript, estoy equipado con las herramientas adecuadas y puedo funcionar absolutamente independientemente de ellas para ofrecer soluciones rápidas y resistentes optimizadas para la escala: el rendimiento y la escalabilidad son prioridades en mi radar.</div>
-        </div>
-    </div>     
     <div class="">
-        <div class="container mt-5 de">
-            <div class="row">
-                <div class="col-md-8 ">
-                    <div class="TextoPrincipal">
-                        <div class="TituloP">
-                            Con los años 
-                        </div>
-                        <p>Con los años, he creado productos para empresas y negocios en todo el mundo que van desde sitios web de marketing hasta soluciones complejas y aplicaciones empresariales con enfoque en experiencias de usuario rápidas, elegantes y accesibles.</p>
-                        <p>Actualmente, trabajo en Shopify como Ingeniero Senior de Frontend creando experiencias reflexivas e inclusivas que se adhieren a los estándares web para más de 3 millones de comerciantes en todo el mundo.</p>
-                        <p>Antes de ahora, era Ingeniero Principal de Frontend en hellotax, donde trabajé en un conjunto de herramientas y servicios adaptados al cumplimiento automatizado del IVA para vendedores multicanal en Europa.</p>
-                        <p>Antes de hellotax, fui consultor senior de ingeniería de frontend con Pixel2HTML, construyendo aplicaciones e interfaces de JavaScript para organizaciones e individuos.</p>
-                        <p>Una vez también lideré el equipo de frontend en Conectar, una startup de aprendizaje electrónico a través de la construcción de múltiples aplicaciones React en una única plataforma de aprendizaje.</p>
-                    </div>
+        <div class="row">
+            <div class="col-md-6 derecha2 ">
+                <div class="Titulo2">
+                    Diseño
                 </div>
-                <div class="col-md-4 IMG">
-                    <img class="img-thumbnail float-md-right imagen" src="file:///T:/fondos/Captura%20de%20pantalla%202024-06-17%20013546.png" alt="Imagen">
+                <div class="sub1">Probablemente no sea el típico diseñador que se coloca detrás de una mesa de trabajo de Illustrator ajustando píxeles, pero diseño. Inmerso en hojas de estilo, ajustando tamaños de fuente y contemplando diseños es donde me encontrarás (~_^). Estoy comprometido a crear experiencias de usuario fluidas sin dejar de estar a la moda.
                 </div>
             </div>
-           
         </div>
     </div>
+
     <div class="">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="container mt-5">
-                    <div class="row">
-                      <div class="col-md-6 order-md-2 SE">
-                        <h2 class="title">Escribo a veces</h2>
-                        <p class="description">Sobre diseño,</p>
-                        <p class="description">Frontend dev,</p>
-                        <p class="description">Aprendizaje y vida,</p>
-                        <p class="description">Ese es mi segundo bloque.</p>
-                      </div>
-                      <div class="col-md-6 order-md-1">
-                        <h2 class="title">Construyo cosas con diseño</h2>
-                        <p class="description">Código abierto</p>
-                        <p class="description">Proyectos y aplicaciones web</p>
-                        <p class="description">Experimentales, ese es mi primer renglón.</p>
-                      </div>
-                    </div>
-                    <div class="row mt-5 mb-5"> <!-- Añadir márgenes arriba y abajo -->
-                      <div class="col-md-12 text-center">
-                        <hr class="my-4"> <!-- Línea separadora con margen inferior reducido -->
-                      </div>
-                    </div>
-                  </div>
+        <div class="row ">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 derecha3 ">
+                <div class="Titulo3">
+                    Ingeniería
+                </div>
+                <div class="sub2">Al crear aplicaciones JavaScript, estoy equipado con las herramientas adecuadas y puedo funcionar absolutamente independientemente de ellas para ofrecer soluciones rápidas y resistentes optimizadas para la escala: el rendimiento y la escalabilidad son prioridades en mi radar.</div>
             </div>
-          </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="row ">
+            <div class="col-md-8">
+                <div class="TextoPrincipal">
+                    <h1 class="TituloP">Con los años</h1>
+                    <p>He creado productos para empresas y negocios en todo el mundo que van desde sitios web de marketing hasta soluciones complejas y aplicaciones empresariales con enfoque en experiencias de usuario rápidas, elegantes y accesibles.</p>
+                    <p>Actualmente, trabajo en Shopify como Ingeniero Senior de Frontend creando experiencias reflexivas e inclusivas que se adhieren a los estándares web para más de 3 millones de comerciantes en todo el mundo.</p>
+                    <p>Antes de ahora, era Ingeniero Principal de Frontend en hellotax, donde trabajé en un conjunto de herramientas y servicios adaptados al cumplimiento automatizado del IVA para vendedores multicanal en Europa.</p>
+                    <p>Antes de hellotax, fui consultor senior de ingeniería de frontend con Pixel2HTML, construyendo aplicaciones e interfaces de JavaScript para organizaciones e individuos.</p>
+                    <p>Una vez también lideré el equipo de frontend en Conectar, una startup de aprendizaje electrónico a través de la construcción de múltiples aplicaciones React en una única plataforma de aprendizaje.</p>
+                    <div class="col-md-4 IMG ">
+                        <img class="" src="https://imgs.search.brave.com/q35jqYeV1LtNLP1WHO7VFIXwGSR1PaEq_fJzdZq9OyA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/dmVjdG9yLWdyYXRp/cy9kaXNlbmFkb3It/Z3JhZmljby1lc2Nl/bmEtZXNjcml0b3Jp/b182MDM4NDMtNzcy/LmpwZz9zaXplPTYy/NiZleHQ9anBn" alt="Imagen">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h2 class="title">Construyo cosas con diseño</h2>
+                <p class="description">Código abierto</p>
+                <p class="description">Proyectos y aplicaciones web</p>
+                <p class="description">Experimentales, ese es mi primer renglón.</p>
+            </div>
+            <div class="col-md-6 ">
+                <h2 class="title">Escribo a veces</h2>
+                <p class="description">Sobre diseño,</p>
+                <p class="description">Frontend dev,</p>
+                <p class="description">Aprendizaje y vida,</p>
+                <p class="description">Ese es mi segundo bloque.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center fondo">
+                <hr class="separator">
+            </div>
+        </div>
     </div>
 
     <!-- Scripts al final del body -->
     <script src="JS/bootstrap.bundle.min.js"></script>
-    
-     
-    
 </body>
 </html>
