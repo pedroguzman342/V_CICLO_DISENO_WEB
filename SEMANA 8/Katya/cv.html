@@ -4,6 +4,10 @@
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="JS/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <style>
             .menu_izquierdo {
                 background: rgba(227, 125, 208, 0.721);
@@ -12,22 +16,24 @@
                 width: 16%;
             }
             .menu_derecho {
-                background: rgba(249, 240, 255, 0.501);
-                margin-left: 16%;
-                padding: 20px;
+                
+                background: rgba(218, 180, 243, 0.322);
+                margin-left: 15.5%;
+                padding: 30px;
                 height: 100vh; /* Ocupa toda la altura de la ventana */
                 overflow: hidden; /* Oculta el desbordamiento */
                 display: flex; /* Nuevo: para centrar el contenido */
                 justify-content: left; /* Nuevo: para centrar el contenido */
                 align-items: center; /* Nuevo: para centrar el contenido */
-                scroll-behavior: smooth; /* Transición suave */
+                scroll-behavior: auto; /* Transición suave */
+                
             }
             .imagen {
                 border-radius: 50%;
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
                 margin-top: 280px;
-                margin-left: 60px;
+                margin-left: 50px;
                 border: 8px solid #fafafa57;
             }
             .menu_I {
@@ -73,7 +79,7 @@
                 margin-top: 20px;
             }
             .project {
-                background: white;
+                background: rgba(223, 148, 209, 0.411);
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 margin: 10px;
@@ -95,7 +101,7 @@
                 margin: 0 0 10px;
             }
             .project a {
-                color: #007bff;
+                color: #4391a5c4;
                 text-decoration: none;
             }
             .project a:hover {
@@ -112,14 +118,125 @@
                 width: 50px;
                 height: 50px;
 
+            }           
+            
+        
+            .titulo {
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 20px;
             }
+            .iconos {
+                display: flex; /* Nuevo: para centrar el contenido */
+                justify-content: left;
+                margin-top: 20px;
+                
+            }
+            .iconos a {
+                margin: 0 10px;
+                font-size: 24px;
+                color: #495156;
+                transition: color 0.2s ease;
+            }
+            .iconos a:hover {
+                color: #495156;
+            }
+            .iconos i {
+                margin: 0 10px;
+                font-size: 24px;
+                color: #495156;
+            }
+            /* About Section */
+            
+            #about .titulo {
+                font-size: 96px;
+                color: #39bca7;
+                font-family: Segoe UI;
+                font-weight: bold;
+                margin-bottom: 20px;
+                
+            }
+            #about .correo {
+                font-size: 24px;
+                color: #39bca7;
+                font-family: apple-system ;
+                font-weight: bold;
+                
+            }
+            #about .descripcion {
+                font-size: 16px;
+                color: #333;
+            }
+            /* Other Sections */
+            #projects, #education, #skills, #interests {
+                padding: 20px;
+                margin-bottom: 20px;
+                font-family: Segoe UI;
+                
+                border-radius: 10px;
+                
+            }
+            .Lugar{
+                font-family:  Tahoma;
+                font-weight: bold;
+                color: #5e3481;
+
+            }
+            .Carrera{
+                font-family: monospace;
+                color: #18131a;
+                
+            }
+            .descr{
+                font-family: monospace;
+                color: #18131a;
+                
+            }
+            .fecha{
+                font-family: monospace;
+                color: #18131a;
+                
+            }
+            .mpb{
+                width: 70%;
+                height: 30%;
+                box-shadow: 5px #495156;
+                border-radius: 20px;
+            }
+            .iestp{
+                width: 70%;
+                height: 20%;
+                box-shadow: 5px #495156;
+                border-radius: 20px;
+            }
+            .titles{
+                color: #39bca7;
+                margin-bottom: 50px;
+                font-family:  'Trebuchet MS';
+                font-weight: bold;
+
+            }
+            .collage{
+                width: 50px;
+                height: 70px;
+            }
+            .owl-carousel {
+                width: 100%;
+                height: 300px; /* ajusta el alto según sea necesario */
+                margin: 0 auto;
+            }
+            .MI{
+                font-family: monospace;
+                font-size: 20PX;
+            }
+            
         </style>
     </head>
     <body>
         <div class="row">
             <div class="col-md-2 menu_izquierdo">
                 <div class="col-md-4">
-                    <img class="imagen" src="https://t4.ftcdn.net/jpg/06/24/56/47/360_F_624564764_Ydjoh4ZKr4Bvfjp94j7OIgTv75rQaWFc.jpg" alt="Profile Image">
+                    <img class="imagen" src="img/WhatsApp Image 2024-06-20 at 3.48.59 PM.jpeg" alt="Profile Image">
                 </div><br>
                 <div class="col-md-4 menu_I">
                     <div onclick="showSection('about')">ABOUT</div>
@@ -131,9 +248,9 @@
             </div>
             <div class="col-md-10 menu_derecho">
                 <div id="about" class="section active">
-                    <div class="col-md-5 titulo">VENUS LUMANGLAS</div>
-                    <div class="col-md-1">Philippines· VLUMANGLAS30@GMAIL.COM</div>
-                    <div class="col-md-2">Software Engineer who is interested in devising a better problem-solving method for challenging tasks, and learning new technologies and tools.</div>
+                    <div class=" titulo">Katya Ramirez</div>
+                    <div class="correo">Perú  -  ramireztavillazulema@gmail.com </div>
+                    <div class=" descripcion">Ingeniero de software interesado en diseñar un mejor método de resolución de problemas para tareas desafiantes y aprender nuevas tecnologías y herramientas.</div>
                     <div class="iconos">
                         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
@@ -142,7 +259,7 @@
                     </div>
                 </div>
                 <div id="projects" class="section">
-                    <h2>Projects</h2>
+                    <h2 class="titles">Projects</h2>
                     <div class="project-container">
                         <div class="project">
                             <img src="https://binos30.github.io/src/img/solanaland.png" alt="Proyecto 1">
@@ -183,31 +300,41 @@
                 </div>
 
                 <div id="education" class="section">
-                    <h2>Education</h2>
+                    <h2 class="titles">Educacion</h2>
                     <div class="education">
-                        <p>
-                            BATANGAS STATE UNIVERSITY
-                        </p>
-                        <p>BACHELOR OF SCIENCE</p>
-                        <p>Information Technolgy - Business Analytics Track</p>
-                        <date>June 2015 - June 2019</date>                       
+                        <div class="Lugar">INSTITUTO DE EDUCACION SUPERIOR TECNOLOGICO PAUCAR DEL SARA</div>
+                        <img class="iestp" src="https://iestpsarasara.iestpsdg.edu.pe/wp-content/uploads/2023/11/slider1-sarasara.jpg"><br>
+
+                        <div class="Carrera">TECNICA EN COMPUTACIÓN E INFORMATICA</div>
+                        <div class="descr">Tecnología de la información: pista de análisis empresarial</div>
+                        <div class="fecha">Junio 2022 - Junio 2024</div>                         
+                        
+                                            
                         
                     </div>
 
-                    <div>
-                        BATANGAS EASTERN COLLEGES
-                         June 2009 - March 2013
+                    <div class="Lugar">
+                        Colegio - Maria Parado de Bellido
+                         June 2017 - March 2021
                     </div>
-                    <div>
-                        SAN JUAN EAST CENTRAL SCHOOL
-                        June 2003 - March 2009
+                    <img class="mpb" src="https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/284264961_1419337018512402_6266389105516029954_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RIaZNIun82cQ7kNvgEpMtwk&_nc_ht=scontent.flim2-1.fna&oh=00_AYBo-_WKLrBBSnhVUruC_6G-uP-q066ySlx5maN9MF0Bzg&oe=667A5BA9">
+
+                    <div class="Lugar">
+                        Escuela - Jesus Pimentel Moscoso
+                        June 2010 - March 20016
+                        
                     </div>
+                    
+                   
+
+
+
                 </div>
                 
 
                 <div id="skills" class="section">
-                    <h2>Skills</h2>
-                    <div>PROGRAMMING LANGUAGES & TOOLS</div>
+                    <h2 class="titles">Skills</h2>
+                    <div>LENGUAJES Y HERRAMIENTAS DE PROGRAMACIÓN</div>
                         <div >                       
                           <img class="img-programs" src="https://binos30.github.io/src/img/html5-icon.svg" >                                               
                           <img class="img-programs" src="https://binos30.github.io/src/img/css3-icon.svg" >   
@@ -228,17 +355,53 @@
                 </div>
 
                 <div id="interests" class="section">
-                    <h2>INTERESTS</h2>
+                    <h2 class="titles">INTERESTS</h2>
 
-                    <p>I watch Christian, action, comedy, sci-fi and fantasy genre movies and television shows. I listen to Christian music and reading books.</p>
+                    <p class="MI">Veo películas, k-dramas, anime y series de:  acción, comedia, ciencia ficción y fantasía. Escucho música y me encanta la lluvia.</p>
 
-                    <img src="https://data-card-for-spotify.herokuapp.com/api/card?user_id=groundzero30">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="img/WhatsApp_Image_2024-06-20_at_4.53.57_PM-removebg-preview.png" alt="Imagen 1">
+                        </div>
+                        <div class="item">
+                            <img src="img/WhatsApp_Image_2024-06-20_at_4.53.57_PM__1_-removebg-preview - copia.png">
+                        </div>
+                        <div class="item">
+                            <img src="img/WhatsApp_Image_2024-06-20_at_4.53.57_PM__2_-removebg.png" alt="Imagen 3">
+                        </div>
+                        <div class="item">
+                            <img src="img/WhatsApp Image 2024-06-20 at 5.40.01 PM.jpeg" alt="Imagen 3">
+                        </div>
+                        
+                    </div>
+
+                   
 
 
                 </div>
             </div>
             
         </div>
+        <script>
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 3
+                        }
+                    }
+                });
+            });
+        </script>
         <script>
             function showSection(sectionId) {
                 
@@ -250,6 +413,7 @@
                 document.getElementById(sectionId).classList.add('active');
             }
         </script>
+
     </body>
 </html>
 
