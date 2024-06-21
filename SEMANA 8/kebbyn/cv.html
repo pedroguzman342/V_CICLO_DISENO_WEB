@@ -7,31 +7,62 @@
     <script src="JS/bootstrap.min.js"></script>
     <title>Portafolio de Kebbyn</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
         .imagen-perfil {
             width: 150px;
             border-radius: 50%;
+            margin: 0 auto;
+            display: block;
         }
 
         .nombre {
             font-weight: bold;
             text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
         }
 
         .info {
-            font-size: small;
+            font-size: 0.9em;
+            text-align: center;
+            color: #555;
         }
 
         .menu {
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu p {
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .menu p a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .menu p a:hover {
+            color: #e3af38;
         }
 
         .final {
             text-align: center;
-            font-size: x-small;
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 20px;
         }
 
         .col-md-2 {
-            background-color: #f2f2f6;
+            background-color: #c49745;
             position: fixed;
             top: 0;
             bottom: 0;
@@ -39,30 +70,34 @@
             overflow-y: auto;
             width: 200px;
             padding-top: 20px;
+            border-right: 1px solid #ddd;
         }
 
         .col-md-10 {
             margin-left: 220px;
             padding: 20px;
+            background-color: #fff;
         }
 
         .image-container {
-            background-image: url(https://img.freepik.com/foto-gratis/concepto-diseno-web-dibujos_1134-77.jpg);
-            min-height: 900px;
-            opacity: 0.3;
+            background-image: url(https://www.fundaciontelefonica.com.pe/wp-content/uploads/2022/09/Dia-del-programador.jpg);
+            min-height: 1000px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
 
         .text {
             position: absolute;
             top: 50%;
-            left: 45%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            color: darkblue;
+            color: #e4bb08;
             font-weight: bold;
             padding: 10px;
             text-align: center;
-            font-size: 50px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            font-family: Arial, Helvetica, sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
             -webkit-text-stroke: 1px black;
         }
@@ -70,23 +105,327 @@
         .des {
             position: absolute;
             top: 55%;
-            left: 46.5%;
+            left: 50%;
             transform: translate(-50%, -50%);
             font-weight: bold;
-            color: darkblue;
+            color: #ffffff;
             text-align: center;
-            font-size: 20px;
+            font-size: 1.2em;
             font-family: Arial, Helvetica, sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
             -webkit-text-stroke: 1px black;
         }
 
-        .content-section {
+        .sobre, .servis, .experience, .work, .blog, .contact {
             margin-top: 20px;
-            background-color: #d3d3d3; /* Fondo plomo */
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .sobre h2, .servis h2, .experience h2, .work h2, .blog h2, .contact h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sobre p, .experience p, .work p, .blog p, .contact p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 30%;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #e3af38;
+        }
+
+        .service-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-description {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .progress-bar-container h4 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+
+        .progress-bar-fill-75 {
+            width: 75%;
+            background-color: #3498db;
+        }
+
+        .progress-bar-fill-85 {
+            width: 85%;
+            background-color: #f1c40f;
+        }
+
+        .progress-bar-fill-70 {
+            width: 70%;
+            background-color: #1abc9c;
+        }
+
+        .progress-bar-fill-60 {
+            width: 60%;
+            background-color: #e74c3c;
+        }
+
+        .progress-bar-fill-90 {
+            width: 90%;
+            background-color: #9b59b6;
+        }
+
+        .progress-bar-fill-80 {
+            width: 80%;
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .col-md-2 {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-right: none;
+            }
+
+            .col-md-10 {
+                margin-left: 0;
+            }
+
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .experiencia-laboral .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .experiencia-laboral .icon-1 {
+            background-color: #57c7d4;
+        }
+
+        .experiencia-laboral .icon-2 {
+            background-color: #fa737d;
+        }
+
+        .experiencia-laboral .icon-3 {
+            background-color: #fdb84d;
+        }
+
+        .experiencia-laboral .icon-4 {
+            background-color: #aa93de;
+        }
+
+        .experiencia-laboral .icon-5 {
+            background-color: #36d7b7;
+        }
+
+        .experiencia-laboral .job {
+            background: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .experiencia-laboral .job:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .experiencia-laboral .job h4 {
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .experiencia-laboral .job p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .work-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .work-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .blog-post {
+            flex: 1;
+            min-width: 280px;
+            max-width: 32%;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .blog-post h4 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .blog-post p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .blog-load-more {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .blog-load-more button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .blog-load-more button:hover {
+            background-color: #2980b9;
+        }
+
+        .contact div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact img {
+            margin-right: 10px;
+        }
+
+        .contact form {
+            margin-top: 20px;
+        }
+
+        .contact form div {
+            margin-bottom: 10px;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #2980b9;
+        }
+
     </style>
 </head>
 
@@ -94,19 +433,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <img class="imagen-perfil" src="https://www.semana.com/resizer/AhOjY7VO50nkdLUyhuzX2HcLZuc=/fit-in/768x0/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/KVRYJNDM6FGKPGL6WXPO26HFUA.png">
+                <img class="imagen-perfil" src="fotos/WhatsApp Image 2024-06-20 at 5.41.47 PM.jpeg">
                 <p class="nombre">KEBBYYN RAMIREZ </p>
-                <p class="info">UI/UX/DESIGNER IN PHILIPPINES</p>
+                <p class="info">SOY TECNICO EN COMPUTACION E INFORATICA</p>
                 <div class="menu">
-                    <p>HOME</p>
-                    <p>ABOUT</p>
-                    <p>SERVICES</p>
-                    <p>SKILLS</p>
-                    <p>EDUCATION</p>
-                    <p>EXPERIENCE</p>
-                    <p>WORK</p>
-                    <p>BLOG</p>
-                    <p>CONTACT</p>
+                    <p><a href="#home">HOME</a></p>
+                    <p><a href="#about">ABOUT</a></p>
+                    <p><a href="#services">SERVICES</a></p>
+                    <p><a href="#skills">SKILLS</a></p>
+                    <p><a href="#education">EDUCATION</a></p>
+                    <p><a href="#experience">EXPERIENCE</a></p>
+                    <p><a href="#work">WORK</a></p>
+                    <p><a href="#blog">BLOG</a></p>
+                    <p><a href="#contact">CONTACT</a></p>
                 </div>
                 <div class="final">
                     <p>© Copyright 2024 All rights reserved.</p>
@@ -117,49 +456,136 @@
             </div>
 
             <div class="col-md-10">
-                <div class="image-container"></div>
-                <div class="text">Hola, me llamo kebbyn</div>
-                <div class="des">Especialista en cursos basicos de Computacion e Informmatica</div>
-
-                <!-- Nuevo contenido aquí -->
-                <div class="content-section">
+                <div id="home" class="image-container"></div>
+                <div class="text">HOLA, ME LLAMO KEBBYN</div>
+                <div class="des">Soy técnico en computación e informática</div>
+                <div id="about" class="sobre">
                     <h2>Sobre mí</h2>
-                    <p>Soy un diseñador UI/UX con experiencia en la creación de interfaces intuitivas y atractivas. Mi objetivo es mejorar la experiencia del usuario a través de diseños innovadores.</p>
+                    <p>Jove entusiasta inspirado en ganar experiencia laboral en el área técnica de Computación e Informática y poner en practica lo aprendido en mis años de estudio.</p>
+                    <p>Comprometido con el trabajo en equipo e individual, poniendo en practica los valores en el ambiente de trabajo creando un ecosistema amigable.</p>
                 </div>
-
-                <div class="content-section">
+                <div id="services" class="servis">
                     <h2>Servicios</h2>
-                    <p>Ofrezco una amplia gama de servicios, incluyendo diseño de interfaces, consultoría en experiencia de usuario, y formación en diseño digital.</p>
+                    <div class="services-container">
+                        <div class="service-box">
+                            <div class="service-icon">📱</div>
+                            <div class="service-title">Administracion y configuracion de red</div>
+                            <div class="service-description">Administrracion y configuracion de red básico y eficiente enn todo entorno.</div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-icon">💻</div>
+                            <div class="service-title">Desarrollo Web básico</div>
+                            <div class="service-description">Desarrollo eficiente de paginas web con interface amigable.</div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-icon">🎨</div>
+                            <div class="service-title">Diseño y animacion básico</div>
+                            <div class="service-description">Diseño y animacion basico de personajes, imagenes y más.</div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="content-section">
+                <div id="skills" class="sobre">
                     <h2>Habilidades</h2>
+                    <p>Habilidades basicas en los siguientes programas:</p>
+                    <div class="progress-bar-container">
+                        <h4>HTML</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-75"></div>
+                        </div>
+                        <h4>CSS</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-85"></div>
+                        </div>
+                        <h4>JavaScript</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-70"></div>
+                        </div>
+                        <h4>SQL</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-60"></div>
+                        </div>
+                        <h4>Photoshop</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-90"></div>
+                        </div>
+                        <h4>C#</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill progress-bar-fill-80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="education" class="sobre">
+                    <h2>Educación</h2>
+                    <p>Tres años de estudio en el Instituto Superior Tecnológico Público Paucar del Sara Sara.</p>
+                        
+                </div>
+                <div id="experience" class="sobre experiencia-laboral">
+                    <h2>Experiencia</h2>
+                    <div class="job">
+                        <div class="icon icon-1">📅</div>
+                        <h4>Trabajo en cabinas de internet</h4>
+                        <p>un año como trabajador de cabina de internet ofreciendo servicio de impreciones, matenimiento de equipos y tipeos.</p>
+                    </div>
+                    <div class="job">
+                        <div class="icon icon-2">📅</div>
+                        <h4>Trabajo en el Juzgado Misxto</h4>
+                        <p>Trabajando como ayudante de secretariado durante 6 meses.</p>
+                    </div>
+                    <div class="job">
+                        <div class="icon icon-3">📅</div>
+                        <h4>Trabajo en market</h4>
+                        <p>Como administrador de almacen verificando la entrada y salida de los productos.</p>
+                    </div>
+                </div>
+                <div id="work" class="sobre">
+                    <h2>Mis trabajos</h2>
+                    <div class="work-gallery">
+                        <!-- Añadir aquí las imágenes -->
+                        <img src="https://www.teknei.com/wp-content/uploads/2024/02/computacion_espacial_Teknei_mexico.jpg" alt="Imagen 1">
+                        <img src="https://webdelmaestrocmf.com/portal/wp-content/uploads/2024/01/B-dibujos-1-5-4.webp" alt="Imagen 2">
+                        <img src="https://img.freepik.com/vector-gratis/ilustracion-computacion-nube_24877-52334.jpg" alt="Imagen 3">
+                        <img src="https://vinculotic.com/wp-content/uploads/2020/07/educacion-cuantica-01-1021x580.jpg" alt="Imagen 4">
+                        <img src="https://cdn-3.expansion.mx/dims4/default/fd2d8e1/2147483647/strip/true/crop/2309x1299+0+0/resize/1200x675!/format/webp/quality/60/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F45%2Fa4%2F4d8a797b4d0cbc59235c46a88320%2Fistock-1346925522.jpg" alt="Imagen 5">
+                        <img src="https://www.ucatalunya.edu.co/img/blog/imagen-sobre-inteligencia-artificial.jpg" alt="Imagen 6">
+                    </div>
+                </div>
+                <div id="blog" class="sobre">
+                    <h2>Blog</h2>
+                    <div class="blog-container">
+                        <div class="blog-post">
+                            <img src="https://img.freepik.com/fotos-premium/manos-guantes-goma-que-reparan-primer-computadora-mantenimiento-reparacion-equipos-informaticos-concepto-electronica_151013-17660.jpg" alt="Renovación de la Galería Nacional">
+                            <h4>MANTENIMIENTO Y REPARACION</h4>
+                            <p>Abril 14, 2018 | Diseño Web | 4</p>
+                            <p>Mantenimiento preventivo y correctivo, asi mismo reparaciones de equipos de escritorio y portatiles.</p>
+                        </div>
+                        <div class="blog-post">
+                            <img src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="WordPress para un Principiante">
+                            <h4>PROGRAMACION</h4>
+                            <p>Abril 14, 2018 | Diseño Web | 4</p>
+                            <p>Creacion de paginas web, bases de datos, sistemas de almacen.</p>
+                        </div>
+                        <div class="blog-post">
+                            <img src="https://i.ytimg.com/vi/qkiyDtEPQTg/maxresdefault.jpg" alt="Hacer Sitio Web desde Cero">
+                            <h4>DISEÑO Y ANIMACION</h4>
+                            <p>Abril 14, 2018 | Inspiración | 4</p>
+                            <p>creacion de avatars y videojuegos,, asi mismo disewño de imagenes con movimienntos.</p>
+                        </div>
+                    </div>
+                    <div class="blog-load-more">
+                        <button>Cargar más</button>
+                    </div>
+                </div>
+               <div id="contact" class="servis">
+                    <h2>Contacto</h2>
+                    <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través de:</p>
                     <ul>
-                        <li>Diseño de interfaces</li>
-                        <li>Experiencia de usuario</li>
-                        <li>Prototipado</li>
-                        <li>Investigación de usuario</li>
+                        <li><strong>Email:</strong> kebbynramirez@gmmail.com</li>
+                        <li><strong>Teléfono:</strong> +51 921121362</li>
+                        
                     </ul>
                 </div>
 
-                <div class="content-section">
-                    <h2>Educación</h2>
-                    <p>Título en Diseño Gráfico de la Universidad de Filipinas. Cursos adicionales en diseño de interacción y psicología del usuario.</p>
-                </div>
-
-                <div class="content-section">
-                    <h2>Experiencia</h2>
-                    <p>Más de 5 años de experiencia trabajando con startups y empresas establecidas, creando soluciones digitales efectivas.</p>
-                </div>
-
-                <div class="content-section">
-                    <h2>Proyectos</h2>
-                    <p>He trabajado en numerosos proyectos, incluyendo aplicaciones móviles, sitios web y sistemas de software.</p>
-                </div>
-
-                <div class="content-section">
-                    <h2>Contacto</h2>
-                    <p>Si estás interesado en trabajar conmigo, no dudes en <a href="mailto:kebbyn@example.com">contactarme</a>.</p>
+                    </form>
                 </div>
             </div>
         </div>
